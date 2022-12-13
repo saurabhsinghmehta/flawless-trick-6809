@@ -6,7 +6,7 @@ import AdminDashboard from "../Pages/AdminDashboard";
 function MainRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<AdminDashboard />} />
+      <Route path="/admin" element={<AdminDashboard />} />
       <Route path="/prod_managment" element={<ProductManagement />} />
       <Route path="/admin_sorting" element={<Sorting />} />
     </Routes>
