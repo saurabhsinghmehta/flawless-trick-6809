@@ -74,6 +74,11 @@ const Home = () => {
 
         </SimpleGrid>
         </Container>
+
+        {/* Offers&Deals */}
+        <Box backgroundColor='#202124'>
+
+        </Box>
     </div>
   )
 }
