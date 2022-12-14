@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from '../Components/Navbar';
-import {Box, Image,Heading, Container, Flex,SimpleGrid,Text} from '@chakra-ui/react';
+import {Box, Image,Heading, Container, Flex,SimpleGrid,Text,Spacer,Link,Button} from '@chakra-ui/react';
 
 const data=[
     {
@@ -40,6 +40,24 @@ const data=[
     }
 ];
 
+let offer=[
+    {
+        id:1,
+        img:"https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/lg/CHKZINGER.jpg",
+        title:"1 PC FREE CHICKEN ZINGER",      
+    },
+    {
+        id:2,
+        img:"https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/lg/VEGZINGER.jpg",
+        title:"1 PC FREE VEG ZINGER",      
+    },
+    {
+        id:3,
+        img:"https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/lg/ADDCHK99.jpg",
+        title:"ADD 2 PC HOT N CRISPY",      
+    }
+];
+
 const Home = () => {
   return (
     <div>
@@ -76,8 +94,30 @@ const Home = () => {
         </Container>
 
         {/* Offers&Deals */}
-        <Box backgroundColor='#202124'>
-
+        <Box backgroundColor='#202124' marginTop='80px'>
+        <Container maxW='1000px' paddingTop='50px'>
+         <Flex justifyContent='space-between'>
+         <Box p='4'>
+          <Heading color='white'>OFFERS & DEALS</Heading>
+         </Box>
+         <Spacer />
+         <Box p='4'>
+         <Link to='/deals'><Text color='white' fontWeight='extrabold'>View All Deals ---- </Text></Link>
+         </Box>
+         </Flex>
+        </Container>
+        <Container maxW='1000px' marginTop='20px'  paddingBottom='50px'>
+        <SimpleGrid minChildWidth='200px' spacing='40px'>
+            {offer.map((item)=>(
+                <Box backgroundColor='white' paddingBottom='20px'>
+                <Image src={item.img} />
+                <Heading color='red' size='lg' fontWeight='extrabold'>{item.title}</Heading>
+                <Button width='120px' marginTop='10px' border='1px solid black' borderRadius='20px'>Redeem</Button>
+              </Box>
+            ))}
+          
+        </SimpleGrid>
+        </Container>
         </Box>
     </div>
   )
