@@ -44,7 +44,7 @@ const Home = () => {
   return (
     <div>
         <Navbar />
-        <Box>
+        <Box marginTop='100px'>
         <Image src='https://images.ctfassets.net/wtodlh47qxpt/5477Y6AToWWjDUgchkqn5l/644a80e35a990d1bee592811b278fddd/Wedmesday_banner_1440x396px.jpg?w=1440&fit=fill&fm=webp' alt='ic' />
         </Box>
         <Box backgroundColor='#f8f7f5'>
