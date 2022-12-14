@@ -7,7 +7,7 @@ import { useState } from "react";
 const Otp = () => {
   const navigate = useNavigate();
   const [otp, setOtp] = useState("");
-  const [redirect, setRedirect] = useState(false);
+  const [redirectto, setRedirectto] = useState(false);
   const handleChange = (e) => {
     setOtp(e.target.value);
   };
@@ -21,17 +21,17 @@ const Otp = () => {
         // User signed in successfully.
         const user = result.user;
         alert("Signin successfull");
-        setRedirect(true);
+        setRedirectto(true);
         // ...
       })
       .catch((error) => {
         // User couldn't sign in (bad verification code?)
         // ...
         alert("Signin faild");
-        setRedirect(false);
+        setRedirectto(false);
       });
   };
-  if (redirect) {
+  if (redirectto) {
     navigate("/");
   }
 
