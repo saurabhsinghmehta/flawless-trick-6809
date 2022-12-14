@@ -3,9 +3,11 @@ import { Flex,Heading,Box,Spacer,Container,Image } from '@chakra-ui/react';
 import ProjectLogo from '../Assets/ProjectLogo.png';
 import { Link } from 'react-router-dom';
 
+
+
 const Navbar = () => {
   return (
-    <Box backgroundColor='#f8f7f5'>
+    <Box>
     <Container maxW='1150px' maxH='120px' paddingTop='10px' paddingBottom='10px'>
  <Flex minWidth='max-content' alignItems='center' gap='2'>
   <Box p='2'>
