@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getData } from "../Redux/Sorting/actiontype";
-import { store } from "../Redux/Sorting/store";
 
 function Sorting() {
   // console.log(store.getState())
