@@ -1,6 +1,8 @@
-import React from 'react'; 
+import React, { useEffect } from 'react'; 
 import Navbar from '../Components/Navbar'; 
 import { Box, Flex, Heading ,Text} from '@chakra-ui/react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getMenuData } from '../Redux/Menudata/action';
  const cat=[
    { id:1, name:"CHICKEN" }, 
    { id:2, name:"EXCLUSIVE DEALS" }, 
@@ -15,6 +17,15 @@ import { Box, Flex, Heading ,Text} from '@chakra-ui/react';
 
 
  const Menu = () => { 
+
+  const menuData=useSelector((store)=>store.Menureducer.menudata);
+  const dispatch =useDispatch();
+
+  useEffect(()=>{
+    dispatch(getMenuData());
+  },[dispatch]);
+  console.log(menuData);
+
   return ( 
   <div> 
     <Navbar /> 
