@@ -3,12 +3,12 @@ import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import { getData } from "../Redux/Sorting/actiontype";
-import { store } from "../Redux/Sorting/store";
+import { store } from "../Redux/store";
 
 function Sorting() {
   // console.log(store.getState())
-  const data=useSelector((state)=>state.data);
-  console.log(data)
+  const data=useSelector((state)=>state.Sortingreducer.data);
+  // console.log(data)
   const dispatch=useDispatch();
 
   const [searchParams, setsearchParams] = useSearchParams();
@@ -109,4 +109,4 @@ function Sorting() {
   );
 }
 
-export default Sorting;
+export default Sorting;
