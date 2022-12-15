@@ -1,4 +1,4 @@
-import { Flex, Grid, GridItem } from "@chakra-ui/react";
+import { Grid, GridItem } from "@chakra-ui/react";
 import React from "react";
 import { useSelector } from "react-redux";
 import DisplayProducts from "../Components/DisplayProducts";
@@ -26,7 +26,7 @@ function AdminDashboard() {
           <Sorting />
         </GridItem>
         <GridItem marginLeft="-440px" marginTop="70px" w={"1200px"} h={"auto"}>
-          <DisplayProducts data={data} />
+          <DisplayProducts />
         </GridItem>
       </Grid>
     </>

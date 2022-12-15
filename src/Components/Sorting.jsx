@@ -3,13 +3,12 @@ import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getData } from "../Redux/Sorting/actiontype";
-import { store } from "../Redux/Sorting/store";
 
 function Sorting() {
   // console.log(store.getState())
-  const data=useSelector((state)=>state.data);
-  console.log(data)
-  const dispatch=useDispatch();
+  const data = useSelector((state) => state.data);
+  console.log(data);
+  const dispatch = useDispatch();
 
   const [searchParams, setsearchParams] = useSearchParams();
   const initialCategory = searchParams.getAll("category");
@@ -43,7 +42,7 @@ function Sorting() {
     params.category = category;
     sort && (params.sort = sort);
     setsearchParams(params);
-    console.log(params);
+    // console.log(params);
     dispatch(getData(category));
   }, [category, setsearchParams, sort]);
 
