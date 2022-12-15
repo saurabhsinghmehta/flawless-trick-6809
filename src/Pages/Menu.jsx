@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
+import Footer from "../Components/Footer";
 
 const Menu = () => {
   return (
     <div>
       Menu
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Menu
+export default Menu;
