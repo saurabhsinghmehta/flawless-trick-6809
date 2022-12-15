@@ -73,6 +73,7 @@ let offer = [
 const Home = () => {
   return (
     <div>
+
       <Navbar />
       <Box marginTop="100px">
         <Image
@@ -85,6 +86,36 @@ const Home = () => {
           WELCOME TO BFC!!
         </Heading>
       </Box>
+
+        <Navbar />
+        <Box marginTop='100px'>
+        <Image src='https://images.ctfassets.net/wtodlh47qxpt/5477Y6AToWWjDUgchkqn5l/644a80e35a990d1bee592811b278fddd/Wedmesday_banner_1440x396px.jpg?w=1440&fit=fill&fm=webp' alt='ic' />
+        </Box>
+        <Box backgroundColor='#f8f7f5'>
+         <Heading size='xl' paddingY='40px' fontWeight='extrabold'>WELCOME TO BFC!!</Heading>
+        </Box>
+
+        {/* Browse Categories */}
+        <Container maxW='1200px'>
+            <Flex alignItems='center' justifyContent='space-evenly' >
+         <Heading size='xl' paddingY='40px' fontWeight='bold'>BROWSE CATEGORIES</Heading>
+         <Box height='5px' width='600px' backgroundColor='#f8f7f5' />
+            </Flex>
+        </Container>
+        <Container maxW='1100px'>
+        <SimpleGrid minChildWidth='200px' spacing='40px'>
+        
+        {data && data.map((item)=>(
+         <Box bg='#f8f7f5' key={item.id}>
+           <Image src={item.img} alt='ic' />
+           <Heading size='sm' paddingY='30px' fontWeight='extrabold'>{item.title}</Heading>
+         </Box>
+        ))}
+        <Box bg='#f8f7f5'>
+           <Image src="https://online.kfc.co.in/static/media/finger_lickin.fc21c805.svg" alt='ic' width='200px' marginLeft='20px' marginTop='30px' />
+           <Text size='sm' paddingY='40px' fontWeight='bold'>View All Menu ----- </Text>
+         </Box>
+
 
       {/* Browse Categories */}
       <Container maxW="1200px">
@@ -138,10 +169,17 @@ const Home = () => {
             </Box>
           </Flex>
         </Container>
+
         <Container maxW="1000px" marginTop="20px" paddingBottom="50px">
           <SimpleGrid minChildWidth="200px" spacing="40px">
             {offer.map((item) => (
               <Box backgroundColor="white" paddingBottom="20px">
+
+        <Container maxW='1000px' marginTop='20px'  paddingBottom='50px'>
+        <SimpleGrid minChildWidth='200px' spacing='40px'>
+            {offer.map((item)=>(
+                <Box backgroundColor='white' paddingBottom='20px' key={item.id}>
+
                 <Image src={item.img} />
                 <Heading color="red" size="lg" fontWeight="extrabold">
                   {item.title}
