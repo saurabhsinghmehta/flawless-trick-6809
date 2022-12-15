@@ -3,15 +3,17 @@ import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import { getData } from "../Redux/Sorting/actiontype";
+import { store } from "../Redux/store";
 
 function Sorting() {
   // console.log(store.getState())
-  const data=useSelector((state)=>state.data);
+  const data=useSelector((state)=>state.Sortingreducer.data);
   console.log(data)
   const dispatch=useDispatch();
 
   const [searchParams, setsearchParams] = useSearchParams();
-  const initialCategory = searchParams.getAll("category");
+  const initialCategory = searchParams.get("category");
+  console.log(initialCategory)
   const initialsort = searchParams.getAll("sort");
   // console.log(initialsort)
   const [sort, setsort] = useState(initialsort[0] || "");
@@ -36,6 +38,11 @@ function Sorting() {
     setsort(e.target.value);
   };
   // console.log(sort)
+  useEffect(()=>{
+    let params = {};
+    params.category = category;
+    setsearchParams(params);
+  },[])
 
   useEffect(() => {
     let params = {};
@@ -46,6 +53,7 @@ function Sorting() {
     dispatch(getData(category));
   }, [category, setsearchParams, sort]);
 
+  console.log(category)
   return (
     <div style={{ width: "300px", border: "1px solid red", marginTop: "10%" }}>
       <h1>Filter Component</h1>
