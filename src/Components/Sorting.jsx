@@ -8,7 +8,7 @@ import { store } from "../Redux/store";
 function Sorting() {
   // console.log(store.getState())
   const data=useSelector((state)=>state.Sortingreducer.data);
-  console.log(data)
+  // console.log(data)
   const dispatch=useDispatch();
 
   const [searchParams, setsearchParams] = useSearchParams();
