@@ -3,10 +3,12 @@ import { Flex,Heading,Box,Spacer,Container,Image } from '@chakra-ui/react';
 import ProjectLogo from '../Assets/ProjectLogo.png';
 import { Link } from 'react-router-dom';
 
+
+
 const Navbar = () => {
   return (
-    <Box backgroundColor='#f8f7f5'>
-    <Container maxW='1150px' maxH='120px' paddingTop='10px' paddingBottom='10px'>
+    <Box border='1px solid'>
+    <Container maxW='1450px' maxH='120px' backgroundColor='white' paddingTop='10px' paddingBottom='10px' position='fixed' zIndex='1' top='0' overflow='visible'>
  <Flex minWidth='max-content' alignItems='center' gap='2'>
   <Box p='2'>
     <Link to='/'><Image src={ProjectLogo} alt='BFC' width='70px'  /></Link>
