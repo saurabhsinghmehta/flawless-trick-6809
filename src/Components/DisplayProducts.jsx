@@ -1,10 +1,8 @@
 import { Box, Grid, GridItem, Image } from "@chakra-ui/react";
 import React from "react";
-import { useSelector } from "react-redux";
 
-function DisplayProducts() {
-  const data = useSelector((e) => e.data);
-  console.log(data);
+function DisplayProducts({ data }) {
+  // console.log(data);
   return (
     <div style={{ border: "2px solid red" }}>
       {" "}
