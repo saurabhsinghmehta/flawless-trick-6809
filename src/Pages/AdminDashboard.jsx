@@ -6,9 +6,11 @@ import Sorting from "../Components/Sorting";
 import "../CSS/admin.css";
 import { getData } from "../Redux/Sorting/actiontype";
 import { useEffect } from "react";
+import { store } from "../Redux/store";
 
 function AdminDashboard() {
-  const data = useSelector((e) => e.data);
+  console.log(store)
+  const data = useSelector((e) => e.Sortingreducer.data);
   console.log(data);
 
   const dispatch=useDispatch();
