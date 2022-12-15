@@ -6,16 +6,12 @@ import { getData } from "../Redux/Sorting/actiontype";
 import { store } from "../Redux/store";
 
 function Sorting() {
-  // console.log(store.getState())
-  const data=useSelector((state)=>state.Sortingreducer.data);
-  // console.log(data)
-  const dispatch=useDispatch();
+  const dispatch = useDispatch();
 
   const [searchParams, setsearchParams] = useSearchParams();
   const initialCategory = searchParams.get("category");
-  console.log(initialCategory)
+  // console.log(initialCategory)
   const initialsort = searchParams.getAll("sort");
-  // console.log(initialsort)
   const [sort, setsort] = useState(initialsort[0] || "");
 
   const [category, setcategory] = useState(initialCategory || "biryani");
@@ -33,27 +29,24 @@ function Sorting() {
   const handlefilter = (e) => {
     setcategory(e.target.value);
   };
-  // console.log(category)
   const handlesort = (e) => {
     setsort(e.target.value);
   };
-  // console.log(sort)
-  useEffect(()=>{
+  useEffect(() => {
     let params = {};
     params.category = category;
     setsearchParams(params);
-  },[])
+  }, []);
 
   useEffect(() => {
     let params = {};
     params.category = category;
     sort && (params.sort = sort);
     setsearchParams(params);
-    // console.log(params);
     dispatch(getData(category));
   }, [category, setsearchParams, sort]);
 
-  console.log(category)
+  // console.log(category)
   return (
     <div style={{ width: "300px", border: "1px solid red", marginTop: "10%" }}>
       <h1>Filter Component</h1>
@@ -109,4 +102,4 @@ function Sorting() {
   );
 }
 
-export default Sorting;
+export default Sorting;

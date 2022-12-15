@@ -6,17 +6,16 @@ import Sorting from "../Components/Sorting";
 import "../CSS/admin.css";
 import { getData } from "../Redux/Sorting/actiontype";
 import { useEffect } from "react";
-import { store } from "../Redux/store";
 
 function AdminDashboard() {
-  console.log(store)
-  const data = useSelector((e) => e.Sortingreducer.data);
+  const data = useSelector((state) => state.Sortingreducer.data);
+
   console.log(data);
 
-  const dispatch=useDispatch();
+  const dispatch = useDispatch();
 
   useEffect(() => {
-   dispatch(getData("biryani"))
+    dispatch(getData("biryani"));
   }, []);
   return (
     //display sales status on daily, weekly and monthly bases
