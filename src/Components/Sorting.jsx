@@ -6,7 +6,6 @@ import { getData } from "../Redux/Sorting/actiontype";
 import { store } from "../Redux/Sorting/store";
 
 function Sorting() {
-  // console.log(store.getState())
   const data=useSelector((state)=>state.data);
   console.log(data)
   const dispatch=useDispatch();
