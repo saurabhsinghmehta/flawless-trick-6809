@@ -6,7 +6,7 @@ import Sorting from "../Components/Sorting";
 import "../CSS/admin.css";
 function AdminDashboard() {
   const data = useSelector((e) => e.data);
-  console.log(data);
+  // console.log(data);
   return (
     //display sales status on daily, weekly and monthly bases
     <>
