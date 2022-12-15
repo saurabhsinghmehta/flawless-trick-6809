@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import { getData } from "../Redux/Sorting/actiontype";
-import { store } from "../Redux/store";
 
 function Sorting() {
   const dispatch = useDispatch();
@@ -48,7 +47,7 @@ function Sorting() {
 
   // console.log(category)
   return (
-    <div style={{ width: "300px", border: "1px solid red", marginTop: "10%" }}>
+    <div id="filteri_ng" style={{ width: "300px", marginTop: "10%" }}>
       <h1>Filter Component</h1>
       <div>
         <div>
@@ -77,6 +76,60 @@ function Sorting() {
             checked={category.includes("chicken")}
           />
           <label htmlFor="">Chicken</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            onChange={handlefilter}
+            value="exclusivedeal"
+            checked={category.includes("exclusivedeal")}
+          />
+          <label htmlFor="">exclusivedeal</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            onChange={handlefilter}
+            value="newlaunch"
+            checked={category.includes("newlaunch")}
+          />
+          <label htmlFor="">newlaunch</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            onChange={handlefilter}
+            value="boxmeal"
+            checked={category.includes("boxmeal")}
+          />
+          <label htmlFor="">boxmeal</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            onChange={handlefilter}
+            value="snacks"
+            checked={category.includes("snacks")}
+          />
+          <label htmlFor="">snacks</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            onChange={handlefilter}
+            value="stayhomespecial"
+            checked={category.includes("stayhomespecial")}
+          />
+          <label htmlFor="">stayhomespecial</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            onChange={handlefilter}
+            value="beverages"
+            checked={category.includes("beverages")}
+          />
+          <label htmlFor="">beverages</label>
         </div>
       </div>
       <h1>Sort By Price</h1>
