@@ -1,12 +1,23 @@
 import { Flex, Grid, GridItem } from "@chakra-ui/react";
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import DisplayProducts from "../Components/DisplayProducts";
 import Sorting from "../Components/Sorting";
 import "../CSS/admin.css";
+import { getData } from "../Redux/Sorting/actiontype";
+import { useEffect } from "react";
+import { store } from "../Redux/store";
+
 function AdminDashboard() {
-  const data = useSelector((e) => e.data);
-  // console.log(data);
+  console.log(store)
+  const data = useSelector((e) => e.Sortingreducer.data);
+  console.log(data);
+
+  const dispatch=useDispatch();
+
+  useEffect(() => {
+   dispatch(getData("biryani"))
+  }, []);
   return (
     //display sales status on daily, weekly and monthly bases
     <>
@@ -33,4 +44,4 @@ function AdminDashboard() {
   );
 }
 
-export default AdminDashboard;
+export default AdminDashboard;
