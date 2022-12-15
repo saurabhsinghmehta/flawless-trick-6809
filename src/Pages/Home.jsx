@@ -80,7 +80,7 @@ const Home = () => {
         <SimpleGrid minChildWidth='200px' spacing='40px'>
         
         {data && data.map((item)=>(
-         <Box bg='#f8f7f5'>
+         <Box bg='#f8f7f5' key={item.id}>
            <Image src={item.img} alt='ic' />
            <Heading size='sm' paddingY='30px' fontWeight='extrabold'>{item.title}</Heading>
          </Box>
@@ -109,7 +109,7 @@ const Home = () => {
         <Container maxW='1000px' marginTop='20px'  paddingBottom='50px'>
         <SimpleGrid minChildWidth='200px' spacing='40px'>
             {offer.map((item)=>(
-                <Box backgroundColor='white' paddingBottom='20px'>
+                <Box backgroundColor='white' paddingBottom='20px' key={item.id}>
                 <Image src={item.img} />
                 <Heading color='red' size='lg' fontWeight='extrabold'>{item.title}</Heading>
                 <Button width='120px' marginTop='10px' border='1px solid black' borderRadius='20px'>Redeem</Button>

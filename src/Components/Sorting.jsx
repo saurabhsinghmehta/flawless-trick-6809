@@ -3,7 +3,6 @@ import { useState,useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getData } from "../Redux/Sorting/actiontype";
-import { store } from "../Redux/Sorting/store";
 
 function Sorting() {
   // console.log(store.getState())
@@ -47,7 +46,7 @@ function Sorting() {
     setsearchParams(params)
     console.log(params)
     dispatch(getData(category));
-  }, [category,setsearchParams,sort]);
+  }, [category,setsearchParams,sort,dispatch]);
 
   return(
     <div style={{width:"300px",border:"1px solid red",marginTop:"10%"}}>
