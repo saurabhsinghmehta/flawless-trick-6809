@@ -16,7 +16,7 @@ import PlayStore_logo from "../Assets/PlayStore_logo.png";
 // import AppStoreBadge from "@/components/AppStoreBadge";
 // import PlayStoreBadge from "@/components/PlayStoreBadge";
 
-const ListHeader = ({ children }: { children: ReactNode }) => {
+const ListHeader = ({ children }) => {
   return (
     <Text fontWeight={"500"} fontSize={"lg"} mb={2}>
       {children}
@@ -24,15 +24,7 @@ const ListHeader = ({ children }: { children: ReactNode }) => {
   );
 };
 
-const SocialButton = ({
-  children,
-  label,
-  href,
-}: {
-  children: ReactNode,
-  label: string,
-  href: string,
-}) => {
+const SocialButton = ({ children, label, href }) => {
   return (
     <chakra.button
       bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
