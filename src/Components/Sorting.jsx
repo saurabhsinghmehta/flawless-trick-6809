@@ -49,7 +49,7 @@ function Sorting() {
     params.category = category;
     sort && (params.sort = sort);
     setsearchParams(params);
-    console.log(params);
+    // console.log(params);
     dispatch(getData(category));
   }, [category, setsearchParams, sort]);
 

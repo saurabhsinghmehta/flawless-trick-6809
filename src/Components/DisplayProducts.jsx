@@ -1,13 +1,16 @@
 import { Box, Grid, GridItem, Image } from "@chakra-ui/react";
 import React from "react";
+import { useSelector } from "react-redux";
 
-function DisplayProducts({ data }) {
+function DisplayProducts() {
+  const data = useSelector((e) => e.data);
+  console.log(data);
   return (
     <div style={{ border: "2px solid red" }}>
       {" "}
       <Grid templateColumns="repeat(3,1fr)" marginLeft={"50px"} gap="10px">
         {data.map((product) => (
-          <GridItem>
+          <GridItem key={product.id}>
             <Box w={"300px"}>
               <Image w={"100%"} src={product.image} /> <h2>{product.title}</h2>
               <h4>{product.category}</h4>
