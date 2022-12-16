@@ -47,8 +47,8 @@ function Sorting() {
 
   // console.log(category)
   return (
-    <div id="filteri_ng" style={{ width: "300px", marginTop: "10%" }}>
-      <h1>Filter Component</h1>
+    <div id="filteri_ng" style={{ width: "300px"}} >
+      <h1 style={{marginBottom:"2%"}}>Filter Component</h1>
       <div>
         <div>
           <input
@@ -132,9 +132,9 @@ function Sorting() {
           <label htmlFor="">beverages</label>
         </div>
       </div>
-      <h1>Sort By Price</h1>
+      {/* <h1>Sort By Price</h1> */}
 
-      <div onChange={handlesort}>
+      {/* <div onChange={handlesort}>
         <input
           type="radio"
           name="sortBy"
@@ -150,7 +150,7 @@ function Sorting() {
           defaultChecked={sort === "desc"}
         />
         <label htmlFor="">Descending</label>
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import { Box, Flex, Grid, GridItem, Select } from "@chakra-ui/react";
+import { Box, Flex, Grid, GridItem, Select ,VStack,HStack} from "@chakra-ui/react";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import DisplayProducts from "../Components/DisplayProducts";
@@ -32,26 +32,29 @@ function AdminDashboard() {
           <h3>Sold 150 products this month</h3>
         </div>
       </div>
-      <Grid templateColumns="repeat(2, 1fr)">
-        <GridItem>
-          <Box display={"grid"} width="40%" padding={"20px"} gap="17px">
+      {/* <Grid templateColumns="repeat(2, 1fr)"> */}
+       <HStack>
+        <VStack border="1px solid red" position="fixed" top="30px"  >
+
+
             <Sorting />
-            <ProductManagement />
-          </Box>
-        </GridItem>
-        <GridItem marginLeft="-440px" marginTop="70px" w={"1200px"} h={"auto"}>
-          <Box>
             <Select w={"200px"} color="black" bg={"grey"}>
               {" "}
               <option value="Sort By Price">Sort By Price</option>
               <option value="High">High</option>{" "}
               <option value="Low">Low</option>{" "}
             </Select>
-          </Box>
+        
+            <ProductManagement />
+          
+        </VStack>
+       
+        {/* <GridItem marginTop="70px" h={"auto"} ml="25%" > */}
 
           <DisplayProducts data={data} />
-        </GridItem>
-      </Grid>
+        {/* </GridItem> */}
+       </HStack>
+      {/* </Grid> */}
     </>
   );
 }
