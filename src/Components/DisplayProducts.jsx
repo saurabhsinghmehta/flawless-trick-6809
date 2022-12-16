@@ -1,22 +1,24 @@
-import { Box, Grid, GridItem, Image } from "@chakra-ui/react";
+import { Box,SimpleGrid, GridItem, Image,Stack } from "@chakra-ui/react";
 import React from "react";
 
 function DisplayProducts({ data }) {
   return (
-    <div style={{ border: "2px solid red" }}>
+    <div style={{ width:"100%",marginLeft:"300px" }}>
       {" "}
-      <Grid templateColumns="repeat(3,1fr)" marginLeft={"50px"} gap="10px">
+      {/* <Stack direction={{ lg: "row",xl:"row","2xl":"row", md: "column",base:"column",sm:"column" }} spacing="50px"> */}
+      <SimpleGrid minChildWidth='250px' spacing='40px' marginTop='30px' textAlign='center'  padding="2%">
         {data.map((product) => (
-          <GridItem key={product.id}>
-            <Box w={"300px"}>
+          // <GridItem key={product.id}>
+            <Box >
               <Image w={"100%"} src={product.image} /> <h2>{product.title}</h2>
               <h4>{product.category}</h4>
               <h3>{product.price}</h3>
               <p>{product.details}</p>
             </Box>
-          </GridItem>
+          // </GridItem>
         ))}
-      </Grid>
+      </SimpleGrid>
+      {/* </Stack> */}
     </div>
   );
 }
