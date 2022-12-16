@@ -100,13 +100,11 @@ export default function LargeWithAppLinksAndSocial() {
 
           <Stack align={"flex-start"}>
             <ListHeader>Install App</ListHeader>
-            {/* <AppStoreBadge /> */}
-            <div style={{ width: "50%" }}>
+            <div style={{ width: "100%" }}>
               <a href="#">
                 <img src={PlayStore_logo} alt="PlayStore_logo" />
               </a>
             </div>
-            {/* <PlayStoreBadge /> */}
           </Stack>
         </SimpleGrid>
       </Container>
