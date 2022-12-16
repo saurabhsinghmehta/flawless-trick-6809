@@ -21,13 +21,13 @@ function ProductManagement() {
           <div>
             <Select name="category" onChange={""}>
               <option value="">Select Category</option>
-              <option value="pune">Biryani</option>
-              <option value="delhi">Burger</option>
-              <option value="goa">exclusivedeal</option>
-              <option value="mumbai">boxmeal </option>
-              <option value="mumbai">snacks </option>
-              <option value="mumbai">stayhomespecial </option>
-              <option value="mumbai">beverages </option>
+              <option value="Biryani">Biryani</option>
+              <option value="Burger">Burger</option>
+              <option value="exclusivedeal">exclusivedeal</option>
+              <option value="boxmeal">boxmeal </option>
+              <option value="snacks">snacks </option>
+              <option value="stayhomespecial">stayhomespecial </option>
+              <option value="beverages">beverages </option>
             </Select>
           </div>
           <div>
