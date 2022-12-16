@@ -4,15 +4,15 @@ import { Box, Container, Flex, Heading ,Text,SimpleGrid,Image,Button, Input} fro
 import { useDispatch, useSelector } from 'react-redux';
 import { getMenuData } from '../Redux/Menudata/action';
  const cat=[
-   { id:1, name:"CHICKEN" }, 
-   { id:2, name:"EXCLUSIVE DEALS" }, 
-   { id:3, name:"NEW LAUNCH" }, 
-   { id:4, name:"BIRIYANI" }, 
-   { id:5, name:"BOX MEALS" }, 
-   { id:6, name:"BURGERS" }, 
-   { id:7, name:"SNACKS" }, 
-   { id:8, name:"STAY HOME SPECIAL" }, 
-   { id:9, name:"BEVERAGES" } 
+   { id:1, cate:"CHICKEN" }, 
+   { id:2, cate:"EXCLUSIVE DEALS" }, 
+   { id:3, cate:"NEW LAUNCH" }, 
+   { id:4, cate:"BIRIYANI" }, 
+   { id:5, cate:"BOX MEALS" }, 
+   { id:6, cate:"BURGERS" }, 
+   { id:7, cate:"SNACKS" }, 
+   { id:8, cate:"STAY HOME SPECIAL" }, 
+   { id:9, cate:"BEVERAGES" } 
   ] 
 
 
@@ -31,17 +31,18 @@ import { getMenuData } from '../Redux/Menudata/action';
     <Navbar /> 
     
     <Box marginTop='120px'> 
-    <Flex> <Box width='350px'> 
+    <Flex> 
+      <Box width='350px' position='fixed'> 
     <Heading fontWeight='extrabold'>BFC MENU</Heading> 
     <Box> {cat.map((ele)=>( 
     <Box key={ele.id} marginTop='20px' > 
-    <Text fontWeight='bold'>{ele.name}</Text> 
+    <Text fontWeight='bold'>{ele.cate}</Text> 
     </Box> ))} 
     </Box> 
     </Box> 
 
     {/* menudata */}
-   <Box backgroundColor='' width='1000px' textAlign='left'>
+   <Box backgroundColor='' width='1000px' textAlign='left' marginLeft='350px'>
      <Input placeholder='Search our menu' marginBottom='30px' />
   
     <hr />
@@ -49,7 +50,7 @@ import { getMenuData } from '../Redux/Menudata/action';
     
     {cat.map((it)=>(
         <Container maxW='900px' marginY='60px' key={it.id}>
-        <Heading fontWeight='extrabold'>{it.name}</Heading>  
+        <Heading fontWeight='extrabold'>{it.cate}</Heading>  
    
         <SimpleGrid minChildWidth='250px' spacing='40px' marginTop='30px' textAlign='center'>
    
