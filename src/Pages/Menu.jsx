@@ -1,8 +1,6 @@
-
-import Footer from "../Components/Footer";
 import React, { useEffect } from 'react'; 
 import Navbar from '../Components/Navbar'; 
-import { Box, Flex, Heading ,Text} from '@chakra-ui/react';
+import { Box, Container, Flex, Heading ,Text,SimpleGrid,Image,Button, Input} from '@chakra-ui/react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getMenuData } from '../Redux/Menudata/action';
  const cat=[
@@ -41,7 +39,35 @@ import { getMenuData } from '../Redux/Menudata/action';
     </Box> ))} 
     </Box> 
     </Box> 
-    <Box backgroundColor='red' width='1000px' color='white'>helllo</Box> 
+
+    {/* menudata */}
+   <Box backgroundColor='' width='1000px' textAlign='left'>
+     <Input placeholder='Search our menu' marginBottom='30px' />
+  
+    <hr />
+
+    
+    {cat.map((it)=>(
+        <Container maxW='900px' marginY='60px' key={it.id}>
+        <Heading fontWeight='extrabold'>{it.name}</Heading>  
+   
+        <SimpleGrid minChildWidth='250px' spacing='40px' marginTop='30px' textAlign='center'>
+   
+         {menuData.chicken && menuData.chicken.map((ele)=>(
+           <Box boxShadow= 'rgba(0, 0, 0, 0.35) 0px 5px 15px' padding='10px' lineHeight='30px' key={ele.id}>
+           <Image src={ele.image} alt='' width='250px' height='200px' />
+           <Text fontWeight='bold'>{ele.title}</Text>
+           <Text>{ele.category}</Text>
+           <Text fontWeight='bold'>$ {ele.price}</Text>
+           <Text>{ele.detail}</Text>
+           <Button backgroundColor='red' color='white' borderRadius='25px' padding='20px'>Add to Cart</Button>
+          </Box>
+         ))}
+     </SimpleGrid>
+    </Container>  
+    ))}
+ 
+    </Box> 
     </Flex> 
     </Box> 
     </div> 
