@@ -105,42 +105,6 @@ const Home = () => {
          </SimpleGrid>
          </Container>
 
-
-      {/* Browse Categories */}
-      <Container maxW="1200px">
-        <Flex alignItems="center" justifyContent="space-evenly">
-          <Heading size="xl" paddingY="40px" fontWeight="bold">
-            BROWSE CATEGORIES
-          </Heading>
-          <Box height="5px" width="600px" backgroundColor="#f8f7f5" />
-        </Flex>
-      </Container>
-      <Container maxW="1100px">
-        <SimpleGrid minChildWidth="200px" spacing="40px">
-          {data &&
-            data.map((item) => (
-              <Box bg="#f8f7f5">
-                <Image src={item.img} alt="ic" />
-                <Heading size="sm" paddingY="30px" fontWeight="extrabold">
-                  {item.title}
-                </Heading>
-              </Box>
-            ))}
-          <Box bg="#f8f7f5">
-            <Image
-              src="https://online.kfc.co.in/static/media/finger_lickin.fc21c805.svg"
-              alt="ic"
-              width="200px"
-              marginLeft="20px"
-              marginTop="30px"
-            />
-            <Text size="sm" paddingY="40px" fontWeight="bold">
-              View All Menu -----{" "}
-            </Text>
-          </Box>
-        </SimpleGrid>
-      </Container>
-
       {/* Offers&Deals */}
       <Box backgroundColor="#202124" marginTop="80px">
         <Container maxW="1000px" paddingTop="50px">
