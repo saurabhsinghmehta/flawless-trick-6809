@@ -1,18 +1,5 @@
 
-import React from "react";
 import Footer from "../Components/Footer";
-
-const Menu = () => {
-  return (
-    <div>
-      Menu
-      <Footer />
-    </div>
-  );
-};
-
-export default Menu;
-
 import React, { useEffect } from 'react'; 
 import Navbar from '../Components/Navbar'; 
 import { Box, Flex, Heading ,Text} from '@chakra-ui/react';
