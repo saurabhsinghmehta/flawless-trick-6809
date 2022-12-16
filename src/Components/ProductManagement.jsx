@@ -1,7 +1,34 @@
 import { Box, Input, Select, Button } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 import styles from "../CSS/ProductMgtStyles.css";
 function ProductManagement() {
+  //handling the input value
+  const [title, setTitle] = useState("");
+  const [category, setCategory] = useState("");
+  const [img, setImg] = useState("");
+  const [dis, setDis] = useState("");
+  const [price, setPrice] = useState();
+
+  const handleTitle = (event) => {
+    event.preventDefault();
+    setTitle(event.target.value);
+  };
+  const handleCategory = (event) => {
+    event.preventDefault();
+    setCategory(event.target.value);
+  };
+  const handleImg = (event) => {
+    event.preventDefault();
+    setImg(event.target.value);
+  };
+  const handleDis = (event) => {
+    event.preventDefault();
+    setDis(event.target.value);
+  };
+  const handlePrice = (event) => {
+    event.preventDefault();
+    setPrice(event.target.value);
+  };
   return (
     <>
       {" "}
@@ -13,13 +40,13 @@ function ProductManagement() {
               placeholder="title"
               type="text"
               name={""}
-              value={""}
+              value={title}
               className={styles.form_Input}
-              onChange={""}
+              onChange={(event) => handleTitle(event)}
             />
           </div>
           <div>
-            <Select name="category" onChange={""}>
+            <Select name="category" value={category} onChange={handleCategory}>
               <option value="">Select Category</option>
               <option value="Biryani">Biryani</option>
               <option value="Burger">Burger</option>
@@ -32,28 +59,28 @@ function ProductManagement() {
           </div>
           <div>
             <Input
-              type="url"
+              type="URL"
               placeholder="Image URL"
-              value={""}
+              value={img}
               name={""}
-              onChange={""}
+              onChange={(event) => handleImg(event)}
             />
           </div>
           <div className={styles.form_element_div}>
             <Input
               type="text"
-              value={""}
+              value={dis}
               name={""}
-              onChange={""}
+              onChange={(event) => handleDis(event)}
               placeholder="description"
             />
           </div>
           <div className={styles.form_element_div}>
             <Input
               type="number"
-              value={""}
+              value={price}
               name={""}
-              onChange={""}
+              onChange={(event) => handlePrice(event)}
               placeholder="price"
             />
           </div>

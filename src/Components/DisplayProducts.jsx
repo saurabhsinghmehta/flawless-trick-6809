@@ -2,7 +2,6 @@ import { Box, Grid, GridItem, Image } from "@chakra-ui/react";
 import React from "react";
 
 function DisplayProducts({ data }) {
-  // console.log(data);
   return (
     <div style={{ border: "2px solid red" }}>
       {" "}
