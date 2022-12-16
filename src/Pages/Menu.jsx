@@ -48,9 +48,8 @@ import { getMenuData } from '../Redux/Menudata/action';
     <hr />
 
     
-    {cat.map((it)=>(
-        <Container maxW='900px' marginY='60px' key={it.id}>
-        <Heading fontWeight='extrabold'>{it.cate}</Heading>  
+        <Container maxW='900px' marginY='60px' >
+        <Heading fontWeight='extrabold'>Chicken</Heading>  
    
         <SimpleGrid minChildWidth='250px' spacing='40px' marginTop='30px' textAlign='center'>
    
@@ -66,7 +65,150 @@ import { getMenuData } from '../Redux/Menudata/action';
          ))}
      </SimpleGrid>
     </Container>  
-    ))}
+
+    <Container maxW='900px' marginY='60px' >
+        <Heading fontWeight='extrabold'>Exclusive Deals</Heading>  
+   
+        <SimpleGrid minChildWidth='250px' spacing='40px' marginTop='30px' textAlign='center'>
+   
+         {menuData.exclusivedeal && menuData.exclusivedeal.map((ele)=>(
+           <Box boxShadow= 'rgba(0, 0, 0, 0.35) 0px 5px 15px' padding='10px' lineHeight='30px' key={ele.id}>
+           <Image src={ele.image} alt='' width='250px' height='200px' />
+           <Text fontWeight='bold'>{ele.title}</Text>
+           <Text>{ele.category}</Text>
+           <Text fontWeight='bold'>$ {ele.price}</Text>
+           <Text>{ele.detail}</Text>
+           <Button backgroundColor='red' color='white' borderRadius='25px' padding='20px'>Add to Cart</Button>
+          </Box>
+         ))}
+     </SimpleGrid>
+    </Container> 
+
+    <Container maxW='900px' marginY='60px' >
+        <Heading fontWeight='extrabold'>New Launch</Heading>  
+   
+        <SimpleGrid minChildWidth='250px' spacing='40px' marginTop='30px' textAlign='center'>
+   
+         {menuData.newlaunch && menuData.newlaunch.map((ele)=>(
+           <Box boxShadow= 'rgba(0, 0, 0, 0.35) 0px 5px 15px' padding='10px' lineHeight='30px' key={ele.id}>
+           <Image src={ele.image} alt='' width='250px' height='200px' />
+           <Text fontWeight='bold'>{ele.title}</Text>
+           <Text>{ele.category}</Text>
+           <Text fontWeight='bold'>$ {ele.price}</Text>
+           <Text>{ele.detail}</Text>
+           <Button backgroundColor='red' color='white' borderRadius='25px' padding='20px'>Add to Cart</Button>
+          </Box>
+         ))}
+     </SimpleGrid>
+    </Container> 
+
+    <Container maxW='900px' marginY='60px' >
+        <Heading fontWeight='extrabold'>Biriyani</Heading>  
+   
+        <SimpleGrid minChildWidth='250px' spacing='40px' marginTop='30px' textAlign='center'>
+   
+         {menuData.biryani && menuData.biryani.map((ele)=>(
+           <Box boxShadow= 'rgba(0, 0, 0, 0.35) 0px 5px 15px' padding='10px' lineHeight='30px' key={ele.id}>
+           <Image src={ele.image} alt='' width='250px' height='200px' />
+           <Text fontWeight='bold'>{ele.title}</Text>
+           <Text>{ele.category}</Text>
+           <Text fontWeight='bold'>$ {ele.price}</Text>
+           <Text>{ele.detail}</Text>
+           <Button backgroundColor='red' color='white' borderRadius='25px' padding='20px'>Add to Cart</Button>
+          </Box>
+         ))}
+     </SimpleGrid>
+    </Container> 
+
+    <Container maxW='900px' marginY='60px' >
+        <Heading fontWeight='extrabold'>Box Meals</Heading>  
+   
+        <SimpleGrid minChildWidth='250px' spacing='40px' marginTop='30px' textAlign='center'>
+   
+         {menuData.boxmeal && menuData.boxmeal.map((ele)=>(
+           <Box boxShadow= 'rgba(0, 0, 0, 0.35) 0px 5px 15px' padding='10px' lineHeight='30px' key={ele.id}>
+           <Image src={ele.image} alt='' width='250px' height='200px' />
+           <Text fontWeight='bold'>{ele.title}</Text>
+           <Text>{ele.category}</Text>
+           <Text fontWeight='bold'>$ {ele.price}</Text>
+           <Text>{ele.detail}</Text>
+           <Button backgroundColor='red' color='white' borderRadius='25px' padding='20px'>Add to Cart</Button>
+          </Box>
+         ))}
+     </SimpleGrid>
+    </Container> 
+
+    <Container maxW='900px' marginY='60px' >
+        <Heading fontWeight='extrabold'>Burgers</Heading>  
+   
+        <SimpleGrid minChildWidth='250px' spacing='40px' marginTop='30px' textAlign='center'>
+   
+         {menuData.burger && menuData.burger.map((ele)=>(
+           <Box boxShadow= 'rgba(0, 0, 0, 0.35) 0px 5px 15px' padding='10px' lineHeight='30px' key={ele.id}>
+           <Image src={ele.image} alt='' width='250px' height='200px' />
+           <Text fontWeight='bold'>{ele.title}</Text>
+           <Text>{ele.category}</Text>
+           <Text fontWeight='bold'>$ {ele.price}</Text>
+           <Text>{ele.detail}</Text>
+           <Button backgroundColor='red' color='white' borderRadius='25px' padding='20px'>Add to Cart</Button>
+          </Box>
+         ))}
+     </SimpleGrid>
+    </Container> 
+
+    <Container maxW='900px' marginY='60px' >
+        <Heading fontWeight='extrabold'>Snacks</Heading>  
+   
+        <SimpleGrid minChildWidth='250px' spacing='40px' marginTop='30px' textAlign='center'>
+   
+         {menuData.snacks && menuData.snacks.map((ele)=>(
+           <Box boxShadow= 'rgba(0, 0, 0, 0.35) 0px 5px 15px' padding='10px' lineHeight='30px' key={ele.id}>
+           <Image src={ele.image} alt='' width='250px' height='200px' />
+           <Text fontWeight='bold'>{ele.title}</Text>
+           <Text>{ele.category}</Text>
+           <Text fontWeight='bold'>$ {ele.price}</Text>
+           <Text>{ele.detail}</Text>
+           <Button backgroundColor='red' color='white' borderRadius='25px' padding='20px'>Add to Cart</Button>
+          </Box>
+         ))}
+     </SimpleGrid>
+    </Container> 
+
+    <Container maxW='900px' marginY='60px' >
+        <Heading fontWeight='extrabold'>Stay Home Special</Heading>  
+   
+        <SimpleGrid minChildWidth='250px' spacing='40px' marginTop='30px' textAlign='center'>
+   
+         {menuData.stayhomespecial && menuData.stayhomespecial.map((ele)=>(
+           <Box boxShadow= 'rgba(0, 0, 0, 0.35) 0px 5px 15px' padding='10px' lineHeight='30px' key={ele.id}>
+           <Image src={ele.image} alt='' width='250px' height='200px' />
+           <Text fontWeight='bold'>{ele.title}</Text>
+           <Text>{ele.category}</Text>
+           <Text fontWeight='bold'>$ {ele.price}</Text>
+           <Text>{ele.detail}</Text>
+           <Button backgroundColor='red' color='white' borderRadius='25px' padding='20px'>Add to Cart</Button>
+          </Box>
+         ))}
+     </SimpleGrid>
+    </Container> 
+
+    <Container maxW='900px' marginY='60px' >
+        <Heading fontWeight='extrabold'>Beverages</Heading>  
+   
+        <SimpleGrid minChildWidth='250px' spacing='40px' marginTop='30px' textAlign='center'>
+   
+         {menuData.beverages && menuData.beverages.map((ele)=>(
+           <Box boxShadow= 'rgba(0, 0, 0, 0.35) 0px 5px 15px' padding='10px' lineHeight='30px' key={ele.id}>
+           <Image src={ele.image} alt='' width='250px' height='200px' />
+           <Text fontWeight='bold'>{ele.title}</Text>
+           <Text>{ele.category}</Text>
+           <Text fontWeight='bold'>$ {ele.price}</Text>
+           <Text>{ele.detail}</Text>
+           <Button backgroundColor='red' color='white' borderRadius='25px' padding='20px'>Add to Cart</Button>
+          </Box>
+         ))}
+     </SimpleGrid>
+    </Container> 
  
     </Box> 
     </Flex> 
