@@ -8,6 +8,7 @@ import Home from "../Pages/Home";
 import Login from "../Pages/Login";
 import Otp from "../Pages/Otp";
 import Cart from "../Pages/Cart";
+import Deals from "../Pages/Deals";
 function MainRoutes() {
   return (
     <Routes>
@@ -16,7 +17,10 @@ function MainRoutes() {
       <Route path="/login" element={<Login />} />
       <Route path="/cart" element={<Cart />} />
       <Route path="/otp" element={<Otp />} />
+      <Route path="/deals" element={<Deals />} />
+
       <Route path="/admin" element={<AdminDashboard />} />
+
       <Route path="/prod_managment" element={<ProductManagement />} />
       <Route path="/admin_sorting" element={<Sorting />} />
     </Routes>
