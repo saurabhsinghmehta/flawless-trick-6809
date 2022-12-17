@@ -135,7 +135,7 @@ function Sorting() {
           <label htmlFor="">beverages</label>
         </div>
       </div>
-      <h1>Sort By Price</h1>
+      {/* <h1>Sort By Price</h1>
 
       <div onChange={handlesort}>
         <input
@@ -153,7 +153,7 @@ function Sorting() {
           defaultChecked={sort === "desc"}
         />
         <label htmlFor="">Descending</label>
-      </div>
+      </div> */}
     </div>
   );
 }

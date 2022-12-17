@@ -20,12 +20,19 @@ import ProductManagement from "../Components/ProductManagement";
 import { UserAuth } from "./Context/UserAuthContext";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 
 function AdminDashboard() {
   const { user, logOut } = UserAuth();
   const location=useLocation();
   const [flag,setflag]=useState(false)
   const navigate = useNavigate();
+
+  const [searchParams, setsearchParams] = useSearchParams();
+  // let initialCategory=searchParams.get("category");
+  // const initialsort = searchParams.getAll("sort");
+  // const [sort, setsort] = useState(initialsort[0] || "");
+
   // console.log(user);
   const data = useSelector((state) => state.Sortingreducer.data);
   // console.log(data)
@@ -47,6 +54,7 @@ function AdminDashboard() {
 
   
   const handleSort=(e)=>{
+    // setsort(e.target.value);
     // setData(data)
     console.log(e.target.value)
     if(e.target.value=="High"){
@@ -72,7 +80,11 @@ function AdminDashboard() {
   },[] );
   
   useEffect(()=>{
+    let params={};
     
+    // params.category=initialCategory;
+    // sort&&(params.sort=sort);
+    // setsearchParams(params)
     setData(data)
   },[flag,location.search])
  
