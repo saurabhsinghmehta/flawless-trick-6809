@@ -5,22 +5,7 @@ function Cart() {
   return (
     <div>
       {" "}
-      <Navbar /> cart 
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+      <Navbar /> cart
       <LargeWithAppLinksAndSocial />{" "}
     </div>
   );
