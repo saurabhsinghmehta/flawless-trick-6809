@@ -15,6 +15,7 @@ function MainRoutes() {
       <Route path="/" element={<Home />} />
       <Route path="/menu" element={<Menu />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/deals" element={<Deals />} />
       <Route path="/cart" element={<Cart />} />
       <Route path="/otp" element={<Otp />} />
       <Route path="/deals" element={<Deals />} />
