@@ -19,9 +19,7 @@ function MainRoutes() {
       <Route path="/cart" element={<Cart />} />
       <Route path="/otp" element={<Otp />} />
       <Route path="/deals" element={<Deals />} />
-
       <Route path="/admin" element={<AdminDashboard />} />
-
       <Route path="/prod_managment" element={<ProductManagement />} />
       <Route path="/admin_sorting" element={<Sorting />} />
     </Routes>

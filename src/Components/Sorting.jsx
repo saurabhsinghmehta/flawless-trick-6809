@@ -7,25 +7,12 @@ import { getData } from "../Redux/Sorting/actiontype";
 function Sorting() {
   const dispatch = useDispatch();
   const data = useSelector((state) => state.Sortingreducer.data);
- 
 
   const [searchParams, setsearchParams] = useSearchParams();
   const initialCategory = searchParams.get("category");
-  // console.log(initialCategory)
   const initialsort = searchParams.getAll("sort");
   const [sort, setsort] = useState(initialsort[0] || "");
-
   const [category, setcategory] = useState(initialCategory || "biryani");
-
-  // const handlefilter=(e)=>{
-  //   const newCategories=[...category];
-  //   if(newCategories.includes(e.target.value)){
-  //       newCategories.splice(newCategories.indexOf(e.target.value),1);
-  //   }else{
-  //     newCategories.push(e.target.value);
-  //   }
-  //   setcategory(newCategories);
-  // }
 
   const handlefilter = (e) => {
     setcategory(e.target.value);
@@ -50,8 +37,8 @@ function Sorting() {
 
   // console.log(category)
   return (
-    <div id="filteri_ng" style={{ width: "300px"}} >
-      <h1 style={{marginBottom:"2%"}}>Filter Component</h1>
+    <div id="filteri_ng" style={{ width: "300px" }}>
+      <h1 style={{ marginBottom: "2%" }}>Filter Component</h1>
       <div>
         <div>
           <input
@@ -135,7 +122,7 @@ function Sorting() {
           <label htmlFor="">beverages</label>
         </div>
       </div>
-      {/* <h1>Sort By Price</h1>
+      <h1>Sort By Price</h1>
 
       <div onChange={handlesort}>
         <input
@@ -153,7 +140,7 @@ function Sorting() {
           defaultChecked={sort === "desc"}
         />
         <label htmlFor="">Descending</label>
-      </div> */}
+      </div>
     </div>
   );
 }
