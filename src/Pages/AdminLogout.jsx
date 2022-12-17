@@ -174,7 +174,6 @@ const AdminLogout = () => {
           type="password"
           name="password"
           placeholder="Password"
-          maxLength="10"
           required
           onChange={(e) => setPassword(e.target.value)}
         />

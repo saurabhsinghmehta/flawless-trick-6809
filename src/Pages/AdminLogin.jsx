@@ -62,6 +62,10 @@ const AdminLogin = () => {
   //       });
   //   };
 
+  const goToHome = () => {
+    navigate("/");
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
@@ -184,7 +188,6 @@ const AdminLogin = () => {
           type="Password"
           name="Password"
           placeholder="Password"
-          maxLength="10"
           required
           onChange={(e) => setPassword(e.target.value)}
         />
@@ -286,6 +289,21 @@ const AdminLogin = () => {
           Click me
         </a>
       </div>
+      <button
+        style={{
+          backgroundColor: "transparent",
+          color: "black",
+          border: "1px solid black",
+          fontSize: ".9rem",
+          padding: ".9rem 5rem",
+          borderRadius: "50px",
+          marginBottom: "3rem",
+          marginTop: "3rem",
+        }}
+        onClick={goToHome}
+      >
+        Skip, Continue As Guest
+      </button>
     </div>
   );
 };
