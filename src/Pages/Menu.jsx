@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'; 
+import React, { useEffect, useState } from 'react'; 
 import Navbar from '../Components/Navbar'; 
 import { Box, Container, Flex, Heading ,Text,SimpleGrid,Image,Button, Input} from '@chakra-ui/react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -21,6 +21,7 @@ import "../CSS/menu.css"
 
   const menuData=useSelector((store)=>store.Menureducer.menudata);
   const dispatch =useDispatch();
+  const [query,setQuery]=useState("");
 
   useEffect(()=>{
     dispatch(getMenuData());
@@ -44,7 +45,7 @@ import "../CSS/menu.css"
 
     {/* menudata */}
    <Box id="menu-data" backgroundColor='' width='1000px' textAlign='left' marginLeft='350px'>
-     <Input placeholder='Search our menu' marginBottom='30px' />
+     <Input placeholder='Search our menu' marginBottom='30px' value={query} onChange={(e)=>setQuery(e.target.value)} />
   
     <hr />
 
