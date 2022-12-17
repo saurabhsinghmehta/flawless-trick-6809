@@ -6,6 +6,8 @@ import { getData } from "../Redux/Sorting/actiontype";
 
 function Sorting() {
   const dispatch = useDispatch();
+  const data = useSelector((state) => state.Sortingreducer.data);
+ 
 
   const [searchParams, setsearchParams] = useSearchParams();
   const initialCategory = searchParams.get("category");
@@ -43,6 +45,7 @@ function Sorting() {
     sort && (params.sort = sort);
     setsearchParams(params);
     dispatch(getData(category));
+    // console.log(data)
   }, [category, setsearchParams, sort]);
 
   // console.log(category)
@@ -132,9 +135,9 @@ function Sorting() {
           <label htmlFor="">beverages</label>
         </div>
       </div>
-      {/* <h1>Sort By Price</h1> */}
+      <h1>Sort By Price</h1>
 
-      {/* <div onChange={handlesort}>
+      <div onChange={handlesort}>
         <input
           type="radio"
           name="sortBy"
@@ -150,7 +153,7 @@ function Sorting() {
           defaultChecked={sort === "desc"}
         />
         <label htmlFor="">Descending</label>
-      </div> */}
+      </div>
     </div>
   );
 }
