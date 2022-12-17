@@ -11,12 +11,14 @@ import AdminLogin from "../Pages/AdminLogin";
 import AdminLogout from "../Pages/AdminLogout";
 import { UserAuthContextProvider } from "../Pages/Context/UserAuthContext";
 import ProtectedRoute from "../Components/ProtectedRoute";
+import Deals from "../Pages/Deals";
 function MainRoutes() {
   return (
     <UserAuthContextProvider>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/menu" element={<Menu />} />
+        <Route path="/deals" element={<Deals/>} />
         <Route path="/login" element={<Login />} />
         <Route path="/adminlogin" element={<AdminLogin />} />
         <Route path="/adminlogout" element={<AdminLogout />} />
