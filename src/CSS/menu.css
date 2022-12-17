@@ -1,0 +1,15 @@
+@media screen and (min-width: 250px) and (max-width: 650px) {
+    body {
+      background-color: lightgreen;
+    }
+    #menu{
+        display: none;
+        width: 0px;
+        justify-content: center;
+    }
+    #menu-data{
+        margin: auto;
+        width: 100%;
+        justify-content: center;
+    }
+  }

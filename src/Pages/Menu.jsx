@@ -3,6 +3,7 @@ import Navbar from '../Components/Navbar';
 import { Box, Container, Flex, Heading ,Text,SimpleGrid,Image,Button, Input} from '@chakra-ui/react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getMenuData } from '../Redux/Menudata/action';
+import "../CSS/menu.css"
  const cat=[
    { id:1, cate:"CHICKEN" }, 
    { id:2, cate:"EXCLUSIVE DEALS" }, 
@@ -32,7 +33,7 @@ import { getMenuData } from '../Redux/Menudata/action';
     
     <Box marginTop='120px'> 
     <Flex> 
-      <Box width='350px' position='fixed'> 
+      <Box width='350px' position='fixed' id="menu"> 
     <Heading fontWeight='extrabold'>BFC MENU</Heading> 
     <Box> {cat.map((ele)=>( 
     <Box key={ele.id} marginTop='20px' > 
@@ -42,7 +43,7 @@ import { getMenuData } from '../Redux/Menudata/action';
     </Box> 
 
     {/* menudata */}
-   <Box backgroundColor='' width='1000px' textAlign='left' marginLeft='350px'>
+   <Box id="menu-data" backgroundColor='' width='1000px' textAlign='left' marginLeft='350px'>
      <Input placeholder='Search our menu' marginBottom='30px' />
   
     <hr />
@@ -51,10 +52,10 @@ import { getMenuData } from '../Redux/Menudata/action';
         <Container maxW='900px' marginY='60px' >
         <Heading fontWeight='extrabold'>Chicken</Heading>  
    
-        <SimpleGrid minChildWidth='250px' spacing='40px' marginTop='30px' textAlign='center'>
+        <SimpleGrid minChildWidth='250px' spacing='40px' marginTop='30px' textAlign='center' border="0px solid red">
    
          {menuData.chicken && menuData.chicken.map((ele)=>(
-           <Box boxShadow= 'rgba(0, 0, 0, 0.35) 0px 5px 15px' padding='10px' lineHeight='30px' key={ele.id}>
+           <Box boxShadow= 'rgba(0, 0, 0, 0.35) 0px 5px 15px' padding='10px' lineHeight='30px' key={ele.id} maxWidth="300px">
            <Image src={ele.image} alt='' width='250px' height='200px' />
            <Text fontWeight='bold'>{ele.title}</Text>
            <Text>{ele.category}</Text>
@@ -72,8 +73,8 @@ import { getMenuData } from '../Redux/Menudata/action';
         <SimpleGrid minChildWidth='250px' spacing='40px' marginTop='30px' textAlign='center'>
    
          {menuData.exclusivedeal && menuData.exclusivedeal.map((ele)=>(
-           <Box boxShadow= 'rgba(0, 0, 0, 0.35) 0px 5px 15px' padding='10px' lineHeight='30px' key={ele.id}>
-           <Image src={ele.image} alt='' width='250px' height='200px' />
+           <Box boxShadow= 'rgba(0, 0, 0, 0.35) 0px 5px 15px' padding='10px' lineHeight='30px' key={ele.id} maxWidth="300px">
+           <Image  src={ele.image} alt='' width='250px' height='200px' justifyContent="center" />
            <Text fontWeight='bold'>{ele.title}</Text>
            <Text>{ele.category}</Text>
            <Text fontWeight='bold'>$ {ele.price}</Text>
@@ -90,7 +91,7 @@ import { getMenuData } from '../Redux/Menudata/action';
         <SimpleGrid minChildWidth='250px' spacing='40px' marginTop='30px' textAlign='center'>
    
          {menuData.newlaunch && menuData.newlaunch.map((ele)=>(
-           <Box boxShadow= 'rgba(0, 0, 0, 0.35) 0px 5px 15px' padding='10px' lineHeight='30px' key={ele.id}>
+           <Box boxShadow= 'rgba(0, 0, 0, 0.35) 0px 5px 15px' padding='10px' lineHeight='30px' key={ele.id} maxWidth="300px">
            <Image src={ele.image} alt='' width='250px' height='200px' />
            <Text fontWeight='bold'>{ele.title}</Text>
            <Text>{ele.category}</Text>
@@ -108,7 +109,7 @@ import { getMenuData } from '../Redux/Menudata/action';
         <SimpleGrid minChildWidth='250px' spacing='40px' marginTop='30px' textAlign='center'>
    
          {menuData.biryani && menuData.biryani.map((ele)=>(
-           <Box boxShadow= 'rgba(0, 0, 0, 0.35) 0px 5px 15px' padding='10px' lineHeight='30px' key={ele.id}>
+           <Box boxShadow= 'rgba(0, 0, 0, 0.35) 0px 5px 15px' padding='10px' lineHeight='30px' key={ele.id} maxWidth="300px">
            <Image src={ele.image} alt='' width='250px' height='200px' />
            <Text fontWeight='bold'>{ele.title}</Text>
            <Text>{ele.category}</Text>
@@ -126,7 +127,7 @@ import { getMenuData } from '../Redux/Menudata/action';
         <SimpleGrid minChildWidth='250px' spacing='40px' marginTop='30px' textAlign='center'>
    
          {menuData.boxmeal && menuData.boxmeal.map((ele)=>(
-           <Box boxShadow= 'rgba(0, 0, 0, 0.35) 0px 5px 15px' padding='10px' lineHeight='30px' key={ele.id}>
+           <Box boxShadow= 'rgba(0, 0, 0, 0.35) 0px 5px 15px' padding='10px' lineHeight='30px' key={ele.id} maxWidth="300px">
            <Image src={ele.image} alt='' width='250px' height='200px' />
            <Text fontWeight='bold'>{ele.title}</Text>
            <Text>{ele.category}</Text>
@@ -144,7 +145,7 @@ import { getMenuData } from '../Redux/Menudata/action';
         <SimpleGrid minChildWidth='250px' spacing='40px' marginTop='30px' textAlign='center'>
    
          {menuData.burger && menuData.burger.map((ele)=>(
-           <Box boxShadow= 'rgba(0, 0, 0, 0.35) 0px 5px 15px' padding='10px' lineHeight='30px' key={ele.id}>
+           <Box boxShadow= 'rgba(0, 0, 0, 0.35) 0px 5px 15px' padding='10px' lineHeight='30px' key={ele.id} maxWidth="300px">
            <Image src={ele.image} alt='' width='250px' height='200px' />
            <Text fontWeight='bold'>{ele.title}</Text>
            <Text>{ele.category}</Text>
@@ -162,7 +163,7 @@ import { getMenuData } from '../Redux/Menudata/action';
         <SimpleGrid minChildWidth='250px' spacing='40px' marginTop='30px' textAlign='center'>
    
          {menuData.snacks && menuData.snacks.map((ele)=>(
-           <Box boxShadow= 'rgba(0, 0, 0, 0.35) 0px 5px 15px' padding='10px' lineHeight='30px' key={ele.id}>
+           <Box boxShadow= 'rgba(0, 0, 0, 0.35) 0px 5px 15px' padding='10px' lineHeight='30px' key={ele.id} maxWidth="300px">
            <Image src={ele.image} alt='' width='250px' height='200px' />
            <Text fontWeight='bold'>{ele.title}</Text>
            <Text>{ele.category}</Text>
@@ -177,10 +178,10 @@ import { getMenuData } from '../Redux/Menudata/action';
     <Container maxW='900px' marginY='60px' >
         <Heading fontWeight='extrabold'>Stay Home Special</Heading>  
    
-        <SimpleGrid minChildWidth='250px' spacing='40px' marginTop='30px' textAlign='center'>
+        <SimpleGrid minChildWidth='250px' spacing='40px' marginTop='30px' textAlign='center' >
    
          {menuData.stayhomespecial && menuData.stayhomespecial.map((ele)=>(
-           <Box boxShadow= 'rgba(0, 0, 0, 0.35) 0px 5px 15px' padding='10px' lineHeight='30px' key={ele.id}>
+           <Box boxShadow= 'rgba(0, 0, 0, 0.35) 0px 5px 15px' padding='10px' lineHeight='30px' key={ele.id} maxWidth="300px">
            <Image src={ele.image} alt='' width='250px' height='200px' />
            <Text fontWeight='bold'>{ele.title}</Text>
            <Text>{ele.category}</Text>
@@ -198,7 +199,7 @@ import { getMenuData } from '../Redux/Menudata/action';
         <SimpleGrid minChildWidth='250px' spacing='40px' marginTop='30px' textAlign='center'>
    
          {menuData.beverages && menuData.beverages.map((ele)=>(
-           <Box boxShadow= 'rgba(0, 0, 0, 0.35) 0px 5px 15px' padding='10px' lineHeight='30px' key={ele.id}>
+           <Box boxShadow= 'rgba(0, 0, 0, 0.35) 0px 5px 15px' padding='10px' lineHeight='30px' key={ele.id} maxWidth="300px">
            <Image src={ele.image} alt='' width='250px' height='200px' />
            <Text fontWeight='bold'>{ele.title}</Text>
            <Text>{ele.category}</Text>
