@@ -19,13 +19,14 @@ function Cart() {
               padding="2px 25px"
               borderRadius="20px"
               border="1px solid white"
-              _hover={{ bg: "black" }}
+              _hover={{ bg: "red" }}
             >
               Change
             </Button>
           </Heading>
         </Box>
       </Box>
+      cart
       <LargeWithAppLinksAndSocial />{" "}
     </div>
   );
