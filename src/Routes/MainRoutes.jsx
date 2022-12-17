@@ -9,6 +9,7 @@ import Login from "../Pages/Login";
 import Otp from "../Pages/Otp";
 import Cart from "../Pages/Cart";
 import Deals from "../Pages/Deals";
+import AdminLogin from "../Pages/AdminLogin";
 function MainRoutes() {
   return (
     <Routes>
@@ -18,7 +19,7 @@ function MainRoutes() {
       <Route path="/deals" element={<Deals />} />
       <Route path="/cart" element={<Cart />} />
       <Route path="/otp" element={<Otp />} />
-      <Route path="/deals" element={<Deals />} />
+      <Route path="/adminlogin" element={<AdminLogin />} />
       <Route path="/admin" element={<AdminDashboard />} />
       <Route path="/prod_managment" element={<ProductManagement />} />
       <Route path="/admin_sorting" element={<Sorting />} />
