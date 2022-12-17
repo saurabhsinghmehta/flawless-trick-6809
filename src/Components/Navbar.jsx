@@ -17,7 +17,7 @@ const Navbar = () => {
     <Link to='/menu'><Heading size='xs'>Menu</Heading></Link>
   </Box>
   <Box p='2'>
-  <Link to='/deals'><Heading size='xs'>Deals</Heading></Link>
+  <Link to='/offers'><Heading size='xs'>Deals</Heading></Link>
   </Box>
   <Spacer />
     <Link to='/login'><Box p='2' width='90px'>

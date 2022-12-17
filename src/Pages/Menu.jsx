@@ -4,6 +4,7 @@ import { Box, Container, Flex, Heading ,Text,SimpleGrid,Image,Button, Input} fro
 import { useDispatch, useSelector } from 'react-redux';
 import { getMenuData } from '../Redux/Menudata/action';
 import "../CSS/menu.css"
+import Cart from '../Components/Cart';
  const cat=[
    { id:1, cate:"CHICKEN" }, 
    { id:2, cate:"EXCLUSIVE DEALS" }, 
