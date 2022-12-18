@@ -19,7 +19,7 @@ const getCartError = () => {
   };
 };
 
-const GetCartData = (params) => (dispatch) => {
+const GetCartData = () => (dispatch) => {
   // console.log(params)
   dispatch(getCartRequest());
   return axios
