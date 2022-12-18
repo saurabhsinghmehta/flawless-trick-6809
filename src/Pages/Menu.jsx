@@ -381,6 +381,7 @@ const Menu = () => {
                     key={ele.id}
                     maxWidth="300px"
                   >
+                    {/* jsx */}
                     <Image
                       src={ele.image}
                       alt=""
