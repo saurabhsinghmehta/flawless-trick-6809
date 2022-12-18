@@ -1,0 +1,159 @@
+.navbar_checkout {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.4rem;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: white;
+  /* border: 1px solid rgb(26, 212, 72); */
+}
+.navbar_checkout .checkoutAccount {
+  display: flex;
+  width: 15%;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar_checkout .checkoutAccount .needHelp {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.navbar_checkout .checkoutAccount .account {
+  display: flex;
+  width: 35%;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.BackToCart {
+  border-radius: 25px;
+  border: 1px solid rgb(45, 45, 45);
+  padding: 0.8rem 2.4rem;
+  font-weight: bold;
+}
+.BackToCart:hover {
+  color: white;
+  background-color: rgb(41 39 39);
+}
+.checkoutImg {
+  width: 5%;
+}
+.checkoutImg img {
+  width: 100%;
+}
+.checkoutAccount .account > span {
+  cursor: pointer;
+}
+.checkoutAccount .needHelp > span img {
+  width: 1.5rem;
+}
+
+/* --------------main_page------------------- */
+
+.master_checkout {
+  margin-top: 5.66rem;
+  border-top: 1px solid rgb(188, 188, 188);
+  /* border: 2px solid rgb(16, 199, 107); */
+  padding-left: 12%;
+  padding-right: 27%;
+}
+.master_checkout :first-child div {
+  margin-bottom: 1rem;
+}
+.master_checkout .checkout_checkout {
+  display: flex;
+  justify-content: space-between;
+  width: 55vw;
+}
+.master_checkout .checkout_checkout > h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.master_checkout .checkout_checkout div {
+  display: flex;
+  width: 19%;
+  justify-content: space-around;
+  align-items: flex-end;
+  font-weight: bold;
+}
+.master_checkout .checkout_checkout div .secure {
+  padding-bottom: 0.7rem;
+}
+
+.master_checkout .checkout_checkout > div img {
+  width: 1.3rem;
+  margin-bottom: 0.9rem;
+  padding-bottom: 0%;
+  padding-top: 1rem;
+}
+
+.user_details {
+  display: flex;
+  border: 1px solid black;
+  padding: 3rem 2rem;
+  background-color: #f8f7f5;
+  width: 55vw;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.location_img {
+  width: 20px;
+  margin-right: 0.3rem;
+}
+.user_details > .Heading_delivery {
+  width: 30%;
+  justify-content: left;
+  display: flex;
+  font-size: 1.8rem;
+  font-weight: 900;
+  /* font-weight: bolder; */
+  padding: 0 0 0 1rem;
+}
+.address_container {
+  display: flex;
+  margin-top: 0.5rem;
+  /* border: 1px solid red; */
+  font-size: medium;
+  font-weight: bolder;
+}
+.description {
+  width: 70%;
+  /* border: 1px solid rgb(185, 8, 255); */
+  padding-left: 2rem;
+}
+.details_delivery {
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid orange; */
+  width: 100%;
+}
+
+.h1 {
+  font-size: small;
+  font-weight: bolder;
+}
+.changeButton button {
+  text-decoration: underline;
+}
+.address_details {
+  display: flex;
+  margin-top: -4%;
+  font-size: 78%;
+  font-weight: bold;
+  /* border: 1px solid black; */
+  text-align: justify;
+  margin-bottom: 3rem;
+}
+
+.description > input {
+  margin-right: 1rem;
+  border: 1px solid black;
+}
+.description > input :checked {
+  color: black;
+}
