@@ -742,6 +742,20 @@
       "category": "Non veg",
       "price": "730",
       "id": 5
+    },
+    {
+      "title": "Special Chicken Biryani",
+      "image": "https://media.istockphoto.com/id/183060395/photo/briyani-with-egg.jpg?b=1&s=612x612&w=0&k=20&c=L-plMeLUMXrUoHXyrN52eAE_ICzxBMs4H-zT-DoknGw=",
+      "category": "Non veg",
+      "price": "310",
+      "id": 6
+    },
+    {
+      "title": "Classic Biryani",
+      "image": "https://media.istockphoto.com/id/1444100226/photo/biryani.jpg?b=1&s=612x612&w=0&k=20&c=8a9JV-r5oawOK80WZyfTsY3kCS1N11IQLnerVgysOgo=",
+      "category": "Non veg",
+      "price": "320",
+      "id": 7
     }
   ]
 }

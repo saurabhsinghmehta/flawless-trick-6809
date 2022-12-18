@@ -7,6 +7,7 @@ import LargeWithAppLinksAndSocial from "../Components/Footer";
 import Navbar from "../Components/Navbar";
 import { Link } from "react-router-dom";
 function Cart() {
+  const Data2=[];
   const data = [
     {
       img: "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-K488.jpg?ver=22.82",
