@@ -10,7 +10,10 @@ import Otp from "../Pages/Otp";
 import Cart from "../Pages/Cart";
 import Deals from "../Pages/Deals";
 import AdminLogin from "../Pages/AdminLogin";
+import AdminLogout from "../Pages/AdminLogout";
 import Edit from "../Pages/Edit";
+import ProtectedRoute from "../Components/ProtectedRoute";
+import Checkout from "../Pages/Checkout";
 function MainRoutes() {
   return (
     <Routes>
@@ -22,7 +25,16 @@ function MainRoutes() {
       <Route path="/otp" element={<Otp />} />
       <Route path="/product/:id" element={<Edit />} />
       <Route path="/adminlogin" element={<AdminLogin />} />
-      <Route path="/admin" element={<AdminDashboard />} />
+      <Route path="/adminlogout" element={<AdminLogout />} />
+      <Route path="/checkout" element={<Checkout />} />
+      <Route
+        path="/admin"
+        element={
+          <ProtectedRoute>
+            <AdminDashboard />
+          </ProtectedRoute>
+        }
+      />
       <Route path="/prod_managment" element={<ProductManagement />} />
       <Route path="/admin_sorting" element={<Sorting />} />
     </Routes>
