@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 {
+=======
+
+>>>>>>> 7ce6a5f4c6b6bdb0790ea7d54f1574cbe5956f5e
   "bfc": [
     {
       "id": 1,
@@ -799,6 +803,10 @@
       "available": true,
       "price": "50",
       "detail": "Flat 10% off on Mirinda Can 330ml "
+<<<<<<< HEAD
     }
   ]
 }
+=======
+}]}
+>>>>>>> 7ce6a5f4c6b6bdb0790ea7d54f1574cbe5956f5e

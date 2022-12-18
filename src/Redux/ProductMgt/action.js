@@ -19,15 +19,6 @@ export const getFailure = () => {
     type: types.GET_Data_FAILURE,
   };
 };
-// const getdata = (category) => (dispatch) => {
-//   dispatch(getRequest());
-//   return axios
-//     .get(`http://localhost:8080/bfc${category}`)
-//     .then((res) => {
-//       dispatch(getSuccess(res.data));
-//     })
-//     .catch((err) => {});
-// };
 const edit = (id, payload) => (dispatch) => {
   return axios
     .patch(`http://localhost:8080/bfc/${id}`, payload)
@@ -55,7 +46,7 @@ const getdata = (params) => (dispatch) => {
     .catch((e) => dispatch(getFailure()));
 };
 
-const addNewData = (productData, category) => (dispatch) => {
+const addNewData = (productData) => (dispatch) => {
   return axios
     .post(`http://localhost:8080/bfc`, productData)
     .then((res) => {
