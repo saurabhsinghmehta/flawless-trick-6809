@@ -1,34 +1,40 @@
-import { Box, Input, Select, Button } from "@chakra-ui/react";
+import { Box, Button, Input, Select } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
-import styles from "../CSS/ProductMgtStyles.css";
-import { useDispatch } from "react-redux";
-import { addNewData, getdata } from "../Redux/ProductMgt/action.js";
-function ProductManagement() {
-  const dispatch = useDispatch();
-    const [product, setProduct] = useState({
-    image: "",
-    title: "",
-    category: "",
-    available: true,
-    price: 0,
-    detail: "",
-  });
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate, useParams } from "react-router-dom";
+import { edit, getdata } from "../Redux/ProductMgt/action";
+import styles from "../CSS/editPage.css";
 
+const Edit = () => {
+  const dispatch = useDispatch();
+  const products = useSelector((store) => {
+    return store.Productreducer.data;
+  });
+  const { id } = useParams();
+  const data = products.filter((i) => i.id === +id);
+  console.log(id, data, products);
+  const [product, setProduct] = useState({
+    id: data[0].id,
+    image: data[0].image,
+    title: data[0].title,
+    category: data[0].category,
+    available: true,
+    price: data[0].price,
+    detail: data[0].detail,
+  });
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(addNewData(product, product.category)).then(() =>
-      dispatch(getdata(product.category))
-    );
+    dispatch(edit(id, product)).then(() => {
+      dispatch(getdata());
+    });
+    navigate("/admin");
   };
-
   useEffect(() => {
     dispatch(getdata());
-  }, []);
-
+  }, [dispatch]);
   return (
-    <>
-      {" "}
-      <h1>Product Management</h1>
+    <Box>
       <Box w="100%" display={{ md: "flex" }} justifyContent="space-around">
         <Box W="50%">
           <div className={styles.form_element_div}>
@@ -100,8 +106,8 @@ function ProductManagement() {
           </div>
         </Box>
       </Box>
-    </>
+    </Box>
   );
-}
+};
 
-export default ProductManagement;
+export default Edit;

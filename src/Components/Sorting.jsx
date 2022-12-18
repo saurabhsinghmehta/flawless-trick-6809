@@ -37,7 +37,7 @@ function Sorting() {
 
   // console.log(category)
   return (
-    <div id="filteri_ng" style={{ width: "300px" }}>
+    <div  style={{ width: "300px" }}>
       <h1 style={{ marginBottom: "2%" }}>Filter Component</h1>
       <div>
         <div>
