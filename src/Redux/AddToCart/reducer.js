@@ -9,15 +9,15 @@ const initialState={
 const reducer=(oldstate=initialState,action)=>{
     const {type,payload}=action;
     switch(type){
-        case types.GET_ERROR:
+        case types.GET_CART_ERROR:
             return {
                 ...oldstate,isError:true,isLoading:false
             }
-        case types.GET_REQUEST:
+        case types.GET_CART_REQUEST:
             return {
                 ...oldstate,isLoading:false
             }
-        case types.GET_SUCCESS:
+        case types.GET_CART_SUCCESS:
             return {
                 ...oldstate,cart:payload
             }
