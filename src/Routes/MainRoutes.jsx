@@ -10,6 +10,7 @@ import Otp from "../Pages/Otp";
 import Cart from "../Pages/Cart";
 import Deals from "../Pages/Deals";
 import AdminLogin from "../Pages/AdminLogin";
+import Edit from "../Pages/Edit";
 function MainRoutes() {
   return (
     <Routes>
@@ -19,6 +20,7 @@ function MainRoutes() {
       <Route path="/deals" element={<Deals />} />
       <Route path="/cart" element={<Cart />} />
       <Route path="/otp" element={<Otp />} />
+      <Route path="/product/:id" element={<Edit />} />
       <Route path="/adminlogin" element={<AdminLogin />} />
       <Route path="/admin" element={<AdminDashboard />} />
       <Route path="/prod_managment" element={<ProductManagement />} />

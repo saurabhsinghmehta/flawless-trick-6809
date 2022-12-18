@@ -15,7 +15,7 @@ import DisplayProducts from "../Components/DisplayProducts";
 import Sorting from "../Components/Sorting";
 import "../CSS/admin.css";
 import { getData } from "../Redux/Sorting/actiontype";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import ProductManagement from "../Components/ProductManagement";
 import { UserAuth } from "./Context/UserAuthContext";
 import { useNavigate } from "react-router-dom";
@@ -23,13 +23,13 @@ import { useLocation } from "react-router-dom";
 
 function AdminDashboard() {
   const { user, logOut } = UserAuth();
-  const location=useLocation();
-  const [flag,setflag]=useState(false)
+  const location = useLocation();
+  const [flag, setflag] = useState(false);
   const navigate = useNavigate();
   // console.log(user);
   const data = useSelector((state) => state.Sortingreducer.data);
   // console.log(data)
-  const [Data,setData]=useState([]);
+  const [Data, setData] = useState([]);
   // console.log(Data)
 
   const handleLogout = async () => {
@@ -45,37 +45,33 @@ function AdminDashboard() {
 
   const dispatch = useDispatch();
 
-  
-  const handleSort=(e)=>{
+  const handleSort = (e) => {
     // setData(data)
-    console.log(e.target.value)
-    if(e.target.value=="High"){
-      data.sort((a,b)=>{
+    console.log(e.target.value);
+    if (e.target.value == "High") {
+      data.sort((a, b) => {
         // console.log(el)
-        return b.price-a.price;
-      })
-    }else{
-      data.sort((a,b)=>{
+        return b.price - a.price;
+      });
+    } else {
+      data.sort((a, b) => {
         // console.log(el)
-        return a.price-b.price;
-      })
+        return a.price - b.price;
+      });
     }
     // console.log(Data)
-    setflag(!flag)
+    setflag(!flag);
     // console.log(data)
-    setData(data)
-  }
-  
+    setData(data);
+  };
+
   useEffect(() => {
     dispatch(getData("biryani"));
-    
-  },[] );
-  
-  useEffect(()=>{
-    
-    setData(data)
-  },[flag,location.search])
- 
+  }, []);
+
+  useEffect(() => {
+    setData(data);
+  }, [flag, location.search]);
 
   return (
     //display sales status on daily, weekly and monthly bases
@@ -105,10 +101,16 @@ function AdminDashboard() {
         </div>
       </div>
       {/* <Grid templateColumns="repeat(2, 1fr)"> */}
-      <HStack>
-        <VStack border="1px solid red" position="fixed" top="30px">
+      <HStack id="filteri_ng">
+        <VStack position="fixed" top="30px">
           <Sorting />
-          <Select w={"200px"} color="black" bg={"grey"} onChange={(e)=>handleSort(e)} placeholder="Sort By Price" >
+          <Select
+            w={"200px"}
+            color="black"
+            bg={"grey"}
+            onChange={(e) => handleSort(e)}
+            placeholder="Sort By Price"
+          >
             <option value="High">High</option> <option value="Low">Low</option>
           </Select>
 
@@ -117,7 +119,7 @@ function AdminDashboard() {
 
         {/* <GridItem marginTop="70px" h={"auto"} ml="25%" > */}
 
-        <DisplayProducts data={data==[]?Data:data} />
+        <DisplayProducts data={data == [] ? Data : data} />
         {/* </GridItem> */}
       </HStack>
       {/* </Grid> */}
