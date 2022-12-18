@@ -23,8 +23,8 @@ const getData = (params) => (dispatch) => {
   // console.log(params)
   dispatch(getRequest());
   return axios
-    .get(`http://localhost:8080/bfc`)
-    .then((res) => dispatch(getSuccess(res.data[params])))
+    .get(`http://localhost:8080/bfc`, params)
+    .then((res) => dispatch(getSuccess(res.data)))
 
     .catch((e) => dispatch(getError()));
 };

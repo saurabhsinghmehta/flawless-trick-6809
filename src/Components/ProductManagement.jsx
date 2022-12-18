@@ -2,13 +2,16 @@ import { Box, Input, Select, Button } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import styles from "../CSS/ProductMgtStyles.css";
 import { useDispatch } from "react-redux";
-import { addNewData, getdata } from "../Redux/ProductMgt/action.js";
+import { addNewData } from "../Redux/ProductMgt/action.js";
+import { getData } from "../Redux/Sorting/actiontype";
+
 function ProductManagement() {
   const dispatch = useDispatch();
-    const [product, setProduct] = useState({
+  const [product, setProduct] = useState({
     image: "",
     title: "",
     category: "",
+    option: "",
     available: true,
     price: 0,
     detail: "",
@@ -16,13 +19,18 @@ function ProductManagement() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(addNewData(product, product.category)).then(() =>
-      dispatch(getdata(product.category))
-    );
+    dispatch(addNewData(product)).then(() => dispatch(getData()));
+    setProduct({image: "",
+    title: "",
+    category: "",
+    option: "",
+    available: true,
+    price: 0,
+    detail: "",})
   };
 
   useEffect(() => {
-    dispatch(getdata());
+    dispatch(getData());
   }, []);
 
   return (
@@ -46,6 +54,26 @@ function ProductManagement() {
 
           <div>
             <Select
+              name="option"
+              value={product.option}
+              onChange={(event) =>
+                setProduct({ ...product, option: event.target.value })
+              }
+            >
+              <option value="">Select option</option>
+              <option value="Chicken">Chicken</option>
+              <option value="Biryani">Biryani</option>
+              <option value="exclusivedeal">exclusivedeal</option>
+              <option value="newlaunch">newlaunch</option>
+              <option value="boxmeal">boxmeal</option>
+              <option value="burger">burger</option>
+              <option value="snacks">snacks</option>
+              <option value="stayhomespecial">stayhomespecial</option>
+              <option value="beverages">beverages</option>
+            </Select>
+          </div>
+          <div>
+            <Select
               name="category"
               value={product.category}
               onChange={(event) =>
@@ -53,13 +81,8 @@ function ProductManagement() {
               }
             >
               <option value="">Select Category</option>
-              <option value="Biryani">Biryani</option>
-              <option value="Burger">Burger</option>
-              <option value="exclusivedeal">exclusivedeal</option>
-              <option value="boxmeal">boxmeal </option>
-              <option value="snacks">snacks </option>
-              <option value="stayhomespecial">stayhomespecial </option>
-              <option value="beverages">beverages </option>
+              <option value="veg">veg</option>
+              <option value="non-veg">non-veg</option>
             </Select>
           </div>
           <div>

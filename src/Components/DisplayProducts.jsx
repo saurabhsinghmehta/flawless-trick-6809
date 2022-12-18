@@ -3,6 +3,7 @@ import { Box, SimpleGrid, Image, Button } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { deleteDataFromCart, edit, getdata } from "../Redux/ProductMgt/action";
 import { useDispatch } from "react-redux";
+import { getData } from "../Redux/Sorting/actiontype";
 
 function DisplayProducts({ data }) {
   const [active, setActive] = useState(true);
@@ -11,7 +12,7 @@ function DisplayProducts({ data }) {
     setActive((pre) => !pre);
     let payload = active;
     console.log(payload, id);
-    dispatch(edit(id, { available: payload })).then(() => dispatch(getdata()));
+    dispatch(edit(id, { available: payload })).then(() => dispatch(getData()));
   };
   return (
     <div style={{ width: "100%", marginLeft: "300px" }}>
@@ -75,7 +76,7 @@ function DisplayProducts({ data }) {
                 }}
                 onClick={() =>
                   dispatch(deleteDataFromCart(item.id)).then(() =>
-                    dispatch(getdata())
+                    dispatch(getData())
                   )
                 }
                 ml="70px"

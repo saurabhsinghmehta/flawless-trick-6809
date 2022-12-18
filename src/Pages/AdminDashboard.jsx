@@ -65,9 +65,9 @@ function AdminDashboard() {
     setData(data);
   };
 
-  useEffect(() => {
-    dispatch(getData("biryani"));
-  }, []);
+  // useEffect(() => {
+  //   dispatch(getData("biryani"));
+  // }, []);
 
   useEffect(() => {
     setData(data);

@@ -9,35 +9,35 @@ function Sorting() {
   const data = useSelector((state) => state.Sortingreducer.data);
 
   const [searchParams, setsearchParams] = useSearchParams();
-  const initialCategory = searchParams.get("category");
+  const initialCategory = searchParams.get("option");
   const initialsort = searchParams.getAll("sort");
   const [sort, setsort] = useState(initialsort[0] || "");
-  const [category, setcategory] = useState(initialCategory || "biryani");
+  const [option, setoption] = useState(initialCategory || "biryani");
 
   const handlefilter = (e) => {
-    setcategory(e.target.value);
+    setoption(e.target.value);
   };
   const handlesort = (e) => {
     setsort(e.target.value);
   };
   useEffect(() => {
     let params = {};
-    params.category = category;
+    params.option = option;
     setsearchParams(params);
   }, []);
 
   useEffect(() => {
     let params = {};
-    params.category = category;
+    params.option = option;
     sort && (params.sort = sort);
     setsearchParams(params);
-    dispatch(getData(category));
+    dispatch(getData(params));
     // console.log(data)
-  }, [category, setsearchParams, sort]);
+  }, [option, setsearchParams, sort]);
 
-  // console.log(category)
+  // console.log(option)
   return (
-    <div  style={{ width: "300px" }}>
+    <div style={{ width: "300px" }}>
       <h1 style={{ marginBottom: "2%" }}>Filter Component</h1>
       <div>
         <div>
@@ -45,7 +45,7 @@ function Sorting() {
             type="checkbox"
             onChange={handlefilter}
             value="biryani"
-            checked={category.includes("biryani")}
+            checked={option.includes("biryani")}
           />
           <label htmlFor="">Biryani</label>
         </div>
@@ -54,7 +54,7 @@ function Sorting() {
             type="checkbox"
             onChange={handlefilter}
             value="burger"
-            checked={category.includes("burger")}
+            checked={option.includes("burger")}
           />
           <label htmlFor="">Burger</label>
         </div>
@@ -63,7 +63,7 @@ function Sorting() {
             type="checkbox"
             onChange={handlefilter}
             value="chicken"
-            checked={category.includes("chicken")}
+            checked={option.includes("chicken")}
           />
           <label htmlFor="">Chicken</label>
         </div>
@@ -72,7 +72,7 @@ function Sorting() {
             type="checkbox"
             onChange={handlefilter}
             value="exclusivedeal"
-            checked={category.includes("exclusivedeal")}
+            checked={option.includes("exclusivedeal")}
           />
           <label htmlFor="">exclusivedeal</label>
         </div>
@@ -81,7 +81,7 @@ function Sorting() {
             type="checkbox"
             onChange={handlefilter}
             value="newlaunch"
-            checked={category.includes("newlaunch")}
+            checked={option.includes("newlaunch")}
           />
           <label htmlFor="">newlaunch</label>
         </div>
@@ -90,7 +90,7 @@ function Sorting() {
             type="checkbox"
             onChange={handlefilter}
             value="boxmeal"
-            checked={category.includes("boxmeal")}
+            checked={option.includes("boxmeal")}
           />
           <label htmlFor="">boxmeal</label>
         </div>
@@ -99,7 +99,7 @@ function Sorting() {
             type="checkbox"
             onChange={handlefilter}
             value="snacks"
-            checked={category.includes("snacks")}
+            checked={option.includes("snacks")}
           />
           <label htmlFor="">snacks</label>
         </div>
@@ -108,7 +108,7 @@ function Sorting() {
             type="checkbox"
             onChange={handlefilter}
             value="stayhomespecial"
-            checked={category.includes("stayhomespecial")}
+            checked={option.includes("stayhomespecial")}
           />
           <label htmlFor="">stayhomespecial</label>
         </div>
@@ -117,7 +117,7 @@ function Sorting() {
             type="checkbox"
             onChange={handlefilter}
             value="beverages"
-            checked={category.includes("beverages")}
+            checked={option.includes("beverages")}
           />
           <label htmlFor="">beverages</label>
         </div>

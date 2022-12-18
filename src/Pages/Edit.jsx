@@ -4,11 +4,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import { edit, getdata } from "../Redux/ProductMgt/action";
 import styles from "../CSS/editPage.css";
+import { getData } from "../Redux/Sorting/actiontype";
 
 const Edit = () => {
   const dispatch = useDispatch();
   const products = useSelector((store) => {
-    return store.Productreducer.data;
+    return store.Sortingreducer.data;
   });
   const { id } = useParams();
   const data = products.filter((i) => i.id === +id);
@@ -25,13 +26,13 @@ const Edit = () => {
   const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(edit(id, product)).then(() => {
-      dispatch(getdata());
+    dispatch(edit(id, product)).then(() =>{
+      dispatch(getData());
     });
     navigate("/admin");
   };
   useEffect(() => {
-    dispatch(getdata());
+    dispatch(getData());
   }, [dispatch]);
   return (
     <Box>

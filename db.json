@@ -1,711 +1,804 @@
-{"bfc":{
-  "chicken": [
+{
+  "bfc": [
     {
-        "id":1,
-        "image":"https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002167.jpg?ver=22.82",
-        "title":"All Chicken Box",
-        "category":"Non veg",
-        "price":"440",
-        "detail":"Flat 20% off on All chicken box "	
-      },
-      {
-        "id":2,
-        "image":"https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00001003.jpg?ver=22.82",
-        "title":"Tandoori Box",
-        "category":"Non veg",
-        "price":"550",
-        "detail":"Flat 10% off on Tandoori Box "	
-      },
-      {
-        "id":3,
-        "image":"https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00001004.jpg?ver=22.82",
-        "title":"Veg Zinger Box",
-        "category":"veg",
-        "price":"540",
-        "detail":"Flat 10% off on Veg Zinger Box "	
-      },
-    {
-      "id":4,
-      "image":"https://images.pexels.com/photos/60616/fried-chicken-chicken-fried-crunchy-60616.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "title":"Mingles Bucket Meal",
-      "category":"Non veg",
-      "price":"479",
-      "detail":"Flat 10% off on Mingles Bucket Meal "	
+      "id": 1,
+      "image": "https://media.istockphoto.com/id/183060395/photo/briyani-with-egg.jpg?b=1&s=612x612&w=0&k=20&c=L-plMeLUMXrUoHXyrN52eAE_ICzxBMs4H-zT-DoknGw=",
+      "title": "Special Chicken Biryani",
+      "category": "Non veg",
+      "option": "Chicken",
+      "available": false,
+      "price": "3",
+      "detail": "Flat 20% off on Special Chicken Biryani "
     },
     {
-      "id":5,
-      "image":"https://images.pexels.com/photos/33406/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600",
-      "title":"Solo Feast",
-      "category":"Non veg",
-      "price":"514",
-      "detail":"Flat 10% off on Solo Feast "	
+      "id": 2,
+      "image": "https://media.istockphoto.com/id/1444100226/photo/biryani.jpg?b=1&s=612x612&w=0&k=20&c=8a9JV-r5oawOK80WZyfTsY3kCS1N11IQLnerVgysOgo=",
+      "title": "Classic Biryani",
+      "category": "Non veg",
+      "option": "Chicken",
+      "available": true,
+      "price": "3",
+      "detail": "Flat 20% off on Classic Biryani "
     },
     {
-      "id":6,
-      "image":"https://media.istockphoto.com/id/177005490/photo/fried-chicken-in-big-red-white-stripes-bucket-box.jpg?b=1&s=612x612&w=0&k=20&c=NyGoGmSkGewKSnlbW4ai1aOnE3mPYEr-WcvV-ZGlOyk=",
-      "title":"Bucket Hot Chicken",
-      "category":"Non veg",
-      "price":"641",
-      "detail":"Flat 10% off on Bucket Hot Chicken "	
+      "id": 4,
+      "image": "https://images.pexels.com/photos/9609853/pexels-photo-9609853.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Combo Biryani",
+      "category": "Non veg",
+      "option": "Chicken",
+      "available": true,
+      "price": "45",
+      "detail": "Flat 20% off on Combo Biryani "
     },
     {
-      "id":7,
-      "image":"https://media.istockphoto.com/id/1133687689/photo/perfect-fried-chicken-pieces-flying-around-in-red-white-striped-box.jpg?b=1&s=612x612&w=0&k=20&c=pzzV09JmJSrLIT3epjQPZ8Nz0QKQ0dfA86Oe0nFCrJU=",
-      "title":"Bucket Spicy chicken",
-      "category":"Non veg",
-      "price":"644",
-      "detail":"Flat 10% off on Bucket Spicy chicken "	
+      "id": 5,
+      "image": "https://images.pexels.com/photos/12737656/pexels-photo-12737656.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Grilled Biryani",
+      "category": "Non veg",
+      "option": "Chicken",
+      "available": true,
+      "price": "410",
+      "detail": "Flat 15% off on Grilled Biryani "
     },
     {
-      "id":8,
-      "image":"https://media.istockphoto.com/id/576730586/photo/red-bucket-of-fried-chicken-on-white-background-2.jpg?b=1&s=612x612&w=0&k=20&c=Ls5mEs2hJCofdcM3lsHiwGx5IH7x0n7b3ge8ZFEoF0Y=",
-      "title":"Peri Peri Leg Pc Meal",
-      "category":"Non veg",
-      "price":"641",
-      "detail":"Flat 10% off on Bucket Peri Peri Leg Pc Meal "	
+      "id": 6,
+      "image": "https://images.pexels.com/photos/7394819/pexels-photo-7394819.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Handi Biryani",
+      "category": "Non veg",
+      "option": "Chicken",
+      "available": true,
+      "price": "510",
+      "detail": "Flat 10% off on Handi Biryani "
     },
     {
-      "id":9,
-      "image":"https://media.istockphoto.com/id/477707389/photo/bucket-of-chicken.jpg?b=1&s=612x612&w=0&k=20&c=04UeV0qwB3RDCXPpEagoaYDD-1ibRkewb9ytYFktu4s=",
-      "title":"Smoky Chicken",
-      "category":"Non veg",
-      "price":"719",
-      "detail":"Flat 10% off on Smoky Chicken "	
+      "id": 7,
+      "image": "https://images.pexels.com/photos/5410410/pexels-photo-5410410.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Thali Biryani",
+      "category": "Non veg",
+      "option": "Chicken",
+      "available": true,
+      "price": "210",
+      "detail": "Flat 10% off on Thali Biryani "
     },
     {
-      "id":10,
-      "image":"https://images.pexels.com/photos/5474676/pexels-photo-5474676.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "title":"Special Chicken",
-      "category":"Non veg",
-      "price":"689",
-      "detail":"Flat 10% off on Special Chicken "	
+      "id": 8,
+      "image": "https://images.pexels.com/photos/9609843/pexels-photo-9609843.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Egg Biryani",
+      "category": "Non veg",
+      "option": "Chicken",
+      "available": true,
+      "price": "320",
+      "detail": "Flat 20% off on Egg Biryani "
     },
     {
-      "id":11,
-      "image":"https://images.pexels.com/photos/2994900/pexels-photo-2994900.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "title":"Hot & Crispy Chicken",
-      "category":"Non veg",
-      "price":"619",
-      "detail":"Flat 10% off on Hot & Crispy Chicken"	
+      "id": 9,
+      "image": "https://images.pexels.com/photos/8884315/pexels-photo-8884315.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Delicious Biryani",
+      "category": "Non veg",
+      "option": "Chicken",
+      "available": true,
+      "price": "390",
+      "detail": "Flat 10% off on Delicious Biryani "
     },
     {
-      "id":12,
-      "image":"https://images.pexels.com/photos/792024/pexels-photo-792024.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "title":"Peri Peri Strips",
-      "category":"Non veg",
-      "price":"415",
-      "detail":"Flat 10% off on Peri Peri Strips "	
+      "id": 10,
+      "image": "https://images.pexels.com/photos/12620971/pexels-photo-12620971.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Veg Biryani",
+      "category": "veg",
+      "option": "Chicken",
+      "available": true,
+      "price": "190",
+      "detail": "Flat 30% off on Veg Biryani "
     },
     {
-      "id":13,
-      "image":"https://images.pexels.com/photos/2338407/pexels-photo-2338407.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "title":"Fried Chicken",
-      "category":"Non veg",
-      "price":"510",
-      "detail":"Flat 10% off on Fried Chicken "	
+      "id": 11,
+      "image": "https://media.istockphoto.com/id/183060395/photo/briyani-with-egg.jpg?b=1&s=612x612&w=0&k=20&c=L-plMeLUMXrUoHXyrN52eAE_ICzxBMs4H-zT-DoknGw=",
+      "title": "Special Chicken Biryani",
+      "category": "Non veg",
+      "option": "Chicken",
+      "available": true,
+      "price": "310",
+      "detail": "Flat 20% off on Breakfast Meal "
     },
     {
-      "id":14,
-      "image":"https://images.pexels.com/photos/60616/fried-chicken-chicken-fried-crunchy-60616.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "title":"Mingles Bucket Meal",
-      "category":"Non veg",
-      "price":"479",
-      "detail":"Flat 10% off on Mingles Bucket Meal "	
+      "id": 12,
+      "image": "https://media.istockphoto.com/id/1444100226/photo/biryani.jpg?b=1&s=612x612&w=0&k=20&c=8a9JV-r5oawOK80WZyfTsY3kCS1N11IQLnerVgysOgo=",
+      "title": "Classic Biryani",
+      "category": "Non veg",
+      "option": "Chicken",
+      "available": true,
+      "price": "320",
+      "detail": "Flat 20% off on Classic Biryani "
     },
     {
-      "id":15,
-      "image":"https://images.pexels.com/photos/33406/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600",
-      "title":"Solo Feast",
-      "category":"Non veg",
-      "price":"514",
-      "detail":"Flat 10% off on Solo Feast "	
+      "id": 13,
+      "image": "https://media.istockphoto.com/id/1430345748/photo/biryani-overhead-view.jpg?b=1&s=612x612&w=0&k=20&c=nfBtNMGwM2nyERgBTYnimSQkGhQx-iHVIALy0EZSIA4=",
+      "title": "Special Biryani",
+      "category": "Non veg",
+      "option": "Chicken",
+      "available": true,
+      "price": "330",
+      "detail": "Flat 10% off on Special Biryani "
     },
     {
-      "id":16,
-      "image":"https://media.istockphoto.com/id/177005490/photo/fried-chicken-in-big-red-white-stripes-bucket-box.jpg?b=1&s=612x612&w=0&k=20&c=NyGoGmSkGewKSnlbW4ai1aOnE3mPYEr-WcvV-ZGlOyk=",
-      "title":"Bucket Hot Chicken",
-      "category":"Non veg",
-      "price":"641",
-      "detail":"Flat 10% off on Bucket Hot Chicken "	
+      "id": 14,
+      "image": "https://images.pexels.com/photos/9609853/pexels-photo-9609853.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Combo Biryani",
+      "category": "Non veg",
+      "option": "Chicken",
+      "available": true,
+      "price": "450",
+      "detail": "Flat 20% off on Combo Biryani "
     },
     {
-      "id":17,
-      "image":"https://media.istockphoto.com/id/1133687689/photo/perfect-fried-chicken-pieces-flying-around-in-red-white-striped-box.jpg?b=1&s=612x612&w=0&k=20&c=pzzV09JmJSrLIT3epjQPZ8Nz0QKQ0dfA86Oe0nFCrJU=",
-      "title":"Bucket Spicy chicken",
-      "category":"Non veg",
-      "price":"644",
-      "detail":"Flat 10% off on Bucket Spicy chicken "	
+      "id": 15,
+      "image": "https://images.pexels.com/photos/12737656/pexels-photo-12737656.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Grilled Biryani",
+      "category": "Non veg",
+      "option": "Chicken",
+      "available": true,
+      "price": "410",
+      "detail": "Flat 15% off on Grilled Biryani "
     },
     {
-      "id":18,
-      "image":"https://media.istockphoto.com/id/576730586/photo/red-bucket-of-fried-chicken-on-white-background-2.jpg?b=1&s=612x612&w=0&k=20&c=Ls5mEs2hJCofdcM3lsHiwGx5IH7x0n7b3ge8ZFEoF0Y=",
-      "title":"Peri Peri Leg Pc Meal",
-      "category":"Non veg",
-      "price":"641",
-      "detail":"Flat 10% off on Bucket Peri Peri Leg Pc Meal "	
+      "id": 16,
+      "image": "https://images.pexels.com/photos/7394819/pexels-photo-7394819.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Handi Biryani",
+      "category": "Non veg",
+      "option": "Chicken",
+      "available": true,
+      "price": "510",
+      "detail": "Flat 10% off on Handi Biryani "
     },
     {
-      "id":19,
-      "image":"https://media.istockphoto.com/id/477707389/photo/bucket-of-chicken.jpg?b=1&s=612x612&w=0&k=20&c=04UeV0qwB3RDCXPpEagoaYDD-1ibRkewb9ytYFktu4s=",
-      "title":"Smoky Chicken",
-      "category":"Non veg",
-      "price":"719",
-      "detail":"Flat 10% off on Smoky Chicken "	
+      "id": 17,
+      "image": "https://images.pexels.com/photos/5410410/pexels-photo-5410410.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Thali Biryani",
+      "category": "Non veg",
+      "option": "Chicken",
+      "available": true,
+      "price": "210",
+      "detail": "Flat 10% off on Thali Biryani "
     },
     {
-      "id":20,
-      "image":"https://images.pexels.com/photos/5474676/pexels-photo-5474676.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "title":"Special Chicken",
-      "category":"Non veg",
-      "price":"689",
-      "detail":"Flat 10% off on Special Chicken "	
-    }],
-"exclusivedeal":[
-      
-       {
-      "id":1,
-      "image":"https://media.istockphoto.com/id/177005490/photo/fried-chicken-in-big-red-white-stripes-bucket-box.jpg?b=1&s=612x612&w=0&k=20&c=NyGoGmSkGewKSnlbW4ai1aOnE3mPYEr-WcvV-ZGlOyk=",
-      "title":"Bucket Hot Chicken",
-      "category":"Non veg",
-      "price":"641",
-      "detail":"Flat 10% off on Bucket Hot Chicken "	
-    },
-      {
-      "id":2,
-      "image":"https://images.pexels.com/photos/33406/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600",
-      "title":"Solo Feast",
-      "category":"Non veg",
-      "price":"514",
-      "detail":"Flat 10% off on Solo Feast "	
+      "id": 18,
+      "image": "https://images.pexels.com/photos/9609843/pexels-photo-9609843.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Egg Biryani",
+      "category": "Non veg",
+      "option": "Chicken",
+      "available": true,
+      "price": "320",
+      "detail": "Flat 20% off on Egg Biryani "
     },
     {
-        "id":3,
-        "image":"https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002164.jpg?ver=22.82",
-        "title":"Special Chicken Feast",
-        "category":"Non veg",
-        "price":"510",
-        "detail":"Flat 20% off on Chicken Feast "	
-      },
+      "id": 19,
+      "image": "https://images.pexels.com/photos/8884315/pexels-photo-8884315.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Delicious Biryani",
+      "category": "Non veg",
+      "option": "Chicken",
+      "available": true,
+      "price": "390",
+      "detail": "Flat 10% off on Delicious Biryani "
+    },
     {
-      "id":4,
-      "image":"https://media.istockphoto.com/id/177005490/photo/fried-chicken-in-big-red-white-stripes-bucket-box.jpg?b=1&s=612x612&w=0&k=20&c=NyGoGmSkGewKSnlbW4ai1aOnE3mPYEr-WcvV-ZGlOyk=",
-      "title":"Bucket Hot Chicken",
-      "category":"Non veg",
-      "price":"641",
-      "detail":"Flat 10% off on Bucket Hot Chicken "	
+      "id": 20,
+      "image": "https://images.pexels.com/photos/12620971/pexels-photo-12620971.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Veg Biryani",
+      "category": "veg",
+      "option": "Chicken",
+      "available": true,
+      "price": "190",
+      "detail": "Flat 30% off on Veg Biryani "
+    },
+    {
+      "id": 21,
+      "image": "https://media.istockphoto.com/id/177005490/photo/fried-chicken-in-big-red-white-stripes-bucket-box.jpg?b=1&s=612x612&w=0&k=20&c=NyGoGmSkGewKSnlbW4ai1aOnE3mPYEr-WcvV-ZGlOyk=",
+      "title": "Bucket Hot Chicken",
+      "category": "Non veg",
+      "option": "exclusivedeal",
+      "available": true,
+      "price": "641",
+      "detail": "Flat 10% off on Bucket Hot Chicken "
+    },
+    {
+      "id": 22,
+      "image": "https://images.pexels.com/photos/33406/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Solo Feast",
+      "category": "Non veg",
+      "option": "exclusivedeal",
+      "available": true,
+      "price": "514",
+      "detail": "Flat 10% off on Solo Feast "
+    },
+    {
+      "id": 23,
+      "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002164.jpg?ver=22.82",
+      "title": "Special Chicken Feast",
+      "category": "Non veg",
+      "option": "exclusivedeal",
+      "available": true,
+      "price": "510",
+      "detail": "Flat 20% off on Chicken Feast "
+    },
+    {
+      "id": 24,
+      "image": "https://media.istockphoto.com/id/177005490/photo/fried-chicken-in-big-red-white-stripes-bucket-box.jpg?b=1&s=612x612&w=0&k=20&c=NyGoGmSkGewKSnlbW4ai1aOnE3mPYEr-WcvV-ZGlOyk=",
+      "title": "Bucket Hot Chicken",
+      "category": "Non veg",
+      "option": "exclusivedeal",
+      "available": true,
+      "price": "641",
+      "detail": "Flat 10% off on Bucket Hot Chicken "
+    },
+    {
+      "id": 25,
+      "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002164.jpg?ver=22.82",
+      "title": "Special Chicken Feast",
+      "category": "Non veg",
+      "option": "newlaunch",
+      "available": true,
+      "price": "510",
+      "detail": "Flat 20% off on Chicken Feast "
+    },
+    {
+      "id": 26,
+      "image": "https://media.istockphoto.com/id/1444100226/photo/biryani.jpg?b=1&s=612x612&w=0&k=20&c=8a9JV-r5oawOK80WZyfTsY3kCS1N11IQLnerVgysOgo=",
+      "title": "Classic Biryani",
+      "category": "Non veg",
+      "option": "newlaunch",
+      "available": true,
+      "price": "320",
+      "detail": "Flat 20% off on Classic Biryani "
+    },
+    {
+      "id": 27,
+      "image": "https://images.pexels.com/photos/33406/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Solo Feast",
+      "category": "Non veg",
+      "option": "newlaunch",
+      "available": true,
+      "price": "514",
+      "detail": "Flat 10% off on Solo Feast "
+    },
+    {
+      "id": 28,
+      "image": "https://images.pexels.com/photos/12737656/pexels-photo-12737656.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Grilled Biryani",
+      "category": "Non veg",
+      "option": "newlaunch",
+      "available": true,
+      "price": "410",
+      "detail": "Flat 15% off on Grilled Biryani "
+    },
+    {
+      "id": 29,
+      "image": "https://media.istockphoto.com/id/183060395/photo/briyani-with-egg.jpg?b=1&s=612x612&w=0&k=20&c=L-plMeLUMXrUoHXyrN52eAE_ICzxBMs4H-zT-DoknGw=",
+      "title": "Special Chicken Biryani",
+      "category": "Non veg",
+      "option": "biryani",
+      "available": true,
+      "price": "310",
+      "detail": "Flat 20% off on Special Chicken Biryani "
+    },
+    {
+      "id": 30,
+      "image": "https://media.istockphoto.com/id/1444100226/photo/biryani.jpg?b=1&s=612x612&w=0&k=20&c=8a9JV-r5oawOK80WZyfTsY3kCS1N11IQLnerVgysOgo=",
+      "title": "Classic Biryani",
+      "category": "Non veg",
+      "option": "biryani",
+      "available": true,
+      "price": "320",
+      "detail": "Flat 20% off on Classic Biryani "
+    },
+    {
+      "id": 31,
+      "image": "https://media.istockphoto.com/id/1430345748/photo/biryani-overhead-view.jpg?b=1&s=612x612&w=0&k=20&c=nfBtNMGwM2nyERgBTYnimSQkGhQx-iHVIALy0EZSIA4=",
+      "title": "Special Biryani",
+      "category": "Non veg",
+      "option": "biryani",
+      "available": true,
+      "price": "330",
+      "detail": "Flat 10% off on Special Biryani "
+    },
+    {
+      "id": 32,
+      "image": "https://images.pexels.com/photos/9609853/pexels-photo-9609853.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Combo Biryani",
+      "category": "Non veg",
+      "option": "biryani",
+      "available": true,
+      "price": "450",
+      "detail": "Flat 20% off on Combo Biryani "
+    },
+    {
+      "id": 33,
+      "image": "https://images.pexels.com/photos/12737656/pexels-photo-12737656.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Grilled Biryani",
+      "category": "Non veg",
+      "option": "biryani",
+      "available": true,
+      "price": "410",
+      "detail": "Flat 15% off on Grilled Biryani "
+    },
+    {
+      "id": 34,
+      "image": "https://images.pexels.com/photos/7394819/pexels-photo-7394819.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Handi Biryani",
+      "category": "Non veg",
+      "option": "biryani",
+      "available": true,
+      "price": "510",
+      "detail": "Flat 10% off on Handi Biryani "
+    },
+    {
+      "id": 35,
+      "image": "https://images.pexels.com/photos/5410410/pexels-photo-5410410.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Thali Biryani",
+      "category": "Non veg",
+      "option": "biryani",
+      "available": true,
+      "price": "210",
+      "detail": "Flat 10% off on Thali Biryani "
+    },
+    {
+      "id": 36,
+      "image": "https://images.pexels.com/photos/9609843/pexels-photo-9609843.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Egg Biryani",
+      "category": "Non veg",
+      "option": "biryani",
+      "available": true,
+      "price": "320",
+      "detail": "Flat 20% off on Egg Biryani "
+    },
+    {
+      "id": 37,
+      "image": "https://images.pexels.com/photos/8884315/pexels-photo-8884315.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Delicious Biryani",
+      "category": "Non veg",
+      "option": "biryani",
+      "available": true,
+      "price": "390",
+      "detail": "Flat 10% off on Delicious Biryani "
+    },
+    {
+      "id": 38,
+      "image": "https://images.pexels.com/photos/12620971/pexels-photo-12620971.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Veg Biryani",
+      "category": "veg",
+      "option": "biryani",
+      "available": true,
+      "price": "190",
+      "detail": "Flat 30% off on Veg Biryani "
+    },
+    {
+      "id": 39,
+      "image": "https://media.istockphoto.com/id/183060395/photo/briyani-with-egg.jpg?b=1&s=612x612&w=0&k=20&c=L-plMeLUMXrUoHXyrN52eAE_ICzxBMs4H-zT-DoknGw=",
+      "title": "Special Chicken Biryani",
+      "category": "Non veg",
+      "option": "biryani",
+      "available": true,
+      "price": "310",
+      "detail": "Flat 20% off on Breakfast Meal "
+    },
+    {
+      "id": 40,
+      "image": "https://media.istockphoto.com/id/1444100226/photo/biryani.jpg?b=1&s=612x612&w=0&k=20&c=8a9JV-r5oawOK80WZyfTsY3kCS1N11IQLnerVgysOgo=",
+      "title": "Classic Biryani",
+      "category": "Non veg",
+      "option": "biryani",
+      "available": true,
+      "price": "320",
+      "detail": "Flat 20% off on Classic Biryani "
+    },
+    {
+      "id": 41,
+      "image": "https://media.istockphoto.com/id/1430345748/photo/biryani-overhead-view.jpg?b=1&s=612x612&w=0&k=20&c=nfBtNMGwM2nyERgBTYnimSQkGhQx-iHVIALy0EZSIA4=",
+      "title": "Special Biryani",
+      "category": "Non veg",
+      "option": "biryani",
+      "available": true,
+      "price": "330",
+      "detail": "Flat 10% off on Special Biryani "
+    },
+    {
+      "id": 42,
+      "image": "https://images.pexels.com/photos/9609853/pexels-photo-9609853.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Combo Biryani",
+      "category": "Non veg",
+      "option": "biryani",
+      "available": true,
+      "price": "450",
+      "detail": "Flat 20% off on Combo Biryani "
+    },
+    {
+      "id": 43,
+      "image": "https://images.pexels.com/photos/12737656/pexels-photo-12737656.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Grilled Biryani",
+      "category": "Non veg",
+      "option": "biryani",
+      "available": true,
+      "price": "410",
+      "detail": "Flat 15% off on Grilled Biryani "
+    },
+    {
+      "id": 44,
+      "image": "https://images.pexels.com/photos/7394819/pexels-photo-7394819.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Handi Biryani",
+      "category": "Non veg",
+      "option": "biryani",
+      "available": true,
+      "price": "510",
+      "detail": "Flat 10% off on Handi Biryani "
+    },
+    {
+      "id": 47,
+      "image": "https://images.pexels.com/photos/8884315/pexels-photo-8884315.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Delicious Biryani",
+      "category": "Non veg",
+      "option": "biryani",
+      "available": true,
+      "price": "390",
+      "detail": "Flat 10% off on Delicious Biryani "
+    },
+    {
+      "id": 48,
+      "image": "https://images.pexels.com/photos/12620971/pexels-photo-12620971.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Veg Biryani",
+      "category": "veg",
+      "option": "biryani",
+      "available": true,
+      "price": "190",
+      "detail": "Flat 30% off on Veg Biryani "
+    },
+    {
+      "id": 49,
+      "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002167.jpg?ver=22.82",
+      "title": "All Chicken Box",
+      "category": "Non veg",
+      "option": "boxmeal",
+      "available": true,
+      "price": "440",
+      "detail": "Flat 20% off on All chicken box "
+    },
+    {
+      "id": 50,
+      "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00001003.jpg?ver=22.82",
+      "title": "Tandoori Box",
+      "category": "Non veg",
+      "option": "boxmeal",
+      "available": true,
+      "price": "550",
+      "detail": "Flat 10% off on Tandoori Box "
+    },
+    {
+      "id": 51,
+      "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00001004.jpg?ver=22.82",
+      "title": "Veg Zinger Box",
+      "category": "veg",
+      "option": "boxmeal",
+      "available": true,
+      "price": "540",
+      "detail": "Flat 10% off on Veg Zinger Box "
+    },
+    {
+      "id": 52,
+      "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002167.jpg?ver=22.82",
+      "title": " Chicken Box",
+      "category": "Non veg",
+      "option": "boxmeal",
+      "available": true,
+      "price": "420",
+      "detail": "Flat 20% off on  chicken box "
+    },
+    {
+      "id": 53,
+      "image": "https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Chicken Burger",
+      "category": "Non veg",
+      "option": "burger",
+      "available": true,
+      "price": "210",
+      "detail": "Flat 10% off on Chicken Burger "
+    },
+    {
+      "id": 54,
+      "image": "https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Chicken Burger with Snacks",
+      "category": "Non veg",
+      "option": "burger",
+      "available": true,
+      "price": "320",
+      "detail": "Flat 10% off on Chicken Burger with Snacks "
+    },
+    {
+      "id": 55,
+      "image": "https://images.pexels.com/photos/1556698/pexels-photo-1556698.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Special Burger",
+      "category": "Non veg",
+      "option": "burger",
+      "available": true,
+      "price": "240",
+      "detail": "Flat 10% off on Special Burger "
+    },
+    {
+      "id": 56,
+      "image": "https://images.pexels.com/photos/1199960/pexels-photo-1199960.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Hot & Crispy Burger",
+      "category": "Non veg",
+      "option": "burger",
+      "available": true,
+      "price": "310",
+      "detail": "Flat 10% off on Hot & Crispy Burger "
+    },
+    {
+      "id": 57,
+      "image": "https://images.pexels.com/photos/1199959/pexels-photo-1199959.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Crispy Burger",
+      "category": "Non veg",
+      "option": "burger",
+      "available": true,
+      "price": "270",
+      "detail": "Flat 10% off on Crispy Burger "
+    },
+    {
+      "id": 58,
+      "image": "https://images.pexels.com/photos/103886/pexels-photo-103886.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Zinger Burger",
+      "category": "Non veg",
+      "option": "burger",
+      "available": true,
+      "price": "240",
+      "detail": "Flat 10% off on Zinger Burger "
+    },
+    {
+      "id": 59,
+      "image": "https://images.pexels.com/photos/2725744/pexels-photo-2725744.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Buddy Meal",
+      "category": "Non veg",
+      "option": "burger",
+      "available": true,
+      "price": "410",
+      "detail": "Flat 10% off on Bucket Buddy Meal "
+    },
+    {
+      "id": 60,
+      "image": "https://images.pexels.com/photos/2336673/pexels-photo-2336673.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Veg Burger",
+      "category": "veg",
+      "option": "burger",
+      "available": true,
+      "price": "140",
+      "detail": "Flat 10% off on Veg Burger "
+    },
+    {
+      "id": 61,
+      "image": "https://images.pexels.com/photos/3248289/pexels-photo-3248289.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Breakfast Meal",
+      "category": "veg",
+      "option": "burger",
+      "available": true,
+      "price": "220",
+      "detail": "Flat 10% off on Breakfast Meal "
+    },
+    {
+      "id": 62,
+      "image": "https://images.pexels.com/photos/2282532/pexels-photo-2282532.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Tandoori Burger",
+      "category": "Non veg",
+      "option": "burger",
+      "available": true,
+      "price": "250",
+      "detail": "Flat 10% off on Tandoori Burger "
+    },
+    {
+      "id": 63,
+      "image": "https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Chicken Burger",
+      "category": "Non veg",
+      "option": "burger",
+      "available": true,
+      "price": "210",
+      "detail": "Flat 10% off on Chicken Burger "
+    },
+    {
+      "id": 64,
+      "image": "https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Chicken Burger with Snacks",
+      "category": "Non veg",
+      "option": "burger",
+      "available": true,
+      "price": "320",
+      "detail": "Flat 10% off on Chicken Burger with Snacks "
+    },
+    {
+      "id": 65,
+      "image": "https://images.pexels.com/photos/1556698/pexels-photo-1556698.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Special Burger",
+      "category": "Non veg",
+      "option": "burger",
+      "available": true,
+      "price": "240",
+      "detail": "Flat 10% off on Special Burger "
+    },
+    {
+      "id": 66,
+      "image": "https://images.pexels.com/photos/1199960/pexels-photo-1199960.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Hot & Crispy Burger",
+      "category": "Non veg",
+      "option": "burger",
+      "available": true,
+      "price": "310",
+      "detail": "Flat 10% off on Hot & Crispy Burger "
+    },
+    {
+      "id": 67,
+      "image": "https://images.pexels.com/photos/1199959/pexels-photo-1199959.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Crispy Burger",
+      "category": "Non veg",
+      "option": "burger",
+      "available": true,
+      "price": "270",
+      "detail": "Flat 10% off on Crispy Burger "
+    },
+    {
+      "id": 68,
+      "image": "https://images.pexels.com/photos/103886/pexels-photo-103886.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Zinger Burger",
+      "category": "Non veg",
+      "option": "burger",
+      "available": true,
+      "price": "240",
+      "detail": "Flat 10% off on Zinger Burger "
+    },
+    {
+      "id": 69,
+      "image": "https://images.pexels.com/photos/2725744/pexels-photo-2725744.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Buddy Meal",
+      "category": "Non veg",
+      "option": "burger",
+      "available": true,
+      "price": "410",
+      "detail": "Flat 10% off on Bucket Buddy Meal "
+    },
+    {
+      "id": 70,
+      "image": "https://images.pexels.com/photos/2336673/pexels-photo-2336673.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Veg Burger",
+      "category": "veg",
+      "option": "burger",
+      "available": true,
+      "price": "140",
+      "detail": "Flat 10% off on Veg Burger "
+    },
+    {
+      "id": 71,
+      "image": "https://images.pexels.com/photos/3248289/pexels-photo-3248289.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Breakfast Meal",
+      "category": "veg",
+      "option": "burger",
+      "available": true,
+      "price": "220",
+      "detail": "Flat 10% off on Breakfast Meal "
+    },
+    {
+      "id": 72,
+      "image": "https://images.pexels.com/photos/2282532/pexels-photo-2282532.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Tandoori Burger",
+      "category": "Non veg",
+      "option": "burger",
+      "available": true,
+      "price": "250",
+      "detail": "Flat 20% off on Tandoori Burger "
+    },
+    {
+      "id": 73,
+      "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-K701.jpg?ver=22.82",
+      "title": "Lava Cake",
+      "category": "veg",
+      "option": "snacks",
+      "available": true,
+      "price": "140",
+      "detail": "Flat 20% off on Lava Cake "
+    },
+    {
+      "id": 74,
+      "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-K496.jpg?ver=22.82",
+      "title": "Choco Pie",
+      "category": "veg",
+      "option": "snacks",
+      "available": true,
+      "price": "150",
+      "detail": "Flat 10% off on Choco Pie "
+    },
+    {
+      "id": 75,
+      "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-K678.jpg?ver=22.82",
+      "title": "Buttered Bun",
+      "category": "veg",
+      "option": "snacks",
+      "available": true,
+      "price": "40",
+      "detail": "Flat 10% off on Buttered Bun "
+    },
+    {
+      "id": 77,
+      "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00000974.jpg?ver=22.82",
+      "title": "Family Feast",
+      "category": "Non veg",
+      "option": "stayhomespecial",
+      "available": true,
+      "price": "730",
+      "detail": "Flat 10% off on Family Feast "
+    },
+    {
+      "id": 78,
+      "image": "https://images.pexels.com/photos/9609853/pexels-photo-9609853.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Combo Biryani",
+      "category": "Non veg",
+      "option": "stayhomespecial",
+      "available": true,
+      "price": "450",
+      "detail": "Flat 20% off on Combo Biryani "
+    },
+    {
+      "id": 79,
+      "image": "https://images.pexels.com/photos/12737656/pexels-photo-12737656.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Grilled Biryani",
+      "category": "Non veg",
+      "option": "stayhomespecial",
+      "available": true,
+      "price": "410",
+      "detail": "Flat 15% off on Grilled Biryani "
+    },
+    {
+      "id": 80,
+      "image": "https://images.pexels.com/photos/7394819/pexels-photo-7394819.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "title": "Handi Biryani",
+      "category": "Non veg",
+      "option": "stayhomespecial",
+      "available": true,
+      "price": "510",
+      "detail": "Flat 10% off on Handi Biryani "
+    },
+    {
+      "id": 81,
+      "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-K350.jpg?ver=22.82",
+      "title": "Pepsi",
+      "category": "veg",
+      "option": "stayhomespecial",
+      "available": true,
+      "price": "40",
+      "detail": "Flat 10% off on Pepsi "
+    },
+    {
+      "id": 83,
+      "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-K486.jpg?ver=22.82",
+      "title": "Pepsi Black Can 330ml",
+      "category": "veg",
+      "option": "stayhomespecial",
+      "available": true,
+      "price": "40",
+      "detail": "Flat 10% off on Pepsi Black Can 330ml "
+    },
+    {
+      "id": 84,
+      "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-K485.jpg?ver=22.82",
+      "title": "Pepsi  Can 330ml",
+      "category": "veg",
+      "option": "stayhomespecial",
+      "available": true,
+      "price": "40",
+      "detail": "Flat 10% off on Pepsi  Can 330ml "
+    },
+    {
+      "id": 86,
+      "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-K488.jpg?ver=22.82",
+      "title": "Mirinda Can 330ml",
+      "category": "veg",
+      "option": "beverages",
+      "available": true,
+      "price": "50",
+      "detail": "Flat 10% off on Mirinda Can 330ml "
     }
-    ],
-"newlaunch":[
-      {
-        "id":1,
-        "image":"https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002164.jpg?ver=22.82",
-        "title":"Special Chicken Feast",
-        "category":"Non veg",
-        "price":"510",
-        "detail":"Flat 20% off on Chicken Feast "	
-      },
-      {
-        "id":2,
-        "image":"https://media.istockphoto.com/id/1444100226/photo/biryani.jpg?b=1&s=612x612&w=0&k=20&c=8a9JV-r5oawOK80WZyfTsY3kCS1N11IQLnerVgysOgo=",
-        "title":"Classic Biryani",
-        "category":"Non veg",
-        "price":"320",
-        "detail":"Flat 20% off on Classic Biryani "	
-      },
-      {
-      "id":3,
-      "image":"https://images.pexels.com/photos/33406/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600",
-      "title":"Solo Feast",
-      "category":"Non veg",
-      "price":"514",
-      "detail":"Flat 10% off on Solo Feast "	
-    },
-     {
-        "id":4,
-        "image":"https://images.pexels.com/photos/12737656/pexels-photo-12737656.jpeg?auto=compress&cs=tinysrgb&w=600",
-        "title":"Grilled Biryani",
-        "category":"Non veg",
-        "price":"410",
-        "detail":"Flat 15% off on Grilled Biryani "	
-      }
-    ],
-  
-  "biryani":[
-      {
-        "id":1,
-        "image":"https://media.istockphoto.com/id/183060395/photo/briyani-with-egg.jpg?b=1&s=612x612&w=0&k=20&c=L-plMeLUMXrUoHXyrN52eAE_ICzxBMs4H-zT-DoknGw=",
-        "title":"Special Chicken Biryani",
-        "category":"Non veg",
-        "price":"310",
-        "detail":"Flat 20% off on Special Chicken Biryani "	
-      },
-      {
-        "id":2,
-        "image":"https://media.istockphoto.com/id/1444100226/photo/biryani.jpg?b=1&s=612x612&w=0&k=20&c=8a9JV-r5oawOK80WZyfTsY3kCS1N11IQLnerVgysOgo=",
-        "title":"Classic Biryani",
-        "category":"Non veg",
-        "price":"320",
-        "detail":"Flat 20% off on Classic Biryani "	
-      },
-      {
-        "id":3,
-        "image":"https://media.istockphoto.com/id/1430345748/photo/biryani-overhead-view.jpg?b=1&s=612x612&w=0&k=20&c=nfBtNMGwM2nyERgBTYnimSQkGhQx-iHVIALy0EZSIA4=",
-        "title":"Special Biryani",
-        "category":"Non veg",
-        "price":"330",
-        "detail":"Flat 10% off on Special Biryani "	
-      },
-      {
-        "id":4,
-        "image":"https://images.pexels.com/photos/9609853/pexels-photo-9609853.jpeg?auto=compress&cs=tinysrgb&w=600",
-        "title":"Combo Biryani",
-        "category":"Non veg",
-        "price":"450",
-        "detail":"Flat 20% off on Combo Biryani "	
-      },
-      {
-        "id":5,
-        "image":"https://images.pexels.com/photos/12737656/pexels-photo-12737656.jpeg?auto=compress&cs=tinysrgb&w=600",
-        "title":"Grilled Biryani",
-        "category":"Non veg",
-        "price":"410",
-        "detail":"Flat 15% off on Grilled Biryani "	
-      },
-      {
-        "id":6,
-        "image":"https://images.pexels.com/photos/7394819/pexels-photo-7394819.jpeg?auto=compress&cs=tinysrgb&w=600",
-        "title":"Handi Biryani",
-        "category":"Non veg",
-        "price":"510",
-        "detail":"Flat 10% off on Handi Biryani "	
-      },
-      {
-        "id":7,
-        "image":"https://images.pexels.com/photos/5410410/pexels-photo-5410410.jpeg?auto=compress&cs=tinysrgb&w=600",
-        "title":"Thali Biryani",
-        "category":"Non veg",
-        "price":"210",
-        "detail":"Flat 10% off on Thali Biryani "	
-      },
-      {
-        "id":8,
-        "image":"https://images.pexels.com/photos/9609843/pexels-photo-9609843.jpeg?auto=compress&cs=tinysrgb&w=600",
-        "title":"Egg Biryani",
-        "category":"Non veg",
-        "price":"320",
-        "detail":"Flat 20% off on Egg Biryani "	
-      },
-      {
-        "id":9,
-        "image":"https://images.pexels.com/photos/8884315/pexels-photo-8884315.jpeg?auto=compress&cs=tinysrgb&w=600",
-        "title":"Delicious Biryani",
-        "category":"Non veg",
-        "price":"390",
-        "detail":"Flat 10% off on Delicious Biryani "	
-      },
-      {
-        "id":10,
-        "image":"https://images.pexels.com/photos/12620971/pexels-photo-12620971.jpeg?auto=compress&cs=tinysrgb&w=600",
-        "title":"Veg Biryani",
-        "category":"veg",
-        "price":"190",
-        "detail":"Flat 30% off on Veg Biryani "	
-      },
-      {
-        "id":11,
-        "image":"https://media.istockphoto.com/id/183060395/photo/briyani-with-egg.jpg?b=1&s=612x612&w=0&k=20&c=L-plMeLUMXrUoHXyrN52eAE_ICzxBMs4H-zT-DoknGw=",
-        "title":"Special Chicken Biryani",
-        "category":"Non veg",
-        "price":"310",
-        "detail":"Flat 20% off on Breakfast Meal "	
-      },
-      {
-        "id":12,
-        "image":"https://media.istockphoto.com/id/1444100226/photo/biryani.jpg?b=1&s=612x612&w=0&k=20&c=8a9JV-r5oawOK80WZyfTsY3kCS1N11IQLnerVgysOgo=",
-        "title":"Classic Biryani",
-        "category":"Non veg",
-        "price":"320",
-        "detail":"Flat 20% off on Classic Biryani "	
-      },
-      {
-        "id":13,
-        "image":"https://media.istockphoto.com/id/1430345748/photo/biryani-overhead-view.jpg?b=1&s=612x612&w=0&k=20&c=nfBtNMGwM2nyERgBTYnimSQkGhQx-iHVIALy0EZSIA4=",
-        "title":"Special Biryani",
-        "category":"Non veg",
-        "price":"330",
-        "detail":"Flat 10% off on Special Biryani "	
-      },
-      {
-        "id":14,
-        "image":"https://images.pexels.com/photos/9609853/pexels-photo-9609853.jpeg?auto=compress&cs=tinysrgb&w=600",
-        "title":"Combo Biryani",
-        "category":"Non veg",
-        "price":"450",
-        "detail":"Flat 20% off on Combo Biryani "	
-      },
-      {
-        "id":15,
-        "image":"https://images.pexels.com/photos/12737656/pexels-photo-12737656.jpeg?auto=compress&cs=tinysrgb&w=600",
-        "title":"Grilled Biryani",
-        "category":"Non veg",
-        "price":"410",
-        "detail":"Flat 15% off on Grilled Biryani "	
-      },
-      {
-        "id":16,
-        "image":"https://images.pexels.com/photos/7394819/pexels-photo-7394819.jpeg?auto=compress&cs=tinysrgb&w=600",
-        "title":"Handi Biryani",
-        "category":"Non veg",
-        "price":"510",
-        "detail":"Flat 10% off on Handi Biryani "	
-      },
-      {
-        "id":17,
-        "image":"https://images.pexels.com/photos/5410410/pexels-photo-5410410.jpeg?auto=compress&cs=tinysrgb&w=600",
-        "title":"Thali Biryani",
-        "category":"Non veg",
-        "price":"210",
-        "detail":"Flat 10% off on Thali Biryani "	
-      },
-      {
-        "id":18,
-        "image":"https://images.pexels.com/photos/9609843/pexels-photo-9609843.jpeg?auto=compress&cs=tinysrgb&w=600",
-        "title":"Egg Biryani",
-        "category":"Non veg",
-        "price":"320",
-        "detail":"Flat 20% off on Egg Biryani "	
-      },
-      {
-        "id":19,
-        "image":"https://images.pexels.com/photos/8884315/pexels-photo-8884315.jpeg?auto=compress&cs=tinysrgb&w=600",
-        "title":"Delicious Biryani",
-        "category":"Non veg",
-        "price":"390",
-        "detail":"Flat 10% off on Delicious Biryani "	
-      },
-      {
-        "id":20,
-        "image":"https://images.pexels.com/photos/12620971/pexels-photo-12620971.jpeg?auto=compress&cs=tinysrgb&w=600",
-        "title":"Veg Biryani",
-        "category":"veg",
-        "price":"190",
-        "detail":"Flat 30% off on Veg Biryani "	
-      }
-      
-    ],
-"boxmeal":[
-      {
-        "id":1,
-        "image":"https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002167.jpg?ver=22.82",
-        "title":"All Chicken Box",
-        "category":"Non veg",
-        "price":"440",
-        "detail":"Flat 20% off on All chicken box "	
-      },
-      {
-        "id":2,
-        "image":"https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00001003.jpg?ver=22.82",
-        "title":"Tandoori Box",
-        "category":"Non veg",
-        "price":"550",
-        "detail":"Flat 10% off on Tandoori Box "	
-      },
-      {
-        "id":3,
-        "image":"https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00001004.jpg?ver=22.82",
-        "title":"Veg Zinger Box",
-        "category":"veg",
-        "price":"540",
-        "detail":"Flat 10% off on Veg Zinger Box "	
-      },
-      {
-        "id":4,
-        "image":"https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002167.jpg?ver=22.82",
-        "title":" Chicken Box",
-        "category":"Non veg",
-        "price":"420",
-        "detail":"Flat 20% off on  chicken box "	
-      }
-
-],
-"burger":[
-      {
-      "id":1,
-      "image":"https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "title":"Chicken Burger",
-      "category":"Non veg",
-      "price":"210",
-      "detail":"Flat 10% off on Chicken Burger "	
-    },
-    {
-      "id":2,
-      "image":"https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "title":"Chicken Burger with Snacks",
-      "category":"Non veg",
-      "price":"320",
-      "detail":"Flat 10% off on Chicken Burger with Snacks "	
-    },
-    {
-      "id":3,
-      "image":"https://images.pexels.com/photos/1556698/pexels-photo-1556698.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "title":"Special Burger",
-      "category":"Non veg",
-      "price":"240",
-      "detail":"Flat 10% off on Special Burger "	
-    },
-    {
-      "id":4,
-      "image":"https://images.pexels.com/photos/1199960/pexels-photo-1199960.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "title":"Hot & Crispy Burger",
-      "category":"Non veg",
-      "price":"310",
-      "detail":"Flat 10% off on Hot & Crispy Burger "	
-    },
-    {
-      "id":5,
-      "image":"https://images.pexels.com/photos/1199959/pexels-photo-1199959.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "title":"Crispy Burger",
-      "category":"Non veg",
-      "price":"270",
-      "detail":"Flat 10% off on Crispy Burger "	
-    },
-    {
-      "id":6,
-      "image":"https://images.pexels.com/photos/103886/pexels-photo-103886.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "title":"Zinger Burger",
-      "category":"Non veg",
-      "price":"240",
-      "detail":"Flat 10% off on Zinger Burger "	
-    },
-    {
-      "id":7,
-      "image":"https://images.pexels.com/photos/2725744/pexels-photo-2725744.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "title":"Buddy Meal",
-      "category":"Non veg",
-      "price":"410",
-      "detail":"Flat 10% off on Bucket Buddy Meal "	
-    },
-    {
-      "id":8,
-      "image":"https://images.pexels.com/photos/2336673/pexels-photo-2336673.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "title":"Veg Burger",
-      "category":"veg",
-      "price":"140",
-      "detail":"Flat 10% off on Veg Burger "	
-    },
-    {
-      "id":9,
-      "image":"https://images.pexels.com/photos/3248289/pexels-photo-3248289.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "title":"Breakfast Meal",
-      "category":"veg",
-      "price":"220",
-      "detail":"Flat 10% off on Breakfast Meal "	
-    },
-    {
-      "id":10,
-      "image":"https://images.pexels.com/photos/2282532/pexels-photo-2282532.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "title":"Tandoori Burger",
-      "category":"Non veg",
-      "price":"250",
-      "detail":"Flat 10% off on Tandoori Burger "	
-    },
-    {
-      "id":11,
-      "image":"https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "title":"Chicken Burger",
-      "category":"Non veg",
-      "price":"210",
-      "detail":"Flat 10% off on Chicken Burger "	
-    },
-    {
-      "id":12,
-      "image":"https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "title":"Chicken Burger with Snacks",
-      "category":"Non veg",
-      "price":"320",
-      "detail":"Flat 10% off on Chicken Burger with Snacks "	
-    },
-    {
-      "id":13,
-      "image":"https://images.pexels.com/photos/1556698/pexels-photo-1556698.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "title":"Special Burger",
-      "category":"Non veg",
-      "price":"240",
-      "detail":"Flat 10% off on Special Burger "	
-    },
-    {
-      "id":14,
-      "image":"https://images.pexels.com/photos/1199960/pexels-photo-1199960.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "title":"Hot & Crispy Burger",
-      "category":"Non veg",
-      "price":"310",
-      "detail":"Flat 10% off on Hot & Crispy Burger "	
-    },
-    {
-      "id":15,
-      "image":"https://images.pexels.com/photos/1199959/pexels-photo-1199959.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "title":"Crispy Burger",
-      "category":"Non veg",
-      "price":"270",
-      "detail":"Flat 10% off on Crispy Burger "	
-    },
-    {
-      "id":16,
-      "image":"https://images.pexels.com/photos/103886/pexels-photo-103886.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "title":"Zinger Burger",
-      "category":"Non veg",
-      "price":"240",
-      "detail":"Flat 10% off on Zinger Burger "	
-    },
-    {
-      "id":17,
-      "image":"https://images.pexels.com/photos/2725744/pexels-photo-2725744.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "title":"Buddy Meal",
-      "category":"Non veg",
-      "price":"410",
-      "detail":"Flat 10% off on Bucket Buddy Meal "	
-    },
-    {
-      "id":18,
-      "image":"https://images.pexels.com/photos/2336673/pexels-photo-2336673.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "title":"Veg Burger",
-      "category":"veg",
-      "price":"140",
-      "detail":"Flat 10% off on Veg Burger "	
-    },
-    {
-      "id":19,
-      "image":"https://images.pexels.com/photos/3248289/pexels-photo-3248289.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "title":"Breakfast Meal",
-      "category":"veg",
-      "price":"220",
-      "detail":"Flat 10% off on Breakfast Meal "	
-    },
-    {
-      "id":20,
-      "image":"https://images.pexels.com/photos/2282532/pexels-photo-2282532.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "title":"Tandoori Burger",
-      "category":"Non veg",
-      "price":"250",
-      "detail":"Flat 20% off on Tandoori Burger "	
-    }],
-"snacks":[
-      {
-        "id":1,
-        "image":"https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-K701.jpg?ver=22.82",
-        "title":"Lava Cake",
-        "category":"veg",
-        "price":"140",
-        "detail":"Flat 20% off on Lava Cake "	
-      },
-      {
-        "id":2,
-        "image":"https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-K496.jpg?ver=22.82",
-        "title":"Choco Pie",
-        "category":"veg",
-        "price":"150",
-        "detail":"Flat 10% off on Choco Pie "	
-      },
-      {
-        "id":3,
-        "image":"https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-K678.jpg?ver=22.82",
-        "title":"Buttered Bun",
-        "category":"veg",
-        "price":"40",
-        "detail":"Flat 10% off on Buttered Bun "	
-      },
-      {
-        "id":4,
-        "image":"https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-K488.jpg?ver=22.82",
-        "title":"Mirinda Can 330ml",
-        "category":"veg",
-        "price":"50",
-        "detail":"Flat 10% off on Mirinda Can 330ml "	
-      }
-
-],
-"stayhomespecial":[
-      {
-        "id":1,
-        "image":"https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00000974.jpg?ver=22.82",
-        "title":"Family Feast",
-        "category":"Non veg",
-        "price":"730",
-        "detail":"Flat 10% off on Family Feast "	
-      },
-      {
-        "id":2,
-        "image":"https://images.pexels.com/photos/9609853/pexels-photo-9609853.jpeg?auto=compress&cs=tinysrgb&w=600",
-        "title":"Combo Biryani",
-        "category":"Non veg",
-        "price":"450",
-        "detail":"Flat 20% off on Combo Biryani "	
-      },
-      {
-        "id":3,
-        "image":"https://images.pexels.com/photos/12737656/pexels-photo-12737656.jpeg?auto=compress&cs=tinysrgb&w=600",
-        "title":"Grilled Biryani",
-        "category":"Non veg",
-        "price":"410",
-        "detail":"Flat 15% off on Grilled Biryani "	
-      },
-      {
-        "id":4,
-        "image":"https://images.pexels.com/photos/7394819/pexels-photo-7394819.jpeg?auto=compress&cs=tinysrgb&w=600",
-        "title":"Handi Biryani",
-        "category":"Non veg",
-        "price":"510",
-        "detail":"Flat 10% off on Handi Biryani "	
-      },
-      {
-        "id":5,
-        "image":"https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-K350.jpg?ver=22.82",
-        "title":"Pepsi",
-        "category":"veg",
-        "price":"40",
-        "detail":"Flat 10% off on Pepsi "	
-      },
-      {
-        "id":6,
-        "image":"https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-K488.jpg?ver=22.82",
-        "title":"Mirinda Can 330ml",
-        "category":"veg",
-        "price":"50",
-        "detail":"Flat 10% off on Mirinda Can 330ml "	
-      },
-      {
-        "id":7,
-        "image":"https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-K486.jpg?ver=22.82",
-        "title":"Pepsi Black Can 330ml",
-        "category":"veg",
-        "price":"40",
-        "detail":"Flat 10% off on Pepsi Black Can 330ml "	
-      },
-      {
-        "id":8,
-        "image":"https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-K485.jpg?ver=22.82",
-        "title":"Pepsi  Can 330ml",
-        "category":"veg",
-        "price":"40",
-        "detail":"Flat 10% off on Pepsi  Can 330ml "	
-      }
-],
-"beverages":[
-      {
-        "id":1,
-        "image":"https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-K486.jpg?ver=22.82",
-        "title":"Pepsi Black Can 330ml",
-        "category":"veg",
-        "price":"40",
-        "detail":"Flat 10% off on Pepsi Black Can 330ml "	
-      },
-      {
-        "id":2,
-        "image":"https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-K488.jpg?ver=22.82",
-        "title":"Mirinda Can 330ml",
-        "category":"veg",
-        "price":"50",
-        "detail":"Flat 10% off on Mirinda Can 330ml "	
-      }]
-}
+  ]
 }
