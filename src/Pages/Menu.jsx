@@ -12,16 +12,15 @@ import {
   Input,
 } from "@chakra-ui/react";
 
-import { useDispatch, useSelector } from "react-redux";
-import { getMenuData } from "../Redux/Menudata/action";
+// import { useDispatch, useSelector } from "react-redux";
+// import { getMenuData } from "../Redux/Menudata/action";
 import "../CSS/menu.css";
-import { getData } from "../Redux/Sorting/actiontype"
+import { getData } from "../Redux/Sorting/actiontype";
 import Footer from "../Components/Footer";
 import { useDispatch, useSelector } from "react-redux";
-import { getMenuData } from "../Redux/Menudata/action";
+// import { getMenuData } from "../Redux/Menudata/action";
 import "../CSS/menu.css";
 import { PostData } from "../Redux/AddToCart/action";
-
 
 const cat = [
   { id: 1, cate: "CHICKEN" },
@@ -36,7 +35,6 @@ const cat = [
 ];
 
 const Menu = () => {
-
   const products = useSelector((store) => {
     return store.Sortingreducer.data;
   });
@@ -52,34 +50,27 @@ const Menu = () => {
   );
   const beverages = products.filter((i) => i.option === "beverages");
 
-
   const menuData = useSelector((store) => store.Menureducer.menudata);
   const dispatch = useDispatch();
   const [query, setQuery] = useState("");
 
   useEffect(() => {
-
     dispatch(getData());
   }, [dispatch]);
-  console.log(menuData);
 
+  // console.log(menuData);
 
-    dispatch(getMenuData());
-  }, [dispatch]);
-  console.log(menuData);
-
-  const handleCart=({title,image,category,price})=>{
-    let param={
+  const handleCart = ({ title, image, category, price }) => {
+    let param = {
       title,
       image,
       category,
-      price
-    }
-    alert("Product Added to Cart Successfully")
+      price,
+    };
+    alert("Product Added to Cart Successfully");
     // console.log(title,image,category,price)
-    dispatch(PostData(param))
-  }
-
+    dispatch(PostData(param));
+  };
 
   return (
     <div>
@@ -126,7 +117,6 @@ const Menu = () => {
                 textAlign="center"
                 border="0px solid red"
               >
-
                 {Chicken.map((ele) => (
                   <Box
                     boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px"
@@ -185,8 +175,6 @@ const Menu = () => {
                     )}
                   </Box>
                 ))}
-
-                
               </SimpleGrid>
             </Container>
 
@@ -199,7 +187,6 @@ const Menu = () => {
                 marginTop="30px"
                 textAlign="center"
               >
-
                 {exclusivedeal.map((ele) => (
                   <Box
                     boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px"
@@ -230,8 +217,6 @@ const Menu = () => {
                     </Button>
                   </Box>
                 ))}
-
-
               </SimpleGrid>
             </Container>
 
@@ -244,7 +229,6 @@ const Menu = () => {
                 marginTop="30px"
                 textAlign="center"
               >
-
                 {newlaunch.map((ele) => (
                   <Box
                     boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px"
@@ -299,13 +283,12 @@ const Menu = () => {
                         color="white"
                         borderRadius="25px"
                         padding="20px"
-                        onClick={()=>handleCart({...ele})}
+                        onClick={() => handleCart({ ...ele })}
                       >
                         Add to Cart
                       </Button>
                     </Box>
                   ))}
-
               </SimpleGrid>
             </Container>
 
@@ -318,7 +301,6 @@ const Menu = () => {
                 marginTop="30px"
                 textAlign="center"
               >
-
                 {biryani.map((ele) => (
                   <Box
                     boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px"
@@ -348,7 +330,6 @@ const Menu = () => {
                     </Button>
                   </Box>
                 ))}
-
               </SimpleGrid>
             </Container>
 
@@ -361,7 +342,6 @@ const Menu = () => {
                 marginTop="30px"
                 textAlign="center"
               >
-
                 {boxmeal.map((ele) => (
                   <Box
                     boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px"
@@ -391,7 +371,6 @@ const Menu = () => {
                     </Button>
                   </Box>
                 ))}
-
               </SimpleGrid>
             </Container>
 
@@ -404,7 +383,6 @@ const Menu = () => {
                 marginTop="30px"
                 textAlign="center"
               >
-
                 {burger.map((ele) => (
                   <Box
                     boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px"
@@ -434,7 +412,6 @@ const Menu = () => {
                     </Button>
                   </Box>
                 ))}
-
               </SimpleGrid>
             </Container>
 
@@ -447,7 +424,6 @@ const Menu = () => {
                 marginTop="30px"
                 textAlign="center"
               >
-
                 {snacks.map((ele) => (
                   <Box
                     boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px"
@@ -478,7 +454,6 @@ const Menu = () => {
                     </Button>
                   </Box>
                 ))}
-
               </SimpleGrid>
             </Container>
 
@@ -491,7 +466,6 @@ const Menu = () => {
                 marginTop="30px"
                 textAlign="center"
               >
-
                 {stayhomespecial.map((ele) => (
                   <Box
                     boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px"
@@ -521,8 +495,6 @@ const Menu = () => {
                     </Button>
                   </Box>
                 ))}
-
-
               </SimpleGrid>
             </Container>
 
@@ -535,7 +507,6 @@ const Menu = () => {
                 marginTop="30px"
                 textAlign="center"
               >
-
                 {beverages.map((ele) => (
                   <Box
                     boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px"
@@ -565,7 +536,6 @@ const Menu = () => {
                     </Button>
                   </Box>
                 ))}
-
               </SimpleGrid>
             </Container>
           </Box>
@@ -573,7 +543,6 @@ const Menu = () => {
       </Box>
 
       <Footer />
-
     </div>
   );
 };
