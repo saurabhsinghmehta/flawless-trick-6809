@@ -15,6 +15,8 @@ import Footer from "../Components/Footer";
 import { useDispatch, useSelector } from "react-redux";
 import { getMenuData } from "../Redux/Menudata/action";
 import "../CSS/menu.css";
+import { PostData } from "../Redux/AddToCart/action";
+
 const cat = [
   { id: 1, cate: "CHICKEN" },
   { id: 2, cate: "EXCLUSIVE DEALS" },
@@ -36,6 +38,18 @@ const Menu = () => {
     dispatch(getMenuData());
   }, [dispatch]);
   console.log(menuData);
+
+  const handleCart=({title,image,category,price})=>{
+    let param={
+      title,
+      image,
+      category,
+      price
+    }
+    alert("Product Added to Cart Successfully")
+    // console.log(title,image,category,price)
+    dispatch(PostData(param))
+  }
 
   return (
     <div>
@@ -106,6 +120,7 @@ const Menu = () => {
                         color="white"
                         borderRadius="25px"
                         padding="20px"
+                        onClick={()=>handleCart({...ele})}
                       >
                         Add to Cart
                       </Button>
@@ -148,6 +163,7 @@ const Menu = () => {
                         color="white"
                         borderRadius="25px"
                         padding="20px"
+                        onClick={()=>handleCart({...ele})}
                       >
                         Add to Cart
                       </Button>
@@ -189,6 +205,7 @@ const Menu = () => {
                         color="white"
                         borderRadius="25px"
                         padding="20px"
+                        onClick={()=>handleCart({...ele})}
                       >
                         Add to Cart
                       </Button>
@@ -230,6 +247,7 @@ const Menu = () => {
                         color="white"
                         borderRadius="25px"
                         padding="20px"
+                        onClick={()=>handleCart({...ele})}
                       >
                         Add to Cart
                       </Button>
@@ -271,6 +289,7 @@ const Menu = () => {
                         color="white"
                         borderRadius="25px"
                         padding="20px"
+                        onClick={()=>handleCart({...ele})}
                       >
                         Add to Cart
                       </Button>
@@ -312,6 +331,7 @@ const Menu = () => {
                         color="white"
                         borderRadius="25px"
                         padding="20px"
+                        onClick={()=>handleCart({...ele})}
                       >
                         Add to Cart
                       </Button>
@@ -353,6 +373,7 @@ const Menu = () => {
                         color="white"
                         borderRadius="25px"
                         padding="20px"
+                        onClick={()=>handleCart({...ele})}
                       >
                         Add to Cart
                       </Button>
@@ -394,6 +415,7 @@ const Menu = () => {
                         color="white"
                         borderRadius="25px"
                         padding="20px"
+                        onClick={()=>handleCart({...ele})}
                       >
                         Add to Cart
                       </Button>
@@ -435,6 +457,7 @@ const Menu = () => {
                         color="white"
                         borderRadius="25px"
                         padding="20px"
+                        onClick={()=>handleCart({...ele})}
                       >
                         Add to Cart
                       </Button>
