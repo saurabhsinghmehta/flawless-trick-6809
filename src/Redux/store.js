@@ -12,5 +12,5 @@ const rootReducer = combineReducers({
   CartReducer
 });
 const store = legacy_createStore(rootReducer, applyMiddleware(thunk));
-
+// hihi
 export { store };
