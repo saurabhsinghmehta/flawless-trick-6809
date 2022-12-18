@@ -1,42 +1,42 @@
 import * as types from "./actiontype";
 import axios from "axios";
-const getRequest = () => {
+const getCartRequest = () => {
   return {
-    type: types.GET_REQUEST,
+    type: types.GET_CART_REQUEST,
   };
 };
 
-const getSuccess = (payload) => {
+const getCartSuccess = (payload) => {
   return {
-    type: types.GET_SUCCESS,
+    type: types.GET_CART_SUCCESS,
     payload,
   };
 };
 
-const getError = () => {
+const getCartError = () => {
   return {
-    type: types.GET_ERROR,
+    type: types.GET_CART_ERROR,
   };
 };
 
-const GetData = (params) => (dispatch) => {
+const GetCartData = (params) => (dispatch) => {
   // console.log(params)
-  dispatch(getRequest());
+  dispatch(getCartRequest());
   return axios
     .get(`http://localhost:8080/cart`)
-    .then((res) => dispatch(getSuccess(res.data)))
+    .then((res) => dispatch(getCartSuccess(res.data)))
 
-    .catch((e) => dispatch(getError()));
+    .catch((e) => dispatch(getCartError()));
 };
 
 const PostData = (param) => (dispatch) => {
     // console.log(params)
-    dispatch(getRequest());
+    dispatch(getCartRequest());
     return axios
       .post(`http://localhost:8080/cart`,param)
-      .then((res) => dispatch(getSuccess(res.data)))
+      .then((res) => dispatch(getCartSuccess(res.data)))
   
-      .catch((e) => dispatch(getError()));
+      .catch((e) => dispatch(getCartError()));
   };
 
-export { GetData,PostData };
+export { GetCartData,PostData };

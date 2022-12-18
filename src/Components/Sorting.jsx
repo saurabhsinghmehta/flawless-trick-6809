@@ -7,6 +7,7 @@ import { getData } from "../Redux/Sorting/actiontype";
 function Sorting() {
   const dispatch = useDispatch();
   const data = useSelector((state) => state.Sortingreducer.data);
+  // console.log(data)
 
   const [searchParams, setsearchParams] = useSearchParams();
   const initialCategory = searchParams.get("category");

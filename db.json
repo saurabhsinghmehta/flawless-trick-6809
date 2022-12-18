@@ -756,6 +756,27 @@
       "category": "Non veg",
       "price": "320",
       "id": 7
+    },
+    {
+      "title": "Special Chicken Feast",
+      "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002164.jpg?ver=22.82",
+      "category": "Non veg",
+      "price": "510",
+      "id": 8
+    },
+    {
+      "title": "Solo Feast",
+      "image": "https://images.pexels.com/photos/33406/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600",
+      "category": "Non veg",
+      "price": "514",
+      "id": 9
+    },
+    {
+      "title": "Classic Biryani",
+      "image": "https://media.istockphoto.com/id/1444100226/photo/biryani.jpg?b=1&s=612x612&w=0&k=20&c=8a9JV-r5oawOK80WZyfTsY3kCS1N11IQLnerVgysOgo=",
+      "category": "Non veg",
+      "price": "320",
+      "id": 10
     }
   ]
 }
