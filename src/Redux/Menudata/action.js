@@ -15,7 +15,7 @@ import axios from 'axios';
      const getMenuData=()=>(dispatch)=>{ 
         dispatch(getMenuRequest()); 
         return axios 
-        .get(`http://localhost:8080/bfc`) 
+        .get(`https://bfc-i90o.onrender.com/bfc`) 
         .then((r)=> dispatch(getMenuSuccess(r.data))) 
         .catch((e)=>dispatch(getMenuError())) } 
         

@@ -21,18 +21,18 @@ export const getFailure = () => {
 };
 const edit = (id, payload) => (dispatch) => {
   return axios
-    .patch(`http://localhost:8080/bfc/${id}`, payload)
+    .patch(`https://bfc-i90o.onrender.com/bfc/${id}`, payload)
     .then((res) => {})
     .catch((err) => {});
 };
 const deleteDataFromCart = (queryParams) => (dispatch) => {
-  return axios.delete(` http://localhost:8080/bfc/${queryParams}`).then(() => {
+  return axios.delete(`https://bfc-i90o.onrender.com/bfc/${queryParams}`).then(() => {
     alert("delete data successfully");
   });
 };
 
 const update = (queryParams) => (dispatch) => {
-  return axios.patch(`http://localhost:8080/bfc/${queryParams}`).then((r) => {
+  return axios.patch(`https://bfc-i90o.onrender.com/bfc/${queryParams}`).then((r) => {
     console.log(r.data);
   });
 };
@@ -40,7 +40,7 @@ const update = (queryParams) => (dispatch) => {
 const getdata = (params) => (dispatch) => {
   dispatch(getRequest());
   return axios
-    .get(`http://localhost:8080/bfc`)
+    .get(`https://bfc-i90o.onrender.com/bfc`)
     .then((res) => dispatch(getSuccess(res.data[params])))
 
     .catch((e) => dispatch(getFailure()));
@@ -48,7 +48,7 @@ const getdata = (params) => (dispatch) => {
 
 const addNewData = (productData) => (dispatch) => {
   return axios
-    .post(`http://localhost:8080/bfc`, productData)
+    .post(`https://bfc-i90o.onrender.com/bfc`, productData)
     .then((res) => {
       alert("Add data successfully");
     })

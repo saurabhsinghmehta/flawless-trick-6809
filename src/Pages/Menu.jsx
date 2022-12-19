@@ -146,6 +146,7 @@ const Menu = () => {
                           borderRadius="25px"
                           padding="20px"
                           disabled={false === ele.available}
+                          onClick={() => handleCart({ ...ele })}
                         >
                           Add to Cart
                         </Button>
@@ -169,6 +170,7 @@ const Menu = () => {
                           borderRadius="25px"
                           padding="20px"
                           disabled={false === ele.available}
+                          onClick={() => handleCart({ ...ele })}
                         >
                           Add to Cart
                         </Button>
@@ -213,6 +215,7 @@ const Menu = () => {
                       borderRadius="25px"
                       padding="20px"
                       disabled={false === ele.available}
+                      onClick={() => handleCart({ ...ele })}
                     >
                       Add to Cart
                     </Button>
@@ -254,6 +257,7 @@ const Menu = () => {
                       borderRadius="25px"
                       padding="20px"
                       disabled={false === ele.available}
+                      onClick={() => handleCart({ ...ele })}
                     >
                       Add to Cart
                     </Button>
@@ -368,6 +372,7 @@ const Menu = () => {
                       borderRadius="25px"
                       padding="20px"
                       disabled={false === ele.available}
+                      onClick={() => handleCart({ ...ele })}
                     >
                       Add to Cart
                     </Button>
@@ -409,6 +414,7 @@ const Menu = () => {
                       borderRadius="25px"
                       padding="20px"
                       disabled={false === ele.available}
+                      onClick={() => handleCart({ ...ele })}
                     >
                       Add to Cart
                     </Button>
@@ -451,6 +457,7 @@ const Menu = () => {
                       borderRadius="25px"
                       padding="20px"
                       disabled={false === ele.available}
+                      onClick={() => handleCart({ ...ele })}
                     >
                       Add to Cart
                     </Button>
@@ -492,6 +499,7 @@ const Menu = () => {
                       borderRadius="25px"
                       padding="20px"
                       disabled={false === ele.available}
+                      onClick={() => handleCart({ ...ele })}
                     >
                       Add to Cart
                     </Button>
@@ -533,6 +541,7 @@ const Menu = () => {
                       borderRadius="25px"
                       padding="20px"
                       disabled={false === ele.available}
+                      onClick={() => handleCart({ ...ele })}
                     >
                       Add to Cart
                     </Button>

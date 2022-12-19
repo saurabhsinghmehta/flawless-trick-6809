@@ -23,7 +23,7 @@ const GetCartData = () => (dispatch) => {
   // console.log(params)
   dispatch(getCartRequest());
   return axios
-    .get(`http://localhost:8080/cart`)
+    .get(`https://bfc-i90o.onrender.com/cart`)
     .then((res) => dispatch(getCartSuccess(res.data)))
 
     .catch((e) => dispatch(getCartError()));
@@ -33,7 +33,7 @@ const PostData = (param) => (dispatch) => {
     // console.log(params)
     dispatch(getCartRequest());
     return axios
-      .post(`http://localhost:8080/cart`,param)
+      .post(`https://bfc-i90o.onrender.com/cart`,param)
       .then((res) => dispatch(getCartSuccess(res.data)))
   
       .catch((e) => dispatch(getCartError()));
