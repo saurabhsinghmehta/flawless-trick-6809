@@ -18,14 +18,17 @@ import { getData } from "../Redux/Sorting/actiontype";
 import { useState, useEffect } from "react";
 import ProductManagement from "../Components/ProductManagement";
 import { UserAuth } from "./Context/UserAuthContext";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import { store } from "../Redux/store";
 
 function AdminDashboard() {
   const { user, logOut } = UserAuth();
   const location = useLocation();
   const [flag, setflag] = useState(false);
   const navigate = useNavigate();
+  const [searchParams,setSearchParams]=useSearchParams();
+  console.log(store.getState());
   // console.log(user);
   const data = useSelector((state) => state.Sortingreducer.data);
   // console.log(data)
@@ -72,6 +75,19 @@ function AdminDashboard() {
   useEffect(() => {
     setData(data);
   }, [flag, location.search]);
+
+  useEffect(() => {
+    if(location||data.length==0){
+        const getbooksParams={
+            params:{
+                option:searchParams.getAll("option"),   
+            }
+        }
+        console.log(getbooksParams)
+        dispatch(getData(getbooksParams));
+    }
+    // console.log(books)
+}, [data.length,dispatch,location.search]);
 
   return (
     //display sales status on daily, weekly and monthly bases

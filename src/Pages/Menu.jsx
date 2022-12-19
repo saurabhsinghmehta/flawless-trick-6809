@@ -67,6 +67,7 @@ const Menu = () => {
       category,
       price,
     };
+    console.log(param)
     alert("Product Added to Cart Successfully");
     // console.log(title,image,category,price)
     dispatch(PostData(param));
@@ -325,6 +326,7 @@ const Menu = () => {
                       borderRadius="25px"
                       padding="20px"
                       disabled={false === ele.available}
+                      onClick={() => handleCart({ ...ele })}
                     >
                       Add to Cart
                     </Button>

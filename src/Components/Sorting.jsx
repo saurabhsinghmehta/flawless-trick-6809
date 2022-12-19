@@ -33,7 +33,7 @@ function Sorting() {
     sort && (params.sort = sort);
     setsearchParams(params);
     dispatch(getData(params));
-    // console.log(data)
+    console.log(data)
   }, [option, setsearchParams, sort]);
 
   // console.log(option)
@@ -63,8 +63,8 @@ function Sorting() {
           <input
             type="checkbox"
             onChange={handlefilter}
-            value="chicken"
-            checked={option.includes("chicken")}
+            value="Chicken"
+            checked={option.includes("Chicken")}
           />
           <label htmlFor="">Chicken</label>
         </div>
