@@ -9,7 +9,8 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { store } from "../Redux/store";
-import {GetCartData} from "../Redux/AddToCart/action"
+import {GetCartData,deleteTodo} from "../Redux/AddToCart/action"
+import axios from "axios";
 function Cart() {
   const Data2=useSelector((state)=>state.CartReducer.cart);
   console.log(Data2)
@@ -22,6 +23,13 @@ function Cart() {
       price: 1000,
     }
   ];
+
+  
+
+  const handleDelete=(id)=>{
+    console.log(id)
+    dispatch(deleteTodo(id))
+  }
 
   useEffect(() => {
    dispatch(GetCartData())
@@ -50,11 +58,11 @@ function Cart() {
       </Box>
       <Flex>
         {/* my cart section */}
-        <Box width="700px">
+        <Box width="700px" >
 
           {/* <Flex> */}
             {Data2.map((item) => (
-              <HStack border="1px solid red" gap="50px" m="5%" >
+              <HStack boxShadow='xl' gap="50px" m="5%" key={item.id} >
               <Box width="200px">
                   <img
                     src={item.image}
@@ -65,7 +73,7 @@ function Cart() {
                 
                 
                 <Box marginTop="30px" gap={"15px"}>
-                  <p>{item.title}</p> <Button onClick={""}  >Remove</Button>
+                  <p>{item.title}</p> <Button onClick={()=>handleDelete(item.id)}  >Remove</Button>
                 </Box>{" "}
                 <Box>
                   <Box display={"flex"}>

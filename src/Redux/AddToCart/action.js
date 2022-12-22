@@ -39,4 +39,16 @@ const PostData = (param) => (dispatch) => {
       .catch((e) => dispatch(getCartError()));
   };
 
-export { GetCartData,PostData };
+  const deleteTodo=(id)=>dispatch=>{
+    console.log(id)
+    // dispatch(deleteTodosRequest())
+    return axios.delete(`https://bfc-i90o.onrender.com/cart/${id}`)
+    .then((res)=>{
+      console.log(res)
+      // dispatch(deleteTodosSuccess(res.data))
+      dispatch(GetCartData())
+    })
+    .catch((e)=>console.log(e))
+  }
+
+export { GetCartData,PostData,deleteTodo };
