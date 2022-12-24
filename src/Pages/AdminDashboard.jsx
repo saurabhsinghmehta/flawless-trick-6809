@@ -38,7 +38,7 @@ function AdminDashboard() {
   const handleLogout = async () => {
     try {
       await logOut;
-      navigate("/adminlogin");
+      navigate("/");
     } catch (error) {
       console.log(error.message);
     }
