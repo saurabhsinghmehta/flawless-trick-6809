@@ -31,7 +31,7 @@ function DisplayProducts({ data }) {
             <h4>{item.category}</h4>
             <h3>{item.price}</h3>
             <p>{item.details}</p>
-            <Box display={"flex"} justifyContent={"space-evenly"}>
+            <Box display={"flex"} justifyContent={"space-around"}>
               <Link to={`/product/${item.id}`}>
                 <Button
                   color={"white"}
@@ -56,12 +56,11 @@ function DisplayProducts({ data }) {
                     }}
                     bg="green"
                     color={"white"}
-                    ml="70px"
                   >
                     active
                   </Button>
                 ) : (
-                  <Button bg="red.400" ml="70px">
+                  <Button bg="red.400">
                     Inactive
                   </Button>
                 )}
@@ -79,7 +78,6 @@ function DisplayProducts({ data }) {
                     dispatch(getData())
                   )
                 }
-                ml="70px"
               >
                 Delete
               </Button>

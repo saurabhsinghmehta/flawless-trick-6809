@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import { getData } from "../Redux/Sorting/actiontype";
+import { Heading,Text } from "@chakra-ui/react";
 
 function Sorting() {
   const dispatch = useDispatch();
@@ -39,10 +40,11 @@ function Sorting() {
   // console.log(option)
   return (
     <div style={{ width: "300px" }}>
-      <h1 style={{ marginBottom: "2%" }}>Filter Component</h1>
-      <div>
+      <Text fontSize="2xl" style={{ marginBottom: "4%",marginLeft:"-5%" }}>Filter Component</Text>
+      <div style={{textAlign:"left",marginLeft:"20%"}}  >
         <div>
           <input
+           style={{marginRight:"5%"}}
             type="checkbox"
             onChange={handlefilter}
             value="biryani"
@@ -52,6 +54,7 @@ function Sorting() {
         </div>
         <div>
           <input
+           style={{marginRight:"5%"}}
             type="checkbox"
             onChange={handlefilter}
             value="burger"
@@ -61,6 +64,7 @@ function Sorting() {
         </div>
         <div>
           <input
+           style={{marginRight:"5%"}}
             type="checkbox"
             onChange={handlefilter}
             value="Chicken"
@@ -71,6 +75,7 @@ function Sorting() {
         <div>
           <input
             type="checkbox"
+            style={{marginRight:"5%"}}
             onChange={handlefilter}
             value="exclusivedeal"
             checked={option.includes("exclusivedeal")}
@@ -79,6 +84,7 @@ function Sorting() {
         </div>
         <div>
           <input
+           style={{marginRight:"5%"}}
             type="checkbox"
             onChange={handlefilter}
             value="newlaunch"
@@ -89,6 +95,7 @@ function Sorting() {
         <div>
           <input
             type="checkbox"
+            style={{marginRight:"5%"}}
             onChange={handlefilter}
             value="boxmeal"
             checked={option.includes("boxmeal")}
@@ -99,6 +106,7 @@ function Sorting() {
           <input
             type="checkbox"
             onChange={handlefilter}
+            style={{marginRight:"5%"}}
             value="snacks"
             checked={option.includes("snacks")}
           />
@@ -107,6 +115,7 @@ function Sorting() {
         <div>
           <input
             type="checkbox"
+            style={{marginRight:"5%"}}
             onChange={handlefilter}
             value="stayhomespecial"
             checked={option.includes("stayhomespecial")}
@@ -116,6 +125,7 @@ function Sorting() {
         <div>
           <input
             type="checkbox"
+            style={{marginRight:"5%"}}
             onChange={handlefilter}
             value="beverages"
             checked={option.includes("beverages")}
