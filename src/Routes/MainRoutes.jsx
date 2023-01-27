@@ -14,6 +14,9 @@ import AdminLogout from "../Pages/AdminLogout";
 import Edit from "../Pages/Edit";
 import ProtectedRoute from "../Components/ProtectedRoute";
 import Checkout from "../Pages/Checkout";
+import UserLogin from "../Pages/UserLogin";
+import UserRegister from "../Pages/UserRegister";
+import Checkout2 from "../Pages/Context/Checkout2";
 function MainRoutes() {
   return (
     <Routes>
@@ -26,7 +29,9 @@ function MainRoutes() {
       <Route path="/product/:id" element={<Edit />} />
       <Route path="/adminlogin" element={<AdminLogin />} />
       <Route path="/adminlogout" element={<AdminLogout />} />
-      <Route path="/checkout" element={<Checkout />} />
+      <Route path="/checkout" element={<Checkout2 />} />
+      <Route path="/userRegister" element={<UserRegister />} />
+      <Route path="/userlogin" element={<UserLogin />} />
       <Route
         path="/admin"
         element={

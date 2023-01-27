@@ -19,7 +19,7 @@ const Navbar = () => {
 
   const handleUser = (e) => {
     if (e.target.value == "User") {
-      navigate("/login");
+      navigate("/userlogin");
     }
     if (e.target.value == "Admin") {
       navigate("/adminlogin");
