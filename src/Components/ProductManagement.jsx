@@ -1,4 +1,4 @@
-import { Box, Input, Select, Button } from "@chakra-ui/react";
+import { Box, Input, Select, Button,Text } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import styles from "../CSS/ProductMgtStyles.css";
 import { useDispatch } from "react-redux";
@@ -36,11 +36,13 @@ function ProductManagement() {
   return (
     <>
       {" "}
-      <h1>Product Management</h1>
+      <Text fontSize="2xl" style={{ marginBottom: "4%",marginTop:"5%" }}>Product Component</Text>
+      {/* <h1>Product Management</h1> */}
       <Box w="100%" display={{ md: "flex" }} justifyContent="space-around">
-        <Box W="50%">
+        <Box W="50%"  >
           <div className={styles.form_element_div}>
             <Input
+              mb="5%"
               placeholder="title"
               type="text"
               name={""}
@@ -54,6 +56,7 @@ function ProductManagement() {
 
           <div>
             <Select
+            mb="5%"
               name="option"
               value={product.option}
               onChange={(event) =>
@@ -74,6 +77,7 @@ function ProductManagement() {
           </div>
           <div>
             <Select
+            mb="5%"
               name="category"
               value={product.category}
               onChange={(event) =>
@@ -87,6 +91,7 @@ function ProductManagement() {
           </div>
           <div>
             <Input
+            mb="5%"
               type="URL"
               placeholder="Image URL"
               value={product.image}
@@ -98,6 +103,7 @@ function ProductManagement() {
           </div>
           <div className={styles.form_element_div}>
             <Input
+            mb="5%"
               type="text"
               value={product.detail}
               name={""}
@@ -109,6 +115,7 @@ function ProductManagement() {
           </div>
           <div className={styles.form_element_div}>
             <Input
+            mb="5%"
               type="number"
               value={product.price}
               name={""}
@@ -119,7 +126,7 @@ function ProductManagement() {
             />
           </div>
           <div style={{ textAlign: "center" }}>
-            <Button onClick={(e) => handleSubmit(e)}>Add Product</Button>
+            <Button mt="5%" onClick={(e) => handleSubmit(e)} colorScheme="green" >Add Product</Button>
           </div>
         </Box>
       </Box>

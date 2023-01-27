@@ -7,7 +7,9 @@ import {
   VStack,
   HStack,
   Button,
+  Text,
   useTimeout,
+  Divider,
 } from "@chakra-ui/react";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -118,18 +120,20 @@ function AdminDashboard() {
       </div>
       {/* <Grid templateColumns="repeat(2, 1fr)"> */}
       <HStack id="filteri_ng">
-        <VStack position="fixed" top="30px">
+        <VStack position="absolute" top="80px">
           <Sorting />
+          <Divider />
+          <Text fontSize="2xl" style={{ marginBottom: "4%",marginTop:"5%" }}>Sorting Component</Text>
           <Select
             w={"200px"}
             color="black"
-            bg={"grey"}
+            bg={""}
             onChange={(e) => handleSort(e)}
             placeholder="Sort By Price"
           >
             <option value="High">High</option> <option value="Low">Low</option>
           </Select>
-
+          <Divider />
           <ProductManagement />
         </VStack>
 
