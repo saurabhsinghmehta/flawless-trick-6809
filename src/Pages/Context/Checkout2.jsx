@@ -19,7 +19,9 @@ import {
   
   const Checkout2 = () => {
   
-   
+
+    const total= localStorage.getItem("total")
+   console.log(total)
     const toast = useToast();
     const navigate = useNavigate()
     // console.log(cart_store)
@@ -138,25 +140,6 @@ import {
             </Box>
           </Box>
           <Box h={"20em"} w={"40%"} bg={"gainsboro"}>
-            {/* <Box boxShadow={"lg"} w={"100%"} h={"6em"} m={"auto"}>
-              <Flex
-                alignItems={"flex-start"}
-                justifyContent={"space-around"}
-                gap={"15px"}
-                m={"auto"}
-                p={"1em"}
-              >
-                <Img
-                  h={"3.5em"}
-                  mt={"0.8em"}
-                  w={"4em"}
-                  src="https://www.adorama.com/images/300x300/fpbs10.jpg"
-                  alt="img"
-                />
-                <Text>10' Background Support System - Cushioned</Text>
-                <Text>$89.95</Text>
-              </Flex>
-            </Box> */}
             <Box>
               <Box
                 display={"flex"}
@@ -167,7 +150,7 @@ import {
                 m={"auto"}
               >
                 <Text>Sub-Total </Text>
-                <Text>{sum}</Text>
+                <Text>{total}</Text>
               </Box>
               <Box
                 display={"flex"}
@@ -205,7 +188,7 @@ import {
                   Order Total
                 </Text>
                 <Text fontSize={"25px"} fontWeight={"bold"}>
-                  {sum}
+                  {total}
                 </Text>
               </Box>
             </Box>
@@ -405,7 +388,7 @@ import {
               m={"auto"}
             >
               <Text>Sub-Total </Text>
-              <Text>{sum}</Text>
+              <Text>{total}</Text>
             </Box>
             <Box
               display={"flex"}
@@ -443,7 +426,7 @@ import {
                 Order Total
               </Text>
               <Text fontSize={"25px"} fontWeight={"bold"}>
-                {sum}
+                {total}
               </Text>
             </Box>
           </Box>
@@ -461,7 +444,7 @@ import {
           </Box>
           <Box h={"2em"} pt={"1em"} w={"60%"} m={"auto"}>
             <Text w={"50%"}>
-              By clicking Place Order you agree to the Adorama Terms and
+              By clicking Place Order you agree to the BFC Terms and
               Conditions.
             </Text>
           </Box>

@@ -1,6 +1,6 @@
 import { Button } from "@chakra-ui/button";
 import { Image } from "@chakra-ui/image";
-import { Box, Flex, Heading, HStack } from "@chakra-ui/layout";
+import { Box, Flex, Heading, HStack,Text } from "@chakra-ui/layout";
 import React from "react";
 import { AddIcon, MinusIcon } from "@chakra-ui/icons";
 import LargeWithAppLinksAndSocial from "../Components/Footer";
@@ -10,21 +10,15 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { store } from "../Redux/store";
 import {GetCartData,deleteTodo} from "../Redux/AddToCart/action"
-import axios from "axios";
+import Checkout2 from "../Pages/Context/Checkout2"
+
+
 function Cart() {
   const Data2=useSelector((state)=>state.CartReducer.cart);
   console.log(Data2)
   const dispatch=useDispatch();
-  // console.log(store.getState())
-  const data = [
-    {
-      img: "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-K488.jpg?ver=22.82",
-      title: "Cold Drink",
-      price: 1000,
-    }
-  ];
 
-  
+  let total = Data2 && Data2.length>0 && Data2.reduce((acc, el) => acc + Number(el.price), 0);
 
   const handleDelete=(id)=>{
     console.log(id)
@@ -61,7 +55,7 @@ function Cart() {
         <Box width="700px" >
 
           {/* <Flex> */}
-            {Data2.map((item) => (
+            { Data2 && Data2.length>0 && Data2.map((item) => (
               <HStack boxShadow='xl' gap="50px" m="5%" key={item.id} >
               <Box width="200px">
                   <img
@@ -105,7 +99,45 @@ function Cart() {
           {/* </Flex> */}
         </Box>
         {/* checkout section */}
-        <Box></Box>
+        <Box>
+        <Box>
+        <Box
+          boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px"
+          w="400px"
+          p="15px"
+          ml="20px"
+          h="180px"
+        >
+          <Box>
+            <Flex justifyContent="space-between" fontSize={12} p="10px">
+              <Text>Item Total(MRP)</Text>
+              <Text>$ {total}</Text>
+            </Flex>
+          </Box>
+          <hr></hr>
+          <hr></hr>
+          <Box marginTop="50px">
+            <Flex justifyContent="space-between" fontSize={12} p="10px">
+              <Text fontWeight="extrabold">To be paid</Text>
+              <Text fontWeight="extrabold">$ {total}</Text>
+            </Flex>
+          </Box>
+        </Box>
+        <Link to="/checkout">
+        <Button
+          w="100%"
+          bg="#FF6F61"
+          width="400px"
+          ml="20px"
+          mt="10px"
+          _hover={{}}
+          onClick={localStorage.setItem("total",total)}
+        >
+          <Text fontWeight={500} color={"white"}>Checkout</Text>
+        </Button>
+        </Link>
+      </Box>
+        </Box>
       </Flex>
       <LargeWithAppLinksAndSocial />{" "}
     </div>
