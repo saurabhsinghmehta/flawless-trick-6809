@@ -11,6 +11,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { store } from "../Redux/store";
 import {GetCartData,deleteTodo} from "../Redux/AddToCart/action"
 import Checkout2 from "../Pages/Context/Checkout2"
+import { useToast } from "@chakra-ui/react";
 
 
 function Cart() {
@@ -19,9 +20,17 @@ function Cart() {
   const dispatch=useDispatch();
 
   let total = Data2 && Data2.length>0 && Data2.reduce((acc, el) => acc + Number(el.price), 0);
+  const toast=useToast();
 
   const handleDelete=(id)=>{
     console.log(id)
+    toast({
+      title: "Product Deleted from Cart",
+      status: "info",
+      duration: 2000,
+      isClosable: true,
+      position:"top"
+    });
     dispatch(deleteTodo(id))
   }
 
@@ -56,9 +65,13 @@ function Cart() {
 
           {/* <Flex> */}
             { Data2 && Data2.length>0 && Data2.map((item) => (
-              <HStack boxShadow='xl' gap="50px" m="5%" key={item.id} >
+              <HStack gap="50px" m="5%" key={item.id} p="3%" borderRadius="15px"
+              boxShadow="rgba(50, 50, 93, 0.25) 0px 6px 12px 5px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px"
+              >
               <Box width="200px">
                   <img
+                  
+                  style={{borderRadius:"15px"}}
                     src={item.image}
                     alt="cart"
                   />
@@ -66,9 +79,10 @@ function Cart() {
               </Box>
                 
                 
-                <Box marginTop="30px" gap={"15px"}>
-                  <p>{item.title}</p> <Button onClick={()=>handleDelete(item.id)}  >Remove</Button>
-                </Box>{" "}
+                <Box marginTop="30px" gap={"15px"} textAlign="left" >
+                  <p><b>{item.title}</b></p>
+                   <Button onClick={()=>handleDelete(item.id)} colorScheme="red" mt="15%"  >Remove</Button>
+                </Box>
                 <Box>
                   <Box display={"flex"}>
                     <Button
@@ -91,7 +105,7 @@ function Cart() {
                     </Button>
                   </Box>
                   <Box>
-                    <p style={{fontSize:"20px"}}>{`$${item.price}`}</p>
+                    <p style={{fontSize:"20px"}}><b>{`$ ${item.price}`}</b></p>
                   </Box>
                 </Box>
                 </HStack>
@@ -99,9 +113,10 @@ function Cart() {
           {/* </Flex> */}
         </Box>
         {/* checkout section */}
-        <Box>
+        
         <Box>
         <Box
+        mt="8%"
           boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px"
           w="400px"
           p="15px"
@@ -137,7 +152,6 @@ function Cart() {
         </Button>
         </Link>
       </Box>
-        </Box>
       </Flex>
       <LargeWithAppLinksAndSocial />{" "}
     </div>

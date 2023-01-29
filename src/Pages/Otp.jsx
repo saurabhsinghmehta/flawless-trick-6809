@@ -4,10 +4,13 @@ import ProjectLogo from "../Assets/ProjectLogo.png";
 import { useNavigate } from "react-router-dom";
 import { ConfirmationResult } from "firebase/auth";
 import { useState } from "react";
+import { useToast } from "@chakra-ui/react";
 const Otp = () => {
   const navigate = useNavigate();
   const [otp, setOtp] = useState("");
   const [redirectto, setRedirectto] = useState(false);
+  const toast=useToast();
+
   const handleChange = (e) => {
     setOtp(e.target.value);
   };
@@ -20,14 +23,28 @@ const Otp = () => {
       .then((result) => {
         // User signed in successfully.
         const user = result.user;
-        alert("Signin successfull");
+        // alert("Signin successfull");
+        toast({
+          title: "Signin Successfull",
+          status: "success",
+          duration: 2000,
+          isClosable: true,
+          position:"top"
+        });
         setRedirectto(true);
         // ...
       })
       .catch((error) => {
         // User couldn't sign in (bad verification code?)
         // ...
-        alert("Signin faild");
+        // alert("Signin faild");
+        toast({
+          title: "Signin Failed",
+          status: "success",
+          duration: 2000,
+          isClosable: true,
+          position:"top"
+        });
         setRedirectto(false);
       });
   };
