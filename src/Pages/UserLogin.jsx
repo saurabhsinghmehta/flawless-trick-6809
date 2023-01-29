@@ -10,6 +10,7 @@ import {
   AlertIcon,
   AlertTitle,
   AlertDescription,
+  useToast
 } from "@chakra-ui/react";
 
 const UserLogin = () => {
@@ -18,6 +19,7 @@ const UserLogin = () => {
   const [error, setError] = useState("");
   const { signin, googleSignin } = UserAuth();
   const navigate = useNavigate();
+  const toast=useToast();
 
   const goToHome = () => {
     navigate("/");
@@ -28,7 +30,14 @@ const UserLogin = () => {
     setError("");
     try {
       await signin(email, password);
-      alert("Login Succesfull");
+      // alert("Login Succesfull");
+      toast({
+        title: "Login Successfull",
+        status: "success",
+        duration: 2000,
+        isClosable: true,
+        position:"top"
+      });
       navigate("/");
     } catch (error) {
       setError(error.message);

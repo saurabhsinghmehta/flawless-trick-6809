@@ -10,6 +10,7 @@ import {
   Image,
   Button,
   Input,
+  useToast
 } from "@chakra-ui/react";
 
 // import { useDispatch, useSelector } from "react-redux";
@@ -53,6 +54,7 @@ const Menu = () => {
   const menuData = useSelector((store) => store.Menureducer.menudata);
   const dispatch = useDispatch();
   const [query, setQuery] = useState("");
+  const toast=useToast();
 
   useEffect(() => {
     dispatch(getData());
@@ -68,7 +70,14 @@ const Menu = () => {
       price,
     };
     console.log(param)
-    alert("Product Added to Cart Successfully");
+    toast({
+      title: "Product Added to Cart Successfully",
+      status: "success",
+      duration: 2000,
+      isClosable: true,
+      position:"top"
+    });
+    // alert("Product Added to Cart Successfully");
     // console.log(title,image,category,price)
     dispatch(PostData(param));
   };
