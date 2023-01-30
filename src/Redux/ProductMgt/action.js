@@ -27,7 +27,7 @@ const edit = (id, payload) => (dispatch) => {
 };
 const deleteDataFromCart = (queryParams) => (dispatch) => {
   return axios.delete(`https://bfc-i90o.onrender.com/bfc/${queryParams}`).then(() => {
-    alert("delete data successfully");
+    // alert("delete data successfully");
   });
 };
 
@@ -50,7 +50,7 @@ const addNewData = (productData) => (dispatch) => {
   return axios
     .post(`https://bfc-i90o.onrender.com/bfc`, productData)
     .then((res) => {
-      alert("Add data successfully");
+      // alert("Add data successfully");
     })
     .catch((e) => {
       console.log(e);

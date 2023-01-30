@@ -4,8 +4,10 @@ import styles from "../CSS/ProductMgtStyles.css";
 import { useDispatch } from "react-redux";
 import { addNewData } from "../Redux/ProductMgt/action.js";
 import { getData } from "../Redux/Sorting/actiontype";
+import { useToast } from "@chakra-ui/react";
 
 function ProductManagement() {
+  const toast=useToast();
   const dispatch = useDispatch();
   const [product, setProduct] = useState({
     image: "",
@@ -27,6 +29,13 @@ function ProductManagement() {
     available: true,
     price: 0,
     detail: "",})
+    toast({
+      title: "Product Added Successfull",
+      status: "success",
+      duration: 2000,
+      isClosable: true,
+      position:"top"
+    });
   };
 
   useEffect(() => {

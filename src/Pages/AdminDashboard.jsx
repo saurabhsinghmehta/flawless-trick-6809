@@ -23,14 +23,17 @@ import { UserAuth } from "./Context/UserAuthContext";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { store } from "../Redux/store";
+import { useToast } from "@chakra-ui/react";
 
 function AdminDashboard() {
+  const toast=useToast();
   const { user, logOut } = UserAuth();
+  // console.log(user)
   const location = useLocation();
   const [flag, setflag] = useState(false);
   const navigate = useNavigate();
   const [searchParams,setSearchParams]=useSearchParams();
-  console.log(store.getState());
+  // console.log(store.getState());
   // console.log(user);
   const data = useSelector((state) => state.Sortingreducer.data);
   // console.log(data)
@@ -40,6 +43,13 @@ function AdminDashboard() {
   const handleLogout = async () => {
     try {
       await logOut;
+      toast({
+        title: "Signed out from Admin",
+        status: "warning",
+        duration: 2000,
+        isClosable: true,
+        position:"top"
+      });
       navigate("/");
     } catch (error) {
       console.log(error.message);
@@ -95,29 +105,30 @@ function AdminDashboard() {
     //display sales status on daily, weekly and monthly bases
     <>
       <div id="admin_display">
-        <div>
+        {/* <div>
           <h3>Sold 2 products today</h3>
         </div>
         <div>
           <h3>Sold 15 products this week</h3>
-        </div>
-        <div>
-          <h3>Sold 150 products this month</h3>
-        </div>
-        <div>
-          <h3>{user && "welocme to admin page"} </h3>
-        </div>
+  </div>*/}
+        {/* <div>
+        <Text fontSize="2xl" fontWeight="bold" >Welcome to Admin Page: </Text>
+        </div> */}
+        <div style={{display:"flex"}} >
+          {/* <h3>{user && "welocme to admin page"} </h3> */}
+          <Text fontSize="2xl" fontWeight="bold"><Text  color="red.400" >Welcome : {user.displayName}</Text></Text>
+        </div> 
         <div>
           <Button
-            colorScheme="teal"
+            colorScheme="red"
             size="sm"
-            style={{ borderRadius: "10px", margin: ".2rem" }}
+            // style={{ borderRadius: "10px", margin: ".2rem" }}
             onClick={handleLogout}
-          >
-            signOut
+            >
+            Sign out
           </Button>
+            </div>
         </div>
-      </div>
       {/* <Grid templateColumns="repeat(2, 1fr)"> */}
       <HStack id="filteri_ng">
         <VStack position="absolute" top="80px">

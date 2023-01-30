@@ -18,7 +18,7 @@ const Login = () => {
     setName(e.target.value);
   };
 
-  //   console.log(name);
+    console.log(name);
 
   const configureCaptcha = () => {
     const auth = getAuth();
