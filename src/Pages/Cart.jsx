@@ -61,10 +61,10 @@ function Cart() {
           </Heading>
         </Box>
       </Box>
-      <Flex>
+      {/* <Flex> */}
         {/* my cart section */}
-        <Box width="700px" >
-
+        <Box width="80%" m="auto">
+          
           {/* <Flex> */}
             { Data2 && Data2.length>0 && Data2.map((item) => (
               <HStack gap="50px" m="5%" key={item.id} p="3%" borderRadius="15px"
@@ -116,16 +116,16 @@ function Cart() {
         </Box>
         {/* checkout section */}
         
-        {total&&<Box>
+        {total&&<Box mb="2%" >
         <Box
+        width="60%"
         mt="8%"
           boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px"
-          w="400px"
           p="3%"
-          ml="20px"
-          h="180px"
+          m="auto"
+          borderRadius="25px"
         >
-          <Box>
+          <Box >
             <Flex justifyContent="space-between" p="10px">
               <Text>Item Total(MRP)</Text>
               <Text>$ {total}</Text>
@@ -146,11 +146,8 @@ function Cart() {
         </Box>
         <Link to="/checkout">
         <Button
-          w="100%"
-          bg="red.400"
-          width="400px"
-          ml="20px"
-          mt="10px"
+          colorScheme="red"
+          mt="2%"
           _hover={{}}
           onClick={localStorage.setItem("total",total)}
         >
@@ -158,7 +155,7 @@ function Cart() {
         </Button>
         </Link>
       </Box>}
-      </Flex>
+      {/* </Flex> */}
       {!total&&<Box>
         <Text fontSize="2xl" style={{marginTop:"5%" }}>Shopping Cart is Empty</Text>
         <Button colorScheme="red" m="5%" p="2%" onClick={()=>navigate("/menu")}  >Continue Shopping</Button>

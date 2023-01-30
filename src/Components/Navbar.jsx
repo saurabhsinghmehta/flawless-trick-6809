@@ -93,7 +93,7 @@ const Navbar = () => {
             <Flex justifyContent="space-between" alignItems="center">
               <Text fontWeight="bold">{namee}</Text>
               <Heading size="xs">
-              <Button onClick={handleLogout}>
+              <Button onClick={handleLogout} colorScheme="red" >
                 Log Out
               </Button>
               </Heading>

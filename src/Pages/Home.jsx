@@ -9,10 +9,10 @@ import {
   SimpleGrid,
   Text,
   Spacer,
-  Link,
   Button,
 } from "@chakra-ui/react";
 import Footer from "../Components/Footer";
+import {Link} from "react-router-dom"
 
 const data = [
   {
@@ -98,10 +98,12 @@ const Home = () => {
            <Heading size='sm' paddingY='30px' fontWeight='extrabold'>{item.title}</Heading>
          </Box>
         ))}
+        <Link to="/menu">
         <Box bg='#f8f7f5'>
            <Image src="https://online.kfc.co.in/static/media/finger_lickin.fc21c805.svg" alt='ic' width='200px' marginLeft='20px' marginTop='30px' />
            <Text size='sm' paddingY='40px' fontWeight='bold'>View All Menu ----- </Text>
          </Box>
+         </Link>
          </SimpleGrid>
          </Container>
 
