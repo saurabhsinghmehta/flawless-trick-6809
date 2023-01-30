@@ -9,7 +9,7 @@ Easy to navigate website
 Secure online payment options
 Fast and reliable delivery
 Usage
-To start using our platform, simply go to our website by visiting this link https://kfc-vert.vercel.app/ and create an account. Once you have an account, you can browse through our selection of cooked chicken products and add them to your cart. You can then proceed to checkout and make your payment using one of our secure online payment options.
+To start using our platform, simply go to our website by visiting this link https://bfc-pi.vercel.app/ and create an account. Once you have an account, you can browse through our selection of cooked chicken products and add them to your cart. You can then proceed to checkout and make your payment using one of our secure online payment options.
 
 Support
 
