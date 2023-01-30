@@ -13,12 +13,17 @@ import { useNavigate } from "react-router-dom";
 const Login = () => {
   const [redirect, setRedirect] = useState(false);
   const [name, setName] = useState("");
+  const [personName,setPersonName]=useState("");
   const navigate = useNavigate();
   const handleChange = (e) => {
     setName(e.target.value);
   };
-
     console.log(name);
+
+    const handleNameChange=(e)=>{
+      setPersonName(e.target.value)
+    }
+    console.log(personName)
 
   const configureCaptcha = () => {
     const auth = getAuth();
@@ -40,7 +45,9 @@ const Login = () => {
     e.preventDefault();
     configureCaptcha();
     const phoneNumber = "+91" + name;
+    const person = personName
     console.log("phoneNumber is", phoneNumber);
+    console.log("name is", personName);
     const appVerifier = window.recaptchaVerifier;
 
     const auth = getAuth();
@@ -51,6 +58,7 @@ const Login = () => {
         window.confirmationResult = confirmationResult;
         // ...
         console.log("OTP has been send");
+        localStorage.setItem("namePerson",personName)
         setRedirect(true);
       })
       .catch((error) => {
@@ -157,7 +165,45 @@ const Login = () => {
             marginLeft: "15px",
             marginRight: "20px",
           }}
-        />
+        />  
+        <div
+        style={{
+          justifyContent: "left",
+          display: "flex",
+          padding: "2rem 1rem 0.5rem",
+        }}
+      >
+        <label style={{ fontSize: ".9rem" }}>Name</label>
+      </div>
+      <input
+        style={{
+          width: "100%",
+          padding: "0 1rem 0.5rem",
+          justifyContent: "left",
+          display: "flex",
+          outline: "none",
+          fontSize: ".8rem",
+          color: "red",
+        }}
+        type="string"
+        name="name"
+        placeholder="Name"
+        required
+        onChange={handleNameChange}
+      />
+       <hr
+          style={{
+            position: "relative",
+            top: "2px",
+            paddingLeft: "2px",
+            border: "none",
+            height: "1px",
+            background: "black",
+            marginBottom: "26px",
+            marginLeft: "15px",
+            marginRight: "20px",
+          }}
+        /> 
 
         <div style={{ fontSize: ".8rem", marginBottom: "2rem" }}>
           By “logging in to KFC”, you agree to our{" "}

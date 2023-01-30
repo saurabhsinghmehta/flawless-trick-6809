@@ -8,7 +8,8 @@ import {
   Container,
   Image,
   Select,
-  selector,
+  Text,
+  Button
 } from "@chakra-ui/react";
 import ProjectLogo from "../Assets/ProjectLogo.png";
 import { Link } from "react-router-dom";
@@ -25,6 +26,12 @@ const Navbar = () => {
       navigate("/adminlogin");
     }
   };
+  let namee = localStorage.getItem("namePerson")||null
+
+  const handleLogout=()=>{
+    localStorage.removeItem("namePerson")
+    window.location.reload()
+  }
 
   return (
     <Box border="1px solid">
@@ -56,28 +63,47 @@ const Navbar = () => {
             </Link>
           </Box>
           <Spacer />
-          {/* <Link to="/login"> */}
+          
+           {/* <Link to="/login">/
+          
+          username and logout */}
+          {!namee?
           <Box p="2" width="140px">
-            <Flex justifyContent="space-between">
-              <Image
-                src="https://images.ctfassets.net/wtodlh47qxpt/6bJdGLRkksNvWP4LI9ZiFF/cb89d6393492fd093e0f99980abfa39e/Account_Icon.svg"
-                alt="ic"
-              />
+          <Flex justifyContent="space-between">
+            <Image
+              src="https://images.ctfassets.net/wtodlh47qxpt/6bJdGLRkksNvWP4LI9ZiFF/cb89d6393492fd093e0f99980abfa39e/Account_Icon.svg"
+              alt="ic"
+            />
+            <Heading size="xs">
+              <Select
+                style={{ border: "transparent", marginLeft: ".2rem" }}
+                placeholder="Sign In"
+                onChange={(e) => handleUser(e)}
+              >
+                <option value="User">User</option>
+
+                <option value="Admin">Admin</option>
+
+                {/* <option value="option2">Admin</option> */}
+              </Select>
+            </Heading>
+          </Flex>
+        </Box>:
+          <Box p="2" width="200px">
+            <Flex justifyContent="space-between" alignItems="center">
+              <Text fontWeight="bold">{namee}</Text>
               <Heading size="xs">
-                <Select
-                  style={{ border: "transparent", marginLeft: ".2rem" }}
-                  placeholder="Sign In"
-                  onChange={(e) => handleUser(e)}
-                >
-                  <option value="User">User</option>
-
-                  <option value="Admin">Admin</option>
-
-                  {/* <option value="option2">Admin</option> */}
-                </Select>
+              <Button onClick={handleLogout}>
+                Log Out
+              </Button>
               </Heading>
             </Flex>
           </Box>
+          }
+         
+          
+
+
           {/* </Link> */}
           <Link to="/cart">
             <Box p="2">
