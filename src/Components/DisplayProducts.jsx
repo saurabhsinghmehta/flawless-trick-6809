@@ -4,13 +4,22 @@ import { Link } from "react-router-dom";
 import { deleteDataFromCart, edit, getdata } from "../Redux/ProductMgt/action";
 import { useDispatch } from "react-redux";
 import { getData } from "../Redux/Sorting/actiontype";
+import { useToast } from "@chakra-ui/react";
 
 function DisplayProducts({ data }) {
+  const toast=useToast();
   const [active, setActive] = useState(true);
   const dispatch = useDispatch();
   const status = (id) => {
     setActive((pre) => !pre);
     let payload = active;
+    toast({
+      title: "One Product Status has been Changed",
+      status: "info",
+      duration: 2000,
+      isClosable: true,
+      position:"top"
+    });
     console.log(payload, id);
     dispatch(edit(id, { available: payload })).then(() => dispatch(getData()));
   };
@@ -19,13 +28,13 @@ function DisplayProducts({ data }) {
       {" "}
       <SimpleGrid
         minChildWidth="250px"
-        spacing="40px"
+        spacing="60px"
         marginTop="30px"
         textAlign="center"
         padding="2%"
       >
         {data.map((item) => (
-          <Box boxSize={"xsm"} height="300px">
+          <Box w="300px" height="300px">
             <Image w={"100%"} src={item.image} h="200px" />{" "}
             <h2>{item.title}</h2>
             <h4>{item.category}</h4>
@@ -73,10 +82,18 @@ function DisplayProducts({ data }) {
                   color: "red",
                   border: "2px solid red ",
                 }}
-                onClick={() =>
+                onClick={() =>{
                   dispatch(deleteDataFromCart(item.id)).then(() =>
                     dispatch(getData())
-                  )
+                    )
+                    toast({
+                      title: "Product Deleted from Admin",
+                      status: "warning",
+                      duration: 2000,
+                      isClosable: true,
+                      position:"top"
+                    });
+                }
                 }
               >
                 Delete

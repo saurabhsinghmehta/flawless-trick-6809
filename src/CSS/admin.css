@@ -1,5 +1,8 @@
 #admin_display {
   display: flex;
-  justify-content: space-evenly;
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  justify-content: space-between;
+  /* box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; */
+  /* box-shadow:"rgba(0, 0, 0, 0.35) 0px 5px 15px"; */
+  padding: 1%;
+  margin: 0px 2% 0px 2%;
 }
