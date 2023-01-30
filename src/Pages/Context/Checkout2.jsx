@@ -12,11 +12,13 @@ import {
     useToast,
   } from "@chakra-ui/react";
   import React from "react";
+  import { useState } from "react";
   import { useDispatch, useSelector } from "react-redux";
   import {   useNavigate } from "react-router-dom";
 import { deleteTodo } from "../../Redux/AddToCart/action";
   
   const Checkout2 = () => {
+    const [card,setcard]=useState("");
   
 
     const total= localStorage.getItem("total")
@@ -30,17 +32,28 @@ import { deleteTodo } from "../../Redux/AddToCart/action";
     let sum=0
     // cart_store.cart_data && cart_store.cart_data.map(el=>(sum+=(Number(el.quantity)*Number(el.productID.price))))
     const handleClick=()=>{
-      toast({
-        title: "Order Placed Successfully.",
-        description: "Your Order Placed Successfully.",
-        status: "success",
-        duration: 9000,
-        isClosable: true,
-      });
-      navigate("/")
-      {cart_store.map((el)=>{
-        dispatch(deleteTodo(el.id))
-      })}
+      if(card==""){
+        toast({
+          position:"top",
+          title: "Please Enter All details",
+          // description: "Your Order Placed Successfully.",
+          status: "info",
+          duration: 3000,
+          isClosable: true,
+        });
+      }else{
+        toast({
+          title: "Order Placed Successfully.",
+          description: "Your Order Placed Successfully.",
+          status: "success",
+          duration: 9000,
+          isClosable: true,
+        });
+        navigate("/")
+        {cart_store.map((el)=>{
+          dispatch(deleteTodo(el.id))
+        })}
+      }
     }
    
     return (
@@ -87,6 +100,7 @@ import { deleteTodo } from "../../Redux/AddToCart/action";
             <Text w={"30%"} fontWeight={"bold"}>
               Ship to
             </Text>
+           
             <Box h={"2em"} w={"100%"} pt={"1em"}>
               <Flex
                 gap={"15px"}
@@ -141,6 +155,7 @@ import { deleteTodo } from "../../Redux/AddToCart/action";
             <Box pt={"3.5em"} w={"58%"}>
               <Checkbox>Save As Default Shipping Address</Checkbox>
             </Box>
+            {/* </form> */}
           </Box>
           <Box h={"20em"} w={"40%"} bg={"gainsboro"}>
             <Box>
@@ -153,7 +168,7 @@ import { deleteTodo } from "../../Redux/AddToCart/action";
                 m={"auto"}
               >
                 <Text>Sub-Total </Text>
-                <Text>{total}</Text>
+                <Text>$ {total}</Text>
               </Box>
               <Box
                 display={"flex"}
@@ -191,7 +206,7 @@ import { deleteTodo } from "../../Redux/AddToCart/action";
                   Order Total
                 </Text>
                 <Text fontSize={"25px"} fontWeight={"bold"}>
-                  {total}
+                  $ {total}
                 </Text>
               </Box>
             </Box>
@@ -285,7 +300,7 @@ import { deleteTodo } from "../../Redux/AddToCart/action";
                   gap={"10px"}
                   m={"auto"}
                 >
-                  <Input required maxLength={16} placeholder="CARD NUMBER" />
+                  <Input required maxLength={16} value={card} onChange={(e)=>setcard(e.target.value)} placeholder="CARD NUMBER" />
                   <Select required w={"10em"}>
                     <option>MM</option>
                     <option>01</option>
@@ -395,7 +410,9 @@ import { deleteTodo } from "../../Redux/AddToCart/action";
             >
               Place Order
             </Button>
+            
           </Box>
+          {/* </form> */}
           <Box h={"2em"} pt={"1em"} w={"60%"} m={"auto"}>
             <Text w={"50%"}>
               By clicking Place Order you agree to the BFC Terms and

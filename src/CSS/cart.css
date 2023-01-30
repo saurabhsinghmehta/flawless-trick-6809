@@ -1,0 +1,13 @@
+@media screen and (min-width: 650px) and (max-width: 2000px) {
+    #checkout{
+        /* width: 400px; */
+        display:block;
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 250px) and (max-width: 650px) {
+    #checkout{
+        display:block;
+    }
+}
