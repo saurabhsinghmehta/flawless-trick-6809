@@ -14,8 +14,7 @@ import {
   import React from "react";
   import { useDispatch, useSelector } from "react-redux";
   import {   useNavigate } from "react-router-dom";
-//   import { GET_CART } from "../Redux/cart/cart_actions";
-  import {useEffect} from "react"
+import { deleteTodo } from "../../Redux/AddToCart/action";
   
   const Checkout2 = () => {
   
@@ -25,7 +24,8 @@ import {
     const toast = useToast();
     const navigate = useNavigate()
     // console.log(cart_store)
-    const cart_store=useSelector((store)=>store.cart)
+    const cart_store=useSelector((state)=>state.CartReducer.cart)
+    const dispatch=useDispatch();
   
     let sum=0
     // cart_store.cart_data && cart_store.cart_data.map(el=>(sum+=(Number(el.quantity)*Number(el.productID.price))))
@@ -38,6 +38,9 @@ import {
         isClosable: true,
       });
       navigate("/")
+      {cart_store.map((el)=>{
+        dispatch(deleteTodo(el.id))
+      })}
     }
    
     return (
@@ -194,56 +197,7 @@ import {
             </Box>
           </Box>
         </Box>
-        <Box mt={"2em"} w={"27%"}>
-          <Text fontWeight={"bold"} fontSize={"25px"}>
-            Payment
-          </Text>
-        </Box>
-        <Box
-          h={"20em"}
-          w={"80%"}
-          m={"auto"}
-          alignItems={"flex-start"}
-          display={"flex"}
-          flexDirection={"row"}
-          justifyContent={"flex-start"}
-          mt={"1em"}
-        >
-          <Box border={"1px solid black"} h={"20em"} w={"60%"}>
-            <Text p={"1em"} fontWeight={"light"} fontSize={"20px"} w={"30%"}>
-              Rewards and Offers:
-            </Text>
-            <Box p={"1em"} h={"11em"} w={"80%"} m={"auto"} bg={"gainsboro"}>
-              <Box pt={"0.2em"}>
-                <Text fontSize={"14px"} textAlign={"justify"}>
-                  Hi, shaik — It looks like you’re not a VIP Rewards member yet.
-                  Join for free and earn 25pts! Plus, earn 25pts just for sharing
-                  your birthdate:
-                </Text>
-              </Box>
-              <Box pt={"0.8em"}>
-                <Flex
-                  alignItems={"flex-start"}
-                  justifyContent={"space-around"}
-                  gap={"10px"}
-                  m={"auto"}
-                >
-                  <Input w={"60%"} placeholder="mm/dd" />
-                  <Button w={"60%"} color={"white"} bg={"orange.500"}>
-                    JOIN NOW
-                  </Button>
-                </Flex>
-              </Box>
-              <Box pt={"0.5em"}>
-                <Text fontSize={"12px"} textAlign={"justify"}>
-                  By joining VIP Rewards, you agree to the Program Terms and
-                  acknowledge acceptance of the Privacy Policy.
-                </Text>
-              </Box>
-            </Box>
-            <hr />
-          </Box>
-        </Box>
+        
         <Box mt={"2em"} w={"30%"}>
           <Text fontWeight={"light"} fontSize={"16px"}>
             PAYMENT METHOD :

@@ -4,8 +4,9 @@ import { UserAuth } from "../Pages/Context/UserAuthContext";
 
 const ProtectedRoute = ({ children }) => {
   let { user } = UserAuth();
+  let token = localStorage.getItem("namePerson")||null
   if (!user) {
-    return <Navigate to="/admin" />;
+    return <Navigate to="/" />;
   }
   return children;
 };

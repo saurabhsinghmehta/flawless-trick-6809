@@ -17,6 +17,7 @@ import Checkout from "../Pages/Checkout";
 import UserLogin from "../Pages/UserLogin";
 import UserRegister from "../Pages/UserRegister";
 import Checkout2 from "../Pages/Context/Checkout2";
+import ProtectedRoute2 from "../Components/ProtectedRoute2";
 function MainRoutes() {
   return (
     <Routes>
@@ -24,7 +25,7 @@ function MainRoutes() {
       <Route path="/menu" element={<Menu />} />
       <Route path="/login" element={<Login />} />
       <Route path="/deals" element={<Deals />} />
-      <Route path="/cart" element={<Cart />} />
+      <Route path="/cart" element={<ProtectedRoute2><Cart /></ProtectedRoute2>} />
       <Route path="/otp" element={<Otp />} />
       <Route path="/product/:id" element={<Edit />} />
       <Route path="/adminlogin" element={<AdminLogin />} />
