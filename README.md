@@ -15,7 +15,7 @@ Support
 
 If you have any questions or concerns, please feel free to contact us through our website. Our customer support team will be happy to assist you.
 
-Thanks for choosing BFC E-commerce Project!
+Thanks for choosing BFC E-commerce Project!!
 
 
 
