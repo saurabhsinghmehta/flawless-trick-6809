@@ -15,35 +15,26 @@ To start using our platform, simply go to our website by visiting this link http
 
 1. Landing Page:
 
-![App Screenshot](https://i.ibb.co/q19pM8h/Screenshot-1278.png)
-
-This is the first page of this website and it has dynamic navbar which is available in all other pages as well because it is exported
-as a component and it also contains SignIn and SignUp button through which we can authenticate as a user with one cart button as well.
-Some carousels are present with a footer at bottom.
+![App Screenshot](https://i.ibb.co/3TbKhCz/Screenshot-2023-01-31-173005.png)
 
 2. Sign Up Page:
 
-![](https://i.ibb.co/bN4sSy5/Screenshot-1284.png)
+![](https://i.ibb.co/dQhbVL3/Screenshot-2023-01-31-173747.png)
 
-New User can create an account and continue shopping.
+3.  Menu Page:
 
-3.  Products Page:
+![](https://i.ibb.co/mvftTzQ/Screenshot-2023-01-31-173405.png)
 
-![](https://i.ibb.co/BNxY4Qh/Screenshot-1283.png)
 
-Products thumbnail are available here with rating and pricing.
+4. Cart Page:
 
-4. Cart Component:
-
-![](https://i.ibb.co/KKKqDXy/Screenshot-1285.png)
+![](https://i.ibb.co/kXnghjT/Screenshot-2023-01-31-173547.png)
 
 All products added in cart will be shown here.
 
-5. Payment Page:
+5. Admin Page:
 
-![](https://i.ibb.co/QpkMpTg/Screenshot-1286.png)
-
-User can pay either using cod or online method.
+![](https://i.ibb.co/nCVt3HG/Screenshot-2023-01-31-173636.png)
 
 
 Support
